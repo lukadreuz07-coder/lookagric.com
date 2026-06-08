@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+<meta name="theme-color" content="#0f6b3a"/>
+<meta name="description" content="LOOK AGRIC ALLIED LIMITED — Nigeria's trusted exporter of cocoa beans, cashew nuts, sesame seeds, shea nuts, soybeans, ginger, palm kernel and hibiscus to global markets."/>
+<title>LOOK AGRIC ALLIED LIMITED | Premium Farm Produce Export — Nigeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════
+   LOOK AGRIC — Complete Design System
+   Version 4.0 — Professional & Modern
+═══════════════════════════════════════════ */
+
+/* RESET */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font-family:'Inter',sans-serif;color:#1e2a22;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img{max-width:100%;display:block;height:auto}
+a{text-decoration:none}
+button{font-family:'Inter',sans-serif}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#f5fbf8}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#0f6b3a,#c8860a);border-radius:2px}
+
+/* TOKENS */
+:root{
+  --g0:#041a0d;
+  --g1:#0a3d1f;
+  --g2:#0f6b3a;
+  --g3:#1a8a4c;
+  --g4:#22a85e;
+  --g5:#e8f7ef;
+  --g6:#f0fbf5;
+  --au:#7a4d00;
+  --a1:#c8860a;
+  --a2:#e09b12;
+  --a3:#f5b830;
+  --a4:#fff8e6;
+  --n0:#060e08;
+  --n1:#1e2a22;
+  --n2:#374a3e;
+  --n3:#5a6e62;
+  --n4:#8fa898;
+  --n5:#e8f0eb;
+  --n6:#f4f8f5;
+  --white:#fff;
+  --cream:#fafaf7;
+  --sx:0 1px 4px rgba(6,40,20,.05);
+  --ss:0 4px 16px rgba(6,40,20,.08);
+  --sm:0 8px 32px rgba(6,40,20,.11);
+  --sl:0 20px 60px rgba(6,40,20,.15);
+  --sx2:0 36px 96px rgba(6,40,20,.20);
+  --glow:0 0 32px rgba(26,138,76,.22);
+  --glow-g:0 0 28px rgba(200,134,10,.22);
+  --r1:8px;--r2:12px;--r3:18px;--r4:24px;--r5:36px;
+  --ease:.24s cubic-bezier(.4,0,.2,1);
+  --ease-out:.4s cubic-bezier(0,.8,.2,1);
+}
+
+/* UTILITY */
+.reveal{opacity:1;transform:none}
+.u-center{text-align:center}
+.u-center .u-sub{margin-inline:auto}
+
+/* ── NAVIGATION ── */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:72px;padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s,box-shadow .3s,background .3s;
+}
+#navbar.scrolled{border-bottom-color:rgba(15,107,58,.1);box-shadow:0 2px 24px rgba(0,0,0,.06);background:rgba(255,255,255,.99)}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
+.nav-logo-img{width:48px;height:48px;border-radius:11px;border:1.5px solid rgba(15,107,58,.15);box-shadow:var(--ss);overflow:hidden;padding:3px;background:#fff;flex-shrink:0}
+.nav-logo-img img{width:100%;height:100%;object-fit:contain;border-radius:7px}
+.nav-logo-text b{display:block;font-family:'Cormorant Garamond',serif;font-size:14.5px;font-weight:700;color:var(--g2);line-height:1.2;letter-spacing:.1px}
+.nav-logo-text small{display:block;font-size:8.5px;font-weight:700;color:var(--a2);letter-spacing:3px;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--n2);transition:color var(--ease);position:relative;padding-bottom:3px;white-space:nowrap}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--g2);border-radius:1px;transition:width var(--ease)}
+.nav-links a:hover{color:var(--g2)}
+.nav-links a:hover::after{width:100%}
+.nav-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:50px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-size:13px;font-weight:600;letter-spacing:.2px;box-shadow:0 4px 18px rgba(15,107,58,.3);transition:all var(--ease);white-space:nowrap;flex-shrink:0}
+.nav-btn:hover{background:linear-gradient(135deg,var(--g2),var(--g3));transform:translateY(-1px);box-shadow:0 8px 28px rgba(15,107,58,.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:9px;min-width:44px;min-height:44px;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent;border:none;background:none}
+.hamburger span{display:block;width:23px;height:2px;background:var(--g2);border-radius:2px;transition:.28s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mobMenu{display:none;flex-direction:column;position:fixed;top:72px;inset-inline:0;bottom:0;background:#fff;z-index:999;padding:20px 6% 32px;overflow-y:auto;border-top:2px solid var(--g5)}
+#mobMenu.open{display:flex}
+#mobMenu a{font-size:16px;font-weight:600;color:var(--n0);padding:15px 0;border-bottom:1px solid var(--n5);display:flex;align-items:center;justify-content:space-between;-webkit-tap-highlight-color:transparent;transition:color var(--ease);min-height:52px}
+#mobMenu a:hover{color:var(--g2)}
+#mobMenu a::after{content:'›';font-size:22px;color:var(--g3);font-weight:300}
+#mobMenu .mob-cta{margin-top:22px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;padding:16px 24px;border-radius:50px;text-align:center;font-weight:700;font-size:15px;box-shadow:0 4px 20px rgba(15,107,58,.3)}
+#mobMenu .mob-cta::after{display:none}
+
+/* ── HERO ── */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://media.base44.com/images/public/6a16801fb0ff64008092b008/62503f5a3_generated_image.png');background-size:cover;background-position:center;will-change:transform}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(118deg,rgba(4,16,9,.96) 0%,rgba(10,40,20,.85) 50%,rgba(15,60,30,.4) 100%)}
+.hero-orb-1{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(26,138,76,.18) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none}
+.hero-orb-2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,184,48,.12) 0%,transparent 70%);bottom:100px;left:-100px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;padding:148px 6% 144px;max-width:840px}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(245,184,48,.3);background:rgba(245,184,48,.07);padding:8px 20px;border-radius:50px;margin-bottom:28px}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--a3);animation:dot-pulse 2.2s ease infinite}
+@keyframes dot-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.65)}}
+.hero-badge span{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--a3)}
+.hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.9rem,6.2vw,5.5rem);font-weight:700;color:#fff;line-height:1.04;margin-bottom:24px;letter-spacing:-.4px}
+.hero-inner h1 em{font-style:italic;background:linear-gradient(90deg,var(--a3),#ffd166,var(--a3));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3.5s linear infinite}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
+.hero-inner p{font-size:1.03rem;color:rgba(255,255,255,.68);line-height:1.95;max-width:520px;margin-bottom:42px;font-weight:300;letter-spacing:.1px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-gold{padding:14px 32px;border-radius:50px;background:linear-gradient(135deg,var(--a1),var(--a3));color:#1a0800;font-weight:700;font-size:14px;letter-spacing:.2px;display:inline-flex;align-items:center;gap:9px;border:none;cursor:pointer;transition:all var(--ease);box-shadow:0 6px 28px rgba(200,134,10,.42)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(200,134,10,.58);background:linear-gradient(135deg,var(--a3),#ffe066)}
+.btn-outline{padding:13px 30px;border-radius:50px;border:1.5px solid rgba(255,255,255,.32);color:#fff;font-size:14px;font-weight:600;transition:all var(--ease);display:inline-flex;align-items:center;gap:9px}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
+.hero-strip{position:absolute;bottom:0;inset-inline:0;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(4,16,9,.78);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid rgba(255,255,255,.06)}
+.hs-item{padding:18px 16px;display:flex;align-items:center;gap:12px;border-right:1px solid rgba(255,255,255,.05)}
+.hs-item:last-child{border-right:none}
+.hs-ico{width:38px;height:38px;border-radius:10px;background:rgba(245,184,48,.12);border:1px solid rgba(245,184,48,.22);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hs-ico i{color:var(--a3);font-size:14px}
+.hs-item strong{display:block;font-size:12px;font-weight:700;color:#fff;line-height:1.3}
+.hs-item span{display:block;font-size:10.5px;color:rgba(255,255,255,.4);margin-top:2px}
+
+/* ── TRUST BAR ── */
+#trustbar{background:#fff;border-bottom:1px solid rgba(15,107,58,.07);padding:14px 5%;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+.tb-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--n2);white-space:nowrap;letter-spacing:.2px}
+.tb-item i{font-size:13px}
+.tb-item .ti-green{color:var(--g2)}
+.tb-item .ti-gold{color:var(--a1)}
+.tb-sep{width:1px;height:22px;background:var(--n5)}
+
+/* ── SHARED SECTION STYLES ── */
+.section{padding:104px 6%}
+.s-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--g2);margin-bottom:14px}
+.s-eyebrow::before{content:'';display:block;width:22px;height:2px;background:linear-gradient(90deg,var(--a1),var(--a3));border-radius:1px}
+h2.s-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.1rem,3.6vw,3.4rem);font-weight:700;color:var(--n0);line-height:1.1;margin-bottom:16px;letter-spacing:-.3px}
+h2.s-title span{color:var(--g2)}
+h2.s-title em{font-style:italic;color:var(--a1)}
+.s-sub{font-size:.96rem;color:var(--n3);line-height:1.9;max-width:600px}
+.s-divider{width:48px;height:3px;background:linear-gradient(90deg,var(--a1),var(--a3));border-radius:2px;margin:0 auto 28px}
+.s-divider-left{width:48px;height:3px;background:linear-gradient(90deg,var(--a1),var(--a3));border-radius:2px;margin:0 0 28px}
+.btn-green{display:inline-flex;align-items:center;gap:9px;padding:13px 28px;border-radius:50px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-weight:600;font-size:13.5px;transition:all var(--ease);box-shadow:0 4px 20px rgba(15,107,58,.28);letter-spacing:.2px}
+.btn-green:hover{background:linear-gradient(135deg,var(--g2),var(--g3));transform:translateY(-1px);box-shadow:var(--glow)}
+
+/* ── ABOUT ── */
+#about{background:linear-gradient(158deg,var(--cream) 0%,var(--g6) 100%)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:start;margin-top:60px}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.a-main{grid-column:1/-1;height:290px;border-radius:var(--r3);overflow:hidden;box-shadow:var(--sl);position:relative}
+.a-main::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(4,16,9,.45));pointer-events:none}
+.a-main img,.a-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.a-main:hover img,.a-thumb:hover img{transform:scale(1.04)}
+.a-thumb{height:175px;border-radius:var(--r2);overflow:hidden;box-shadow:var(--sm)}
+.about-copy p{font-size:.95rem;color:var(--n3);line-height:1.95;margin-bottom:15px}
+.about-feats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0 30px}
+.af-item{background:#fff;border-radius:var(--r1);padding:16px 14px;border:1px solid rgba(15,107,58,.09);box-shadow:var(--sx);transition:all var(--ease)}
+.af-item:hover{box-shadow:var(--ss);border-color:rgba(15,107,58,.2);transform:translateY(-2px)}
+.af-item i{color:var(--g2);font-size:17px;margin-bottom:8px}
+.af-item strong{display:block;font-size:12px;font-weight:700;color:var(--n0);margin-bottom:4px}
+.af-item small{font-size:11.5px;color:var(--n4);line-height:1.6}
+
+/* ── PRODUCTS ── */
+#products{background:#fff}
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:56px}
+.prod-card{border-radius:var(--r3);overflow:hidden;border:1px solid rgba(15,107,58,.09);box-shadow:var(--ss);transition:all var(--ease-out);background:#fff}
+.prod-card:hover{transform:translateY(-10px);box-shadow:var(--sx2),var(--glow);border-color:rgba(15,107,58,.18)}
+.prod-slides{position:relative;height:310px;overflow:hidden;background:#f0f4f2}
+.prod-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .85s ease}
+.prod-slides img.active{opacity:1}
+.prod-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(4,16,9,.62));z-index:1;pointer-events:none}
+.prod-pill{position:absolute;top:14px;left:14px;z-index:2;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:50px;box-shadow:0 2px 12px rgba(15,107,58,.35)}
+.slide-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2}
+.slide-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.38);border:none;padding:0;cursor:pointer;transition:all .3s;flex-shrink:0}
+.slide-dot.active{background:#fff;width:18px;border-radius:3px}
+.prod-body{padding:26px 24px 24px;border-top:1px solid var(--n5)}
+.prod-origin{font-size:10.5px;color:var(--g2);font-weight:700;letter-spacing:.3px;margin-bottom:8px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.prod-origin i{font-size:8.5px;color:var(--a2)}
+.prod-body h3{font-family:'Cormorant Garamond',serif;font-size:1.78rem;font-weight:700;color:var(--n0);margin-bottom:5px;line-height:1.15}
+.prod-tagline{font-size:11.5px;font-weight:600;color:var(--a1);font-style:italic;margin-bottom:13px;letter-spacing:.2px}
+.prod-body p{font-size:12.5px;color:var(--n3);line-height:1.9;margin-bottom:20px}
+.prod-specs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(15,107,58,.1);border-radius:10px;overflow:hidden;margin-bottom:18px}
+.ps-cell{padding:9px 12px;border-right:1px solid rgba(15,107,58,.08);border-bottom:1px solid rgba(15,107,58,.08);background:var(--g6)}
+.ps-cell:nth-child(3n){border-right:none}
+.ps-cell:nth-last-child(-n+3){border-bottom:none}
+.ps-label{font-size:9.5px;color:var(--n4);font-weight:600;letter-spacing:.4px;text-transform:uppercase;margin-bottom:2px}
+.ps-val{font-size:12px;color:var(--n0);font-weight:700}
+.prod-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px}
+.prod-tag{font-size:10px;padding:3px 11px;border-radius:50px;border:1px solid rgba(15,107,58,.18);color:var(--g2);font-weight:600;background:var(--g5)}
+.prod-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:50px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-weight:600;font-size:13px;transition:all var(--ease);box-shadow:0 4px 16px rgba(15,107,58,.25)}
+.prod-cta:hover{background:linear-gradient(135deg,var(--g2),var(--g3));transform:translateY(-1px);box-shadow:var(--glow)}
+
+/* ── CATALOGUE ── */
+#catalogue{background:linear-gradient(158deg,var(--g6) 0%,var(--cream) 100%)}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.cat-card{background:#fff;border-radius:var(--r3);overflow:hidden;border:1px solid rgba(15,107,58,.08);box-shadow:var(--sx);transition:all var(--ease-out);display:flex;flex-direction:column}
+.cat-card:hover{transform:translateY(-9px);box-shadow:var(--sl);border-color:rgba(15,107,58,.16)}
+.cat-img{height:205px;overflow:hidden;position:relative;background:#eef5f1;flex-shrink:0}
+.cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.cat-card:hover .cat-img img{transform:scale(1.07)}
+.cat-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(4,16,9,.58))}
+.cat-pill{position:absolute;bottom:11px;left:11px;z-index:1;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:50px}
+.cat-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column}
+.cat-origin{font-size:10px;color:var(--g2);font-weight:700;letter-spacing:.2px;margin-bottom:7px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.cat-origin i{font-size:8px;color:var(--a2)}
+.cat-body h4{font-family:'Cormorant Garamond',serif;font-size:1.28rem;font-weight:700;color:var(--n0);margin-bottom:4px;line-height:1.2}
+.cat-tagline{font-size:10.5px;font-weight:600;color:var(--a1);font-style:italic;margin-bottom:9px;line-height:1.5}
+.cat-desc{font-size:12px;color:var(--n3);line-height:1.85;margin-bottom:14px;flex:1}
+.cat-specs{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(15,107,58,.1);border-radius:9px;overflow:hidden;margin-bottom:12px}
+.csp-cell{padding:7px 10px;border-right:1px solid rgba(15,107,58,.08);border-bottom:1px solid rgba(15,107,58,.08);background:var(--g6)}
+.csp-cell:nth-child(2n){border-right:none}
+.csp-cell:nth-last-child(-n+2){border-bottom:none}
+.csp-label{display:block;font-size:9px;color:var(--n4);font-weight:600;letter-spacing:.4px;text-transform:uppercase;margin-bottom:1px}
+.csp-val{display:block;font-size:11.5px;color:var(--n0);font-weight:700}
+.cat-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
+.cat-chip{font-size:9.5px;padding:3px 9px;border-radius:50px;border:1px solid rgba(15,107,58,.16);color:var(--g2);font-weight:600;background:var(--g5)}
+.cat-cta{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:50px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-weight:600;font-size:12px;transition:all var(--ease);box-shadow:0 3px 12px rgba(15,107,58,.2);margin-top:auto}
+.cat-cta:hover{background:linear-gradient(135deg,var(--g2),var(--g3));transform:translateY(-1px)}
+
+/* ── GALLERY ── */
+#gallery{overflow:hidden}
+.gallery-strip{display:grid;grid-template-columns:repeat(5,1fr);height:270px}
+.g-panel{overflow:hidden;position:relative;height:100%}
+.g-panel img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.g-panel:hover img{transform:scale(1.09)}
+.g-panel::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(4,16,9,.5));transition:opacity .4s}
+.g-panel:hover::after{opacity:0}
+
+/* ── STATS ── */
+.stats-band{background:linear-gradient(135deg,var(--g0),var(--g1),#0a3d1f);padding:56px 6%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 85%,rgba(245,184,48,.1) 0%,transparent 50%),radial-gradient(ellipse at 85% 15%,rgba(26,138,76,.25) 0%,transparent 50%)}
+.stat-item{position:relative;z-index:1}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:700;color:var(--a3);line-height:1;letter-spacing:-1px}
+.stat-label{font-size:11px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-top:8px}
+
+/* ── WHY US ── */
+#why{background:linear-gradient(135deg,var(--g0) 0%,var(--g1) 50%,#0c5430 100%);position:relative;overflow:hidden}
+#why::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(245,184,48,.1) 0%,transparent 45%),radial-gradient(ellipse at 80% 15%,rgba(26,138,76,.22) 0%,transparent 45%);pointer-events:none}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px;position:relative;z-index:1}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r3);padding:30px 24px;transition:all var(--ease);backdrop-filter:blur(10px)}
+.why-card:hover{background:rgba(255,255,255,.11);border-color:rgba(245,184,48,.32);transform:translateY(-6px);box-shadow:0 18px 48px rgba(0,0,0,.22)}
+.why-ico{width:50px;height:50px;border-radius:13px;background:rgba(245,184,48,.14);border:1px solid rgba(245,184,48,.28);display:flex;align-items:center;justify-content:center;margin-bottom:17px}
+.why-ico i{color:var(--a3);font-size:19px}
+.why-card h4{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:700;color:#fff;margin-bottom:9px;line-height:1.25}
+.why-card p{font-size:12.5px;color:rgba(255,255,255,.56);line-height:1.85}
+
+/* ── PROCESS ── */
+#process{background:#fff}
+.proc-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:60px;position:relative}
+.proc-steps::before{content:'';position:absolute;top:28px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--g5),var(--g2),var(--a3),var(--g2),var(--g5));z-index:0}
+.proc-step{text-align:center;padding:0 14px;position:relative;z-index:1}
+.proc-num{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 5px 20px rgba(15,107,58,.3),0 0 0 5px var(--g6);transition:all var(--ease)}
+.proc-step:hover .proc-num{background:linear-gradient(135deg,var(--a1),var(--a3));box-shadow:0 5px 24px rgba(200,134,10,.38),0 0 0 5px var(--a4);transform:scale(1.08)}
+.proc-step h5{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--n0);margin-bottom:7px;line-height:1.3}
+.proc-step p{font-size:11.5px;color:var(--n4);line-height:1.75}
+
+/* ── CONTACT SECTION ── */
+#contact{background:linear-gradient(158deg,#ecf8f2 0%,#fafaf7 100%)}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.62fr;gap:60px;margin-top:60px;align-items:start}
+
+/* Contact info panel */
+.ci-panel{display:flex;flex-direction:column;gap:0}
+.ci-promise{background:linear-gradient(135deg,var(--g0),var(--g1));border-radius:var(--r3);padding:22px;margin-bottom:20px;position:relative;overflow:hidden}
+.ci-promise::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 85% 15%,rgba(245,184,48,.14) 0%,transparent 55%);pointer-events:none}
+.ci-promise-inner{position:relative;z-index:1;display:flex;align-items:center;gap:14px}
+.ci-promise-ico{width:44px;height:44px;border-radius:11px;background:rgba(245,184,48,.18);border:1px solid rgba(245,184,48,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-promise-ico i{color:var(--a3);font-size:18px}
+.ci-promise-text strong{display:block;font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.ci-promise-text span{font-size:12px;color:rgba(255,255,255,.55);line-height:1.55}
+.ci-items{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.ci-item{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:#fff;border-radius:var(--r2);border:1px solid rgba(15,107,58,.09);box-shadow:var(--sx);transition:all var(--ease)}
+.ci-item:hover{box-shadow:var(--ss);border-color:rgba(15,107,58,.18);transform:translateX(3px)}
+.ci-ico{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;box-shadow:0 3px 12px rgba(15,107,58,.25)}
+.ci-ico.whatsapp{background:linear-gradient(135deg,#1a7f4b,#25d366)}
+.ci-item strong{display:block;font-size:10.5px;font-weight:700;color:var(--n0);letter-spacing:.4px;text-transform:uppercase;margin-bottom:3px}
+.ci-item span{font-size:13px;color:var(--n3);line-height:1.6}
+.ci-item a{color:var(--g2);font-weight:600;text-decoration:none;word-break:break-all;transition:color var(--ease)}
+.ci-item a:hover{color:var(--g3)}
+.ci-badges{background:#fff;border:1px solid rgba(15,107,58,.09);border-radius:var(--r2);padding:18px;box-shadow:var(--sx)}
+.ci-badges-title{font-size:10px;font-weight:700;color:var(--n4);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.ci-badge-list{display:flex;flex-wrap:wrap;gap:7px}
+.ci-badge{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:600;padding:5px 11px;border-radius:50px}
+.ci-badge.green{color:var(--g2);background:var(--g5);border:1px solid rgba(15,107,58,.16)}
+.ci-badge.gold{color:var(--a1);background:var(--a4);border:1px solid rgba(200,134,10,.16)}
+.ci-badge i{font-size:9.5px}
+
+/* ── ENQUIRY FORM — Premium Redesign ── */
+.eq-form-wrap{background:#fff;border-radius:var(--r4);overflow:hidden;box-shadow:var(--sx2);border:1px solid rgba(15,107,58,.08)}
+
+/* Form header */
+.eq-header{background:linear-gradient(135deg,var(--g0) 0%,var(--g1) 45%,#0c5430 100%);padding:30px 38px 26px;position:relative;overflow:hidden}
+.eq-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 90% 10%,rgba(245,184,48,.16) 0%,transparent 50%),radial-gradient(ellipse at 5% 90%,rgba(26,138,76,.35) 0%,transparent 50%);pointer-events:none}
+.eq-header-inner{position:relative;z-index:1}
+.eq-header h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:5px;line-height:1.2}
+.eq-header p{font-size:12.5px;color:rgba(255,255,255,.58);line-height:1.6;max-width:420px;margin-bottom:18px}
+.eq-trust-pills{display:flex;gap:8px;flex-wrap:wrap}
+.eq-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:50px;padding:5px 13px;font-size:10px;font-weight:600;color:rgba(255,255,255,.78);letter-spacing:.3px}
+.eq-pill i{color:var(--a3);font-size:9px}
+
+/* Form body */
+.eq-body{padding:34px 38px 38px}
+
+/* Step labels */
+.eq-step{font-size:9.5px;font-weight:700;color:var(--n4);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;margin-top:4px;display:flex;align-items:center;gap:8px}
+.eq-step::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(15,107,58,.12),transparent)}
+
+/* Field groups */
+.eq-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.eq-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.eq-group label{font-size:10.5px;font-weight:700;color:var(--n1);letter-spacing:.5px;text-transform:uppercase;display:flex;align-items:center;gap:4px}
+.eq-req{color:var(--g2);font-size:13px;line-height:1;font-weight:700}
+.eq-opt{font-size:9.5px;color:var(--n4);font-weight:500;text-transform:none;letter-spacing:0;margin-left:1px}
+.eq-group input,
+.eq-group select,
+.eq-group textarea{
+  width:100%;
+  padding:11px 15px;
+  border:1.5px solid rgba(15,107,58,.13);
+  border-radius:9px;
+  font-family:'Inter',sans-serif;
+  font-size:13.5px;
+  color:var(--n0);
+  background:#fafcfb;
+  outline:none;
+  transition:border-color var(--ease),box-shadow var(--ease),background var(--ease);
+  -webkit-appearance:none;
+  appearance:none;
+}
+.eq-group input::placeholder,
+.eq-group textarea::placeholder{color:#b4c0bb;font-size:13px}
+.eq-group input:hover,
+.eq-group select:hover,
+.eq-group textarea:hover{border-color:rgba(15,107,58,.25);background:#fff}
+.eq-group input:focus,
+.eq-group select:focus,
+.eq-group textarea:focus{border-color:var(--g2);box-shadow:0 0 0 3px rgba(15,107,58,.09);background:#fff}
+.eq-group input.invalid,
+.eq-group select.invalid,
+.eq-group textarea.invalid{border-color:#e03d3d!important;box-shadow:0 0 0 3px rgba(224,61,61,.08)!important;background:#fffafa!important}
+.eq-group select{
+  cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%230f6b3a' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 11px center;
+  background-size:17px;
+  padding-right:34px;
+}
+.eq-group select:disabled{opacity:.5;cursor:not-allowed;background-color:#f2f5f3}
+.eq-group textarea{resize:vertical;min-height:96px;line-height:1.7}
+.eq-hint{font-size:10.5px;color:var(--n4);line-height:1.4;margin-top:3px}
+
+/* GDPR box */
+.eq-gdpr{display:flex;gap:12px;align-items:flex-start;padding:15px 17px;background:linear-gradient(135deg,var(--g6),#f5fbf8);border-radius:10px;border:1.5px solid rgba(15,107,58,.13);margin-bottom:6px;transition:border-color var(--ease),background var(--ease);cursor:pointer}
+.eq-gdpr.checked{border-color:var(--g2);background:linear-gradient(135deg,#e2f5eb,var(--g6))}
+.eq-gdpr.invalid{border-color:#e03d3d!important;background:#fffafa!important}
+.eq-gdpr-check{width:18px;height:18px;min-width:18px;border-radius:4px;margin-top:2px;accent-color:var(--g2);cursor:pointer;flex-shrink:0}
+.eq-gdpr-text{font-size:11.5px;color:var(--n3);line-height:1.7;user-select:none}
+.eq-gdpr-text strong{color:var(--g2)}
+.eq-gdpr-text a{color:var(--g2);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.eq-err{display:none;align-items:center;gap:7px;margin-bottom:16px;padding:9px 14px;background:#fff3f3;border:1px solid rgba(224,61,61,.22);border-radius:8px;font-size:11.5px;color:#c0392b;font-weight:600}
+.eq-err.visible{display:flex}
+.eq-err i{font-size:11px;flex-shrink:0}
+
+/* Submit button */
+.eq-submit{width:100%;padding:15px 28px;border:none;border-radius:11px;background:linear-gradient(135deg,var(--g0),var(--g1),var(--g2));color:#fff;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;letter-spacing:.3px;cursor:pointer;transition:all var(--ease);box-shadow:0 7px 28px rgba(15,107,58,.38);display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;position:relative;overflow:hidden}
+.eq-submit::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent);opacity:0;transition:opacity var(--ease)}
+.eq-submit:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(15,107,58,.5)}
+.eq-submit:hover::after{opacity:1}
+.eq-submit:active{transform:translateY(0)}
+.eq-submit:disabled{opacity:.62;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+.eq-submit-note{text-align:center;font-size:11px;color:var(--n4);margin-top:11px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.eq-submit-note span{display:flex;align-items:center;gap:4px}
+.eq-submit-note i{font-size:10px;color:var(--g2)}
+
+/* Toast notification */
+#toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);padding:13px 26px;border-radius:50px;font-size:13.5px;font-weight:600;color:#fff;box-shadow:var(--sl);opacity:0;transition:all .38s cubic-bezier(.2,.8,.4,1);z-index:9500;pointer-events:none;white-space:nowrap;max-width:92vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── FOOTER ── */
+footer{background:linear-gradient(158deg,var(--g0) 0%,#071e0f 100%);color:rgba(255,255,255,.5);padding:68px 6% 0;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(245,184,48,.06) 0%,transparent 42%);pointer-events:none}
+.footer-grid{display:grid;grid-template-columns:1.55fr 1fr 1fr 1fr;gap:44px;margin-bottom:52px;position:relative;z-index:1}
+.fb-logo{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+.fb-logo-img{width:46px;height:46px;border-radius:10px;border:1.5px solid rgba(255,255,255,.12);overflow:hidden;padding:3px;background:rgba(255,255,255,.05);flex-shrink:0}
+.fb-logo-img img{width:100%;height:100%;object-fit:contain;border-radius:7px}
+.fb-logo-text b{display:block;font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;color:#fff;line-height:1.2}
+.fb-logo-text small{display:block;font-size:8.5px;font-weight:700;color:var(--a2);letter-spacing:2.5px;text-transform:uppercase;margin-top:1px}
+.footer-brand > p{font-size:12.5px;line-height:1.85;color:rgba(255,255,255,.42);max-width:250px;margin-bottom:20px}
+.footer-socials{display:flex;gap:8px}
+.fsoc{width:35px;height:35px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:13px;transition:all var(--ease)}
+.fsoc:hover{background:var(--g2);border-color:var(--g2);color:#fff;transform:translateY(-2px);box-shadow:0 4px 14px rgba(15,107,58,.38)}
+.footer-col h5{font-size:10.5px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a{font-size:12.5px;color:rgba(255,255,255,.42);transition:color var(--ease);display:flex;align-items:center;gap:6px}
+.footer-col ul li a:hover{color:var(--a3)}
+.footer-col ul li a::before{content:'›';color:var(--g3);font-size:13px}
+.footer-col p{font-size:12.5px;color:rgba(255,255,255,.42);line-height:1.85}
+.footer-col a{color:rgba(255,255,255,.55);transition:color var(--ease)}
+.footer-col a:hover{color:var(--a3)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:1}
+.footer-bottom span{font-size:11.5px;color:rgba(255,255,255,.25)}
+.footer-certs{display:flex;gap:12px;flex-wrap:wrap}
+.footer-cert{font-size:10px;font-weight:600;color:rgba(255,255,255,.35);padding:3px 11px;border:1px solid rgba(255,255,255,.09);border-radius:50px;letter-spacing:.5px}
+
+/* ── WHATSAPP BUTTON ── */
+.wa-btn{position:fixed;bottom:26px;right:26px;z-index:900;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;box-shadow:0 5px 24px rgba(37,211,102,.42);transition:all var(--ease);-webkit-tap-highlight-color:transparent}
+.wa-btn::before{content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(37,211,102,.3);animation:wa-ring 2.4s ease infinite}
+@keyframes wa-ring{0%,100%{transform:scale(1);opacity:1}60%{transform:scale(1.32);opacity:0}}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 9px 32px rgba(37,211,102,.58)}
+
+/* ── PRIVACY MODAL ── */
+#privacy-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.68);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:18px}
+.pm-box{background:#fff;border-radius:var(--r4);max-width:720px;width:100%;max-height:88vh;overflow-y:auto;padding:44px 42px;position:relative;box-shadow:var(--sx2)}
+.pm-close{position:sticky;top:0;float:right;background:var(--n6);border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px;color:var(--n3);display:flex;align-items:center;justify-content:center;transition:all var(--ease);flex-shrink:0;margin-left:16px;margin-bottom:8px;z-index:2}
+.pm-close:hover{background:var(--g2);color:#fff}
+.pm-box h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--g2);margin-bottom:6px}
+.pm-date{font-size:11.5px;color:var(--n4);margin-bottom:26px}
+.pm-box h3{font-size:12.5px;font-weight:700;color:var(--g2);text-transform:uppercase;letter-spacing:1px;margin:22px 0 8px}
+.pm-box p,.pm-box li{font-size:13.5px;color:#444;line-height:1.85;margin-bottom:10px}
+.pm-box ul{padding-left:20px}
+.pm-box a{color:var(--g2);font-weight:600}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .prod-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .proc-steps{grid-template-columns:1fr 1fr 1fr;gap:24px}
+  .proc-steps::before{display:none}
+  .stats-band{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+  .nav-links,.nav-btn{display:none}
+  .hamburger{display:flex}
+  .hero-inner{padding:118px 5% 155px}
+  .hero-strip{grid-template-columns:1fr 1fr}
+  .hs-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.05)}
+  .about-grid,.contact-wrap{grid-template-columns:1fr}
+  .about-imgs{grid-template-columns:1fr;gap:10px}
+  .cat-grid{grid-template-columns:1fr}
+  .gallery-strip{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:1fr}
+  .proc-steps{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .eq-row{grid-template-columns:1fr}
+  .eq-body,.eq-header{padding-inline:22px}
+  .eq-body{padding-top:26px}
+  .section{padding:72px 5%}
+}
+@media(max-width:520px){
+  .phone-wrap .phone-code{width:82px;font-size:11.5px}
+  
+  .prod-specs{grid-template-columns:1fr 1fr}
+  
+  .tb-sep{display:none}
+  
+  .hero-inner{padding-top:108px;padding-bottom:128px}
+  
+  .gallery-strip{grid-template-columns:1fr 1fr}
+  .proc-steps{grid-template-columns:1fr}
+  .stats-band{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .hero-strip{grid-template-columns:1fr}
+  .tb-sep{display:none}
+  .eq-body,.eq-header{padding-inline:18px}
+}
+@media(hover:none){
+  .prod-card:hover,.cat-card:hover,.why-card:hover,.af-item:hover,.ci-item:hover{transform:none}
+}
+/* iOS font-size lock — prevent auto-zoom */
+input,select,textarea{font-size:16px!important}
+
+.phone-wrap{display:flex;align-items:stretch;border:1.5px solid rgba(15,107,58,.18);border-radius:10px;overflow:hidden;background:#fff;transition:border-color .2s,box-shadow .2s}
+.phone-wrap:focus-within{border-color:var(--g2);box-shadow:0 0 0 3px rgba(27,94,53,.09)}
+.phone-wrap .phone-code{flex:0 0 auto;width:108px;border:none!important;border-right:1.5px solid rgba(15,107,58,.14)!important;border-radius:0!important;background:#f6fbf7;font-size:12.5px;padding:0 4px 0 8px;cursor:pointer;color:#1a1a1a;font-weight:600;outline:none!important;box-shadow:none!important;height:100%}
+.phone-wrap .phone-code:focus{background:#edf7f0}
+.phone-wrap input[type="tel"]{flex:1 1 auto;border:none!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;outline:none!important;padding:13px 14px;font-size:14px;color:#1a1a1a;min-width:0}
+.phone-wrap input[type="tel"]:focus{box-shadow:none!important;border:none!important}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-img">
+      <img src="https://base44.app/api/apps/6a16801fb0ff64008092b008/files/mp/public/6a16801fb0ff64008092b008/83a38a071_logo.jpg" alt="Look Agric Logo" width="42" height="42" loading="eager" fetchpriority="high"/>
+    </div>
+    <div class="nav-logo-text">
+      <b>LOOK AGRIC ALLIED</b>
+      <small>Limited &mdash; Nigeria</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#catalogue">Catalogue</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-btn"><i class="fas fa-envelope"></i> Get a Quote</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<nav id="mobMenu" aria-label="Mobile Navigation">
+  <a href="#about" onclick="closeMob()">About Us</a>
+  <a href="#products" onclick="closeMob()">Our Products</a>
+  <a href="#catalogue" onclick="closeMob()">Full Catalogue</a>
+  <a href="#why" onclick="closeMob()">Why Choose Us</a>
+  <a href="#process" onclick="closeMob()">Export Process</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <a href="#contact" class="mob-cta" onclick="closeMob()">&#9993; Request a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-orb-1"></div>
+  <div class="hero-orb-2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>Nigeria&rsquo;s Premier Agric Exporter</span>
+    </div>
+    <h1>Connecting Nigeria&rsquo;s<br/>Finest Farms to<br/><em>Global Markets</em></h1>
+    <p>LOOK AGRIC ALLIED LIMITED sources and exports premium cocoa beans, cashew nuts, sesame seeds, shea nuts, ginger, soybeans, palm kernel and hibiscus — from Nigeria&rsquo;s fertile farmlands to buyers across the world.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-gold"><i class="fas fa-seedling"></i> Our Products</a>
+      <a href="#contact" class="btn-outline">Request a Quote &rarr;</a>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="hs-item"><div class="hs-ico"><i class="fas fa-medal"></i></div><div><strong>Export Grade Quality</strong><span>Every batch certified</span></div></div>
+    <div class="hs-item"><div class="hs-ico"><i class="fas fa-layer-group"></i></div><div><strong>8 Commodity Lines</strong><span>Diverse farm produce</span></div></div>
+    <div class="hs-item"><div class="hs-ico"><i class="fas fa-ship"></i></div><div><strong>Global Shipping</strong><span>Full docs &amp; logistics</span></div></div>
+    <div class="hs-item"><div class="hs-ico"><i class="fas fa-headset"></i></div><div><strong>Dedicated Support</strong><span>24h response guarantee</span></div></div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div id="trustbar">
+  <div class="tb-item"><i class="fas fa-globe-africa ti-green"></i> Export to 40+ Countries</div>
+  <div class="tb-sep"></div>
+  <div class="tb-item"><i class="fas fa-check-circle ti-green"></i> EU &amp; International Compliance</div>
+  <div class="tb-sep"></div>
+  <div class="tb-item"><i class="fas fa-trophy ti-gold"></i> Grade A Quality Certified</div>
+  <div class="tb-sep"></div>
+  <div class="tb-item"><i class="fas fa-box ti-green"></i> FOB &amp; CIF Available</div>
+  <div class="tb-sep"></div>
+  <div class="tb-item"><i class="fas fa-shield-alt ti-gold"></i> GDPR Compliant</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="about-grid">
+    <div class="about-imgs reveal">
+      <div class="a-main">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/7d4135330_generated_image.png" alt="Nigerian farmland aerial view" loading="eager" fetchpriority="high"/>
+      </div>
+      <div class="a-thumb">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/331c9d663_generated_image.png" alt="Cocoa beans drying" loading="lazy"/>
+      </div>
+      <div class="a-thumb">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/4d0dee8e3_generated_image.png" alt="Premium cashew nuts" loading="lazy"/>
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <div class="s-eyebrow">Who We Are</div>
+      <h2 class="s-title">Rooted in Nigeria,<br/><span>Reaching the World</span></h2>
+      <div class="s-divider-left"></div>
+      <p>LOOK AGRIC ALLIED LIMITED is a Nigerian farm produce export company headquartered in Ibadan, Oyo State. We specialise in the sourcing, processing, and export of premium agricultural commodities — connecting Nigeria&rsquo;s richest farmlands to global buyers across Europe, Asia, the Middle East, and the Americas.</p>
+      <p>We work directly with trusted farmers across Nigeria&rsquo;s most productive agric belts, ensuring every lot meets international standards for quality, purity, and consistency — every shipment, every time.</p>
+      <div class="about-feats">
+        <div class="af-item"><i class="fas fa-handshake"></i><strong>Direct Farmer Sourcing</strong><small>Partnering with local farmers for fresh, traceable produce.</small></div>
+        <div class="af-item"><i class="fas fa-certificate"></i><strong>Quality Assurance</strong><small>Every batch inspected and graded to international export spec.</small></div>
+        <div class="af-item"><i class="fas fa-ship"></i><strong>Reliable Export</strong><small>Timely shipments with complete documentation support.</small></div>
+        <div class="af-item"><i class="fas fa-leaf"></i><strong>Sustainable Practices</strong><small>Eco-friendly, responsible, community-driven farming.</small></div>
+      </div>
+      <a href="#contact" class="btn-green"><i class="fas fa-paper-plane"></i> Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section id="products" class="section">
+  <div class="u-center reveal">
+    <div class="s-eyebrow">Flagship Exports</div>
+    <h2 class="s-title">Our Two <span>Premier Commodities</span></h2>
+    <div class="s-divider"></div>
+    <p class="s-sub u-sub">Nigeria&rsquo;s most internationally traded farm produce — sourced from the finest growing zones, processed to specification, and shipped with care.</p>
+  </div>
+  <div class="prod-grid" style="margin-top:56px">
+
+    <!-- COCOA -->
+    <div class="prod-card reveal">
+      <div class="prod-slides" id="cocoaSlides">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/331c9d663_generated_image.png" alt="Fermented cocoa beans drying" class="active" loading="eager"/>
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/2c224109a_generated_image.png" alt="Cocoa pod harvest" loading="lazy"/>
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/cebbf1d33_generated_image.png" alt="Cocoa beans close-up" loading="lazy"/>
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/80d19959a_generated_image.png" alt="Cocoa pods on tree" loading="lazy"/>
+        <div class="prod-overlay"></div>
+        <div class="prod-pill">Cocoa Beans</div>
+        <div class="slide-dots" id="cocoaDots">
+          <button class="slide-dot active" onclick="goSlide('cocoa',0)" aria-label="Slide 1"></button>
+          <button class="slide-dot" onclick="goSlide('cocoa',1)" aria-label="Slide 2"></button>
+          <button class="slide-dot" onclick="goSlide('cocoa',2)" aria-label="Slide 3"></button>
+          <button class="slide-dot" onclick="goSlide('cocoa',3)" aria-label="Slide 4"></button>
+        </div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-origin"><i class="fas fa-map-marker-alt"></i> Oyo &middot; Osun &middot; Ondo &middot; Edo &middot; Cross River</div>
+        <h3>Premium Cocoa Beans</h3>
+        <p class="prod-tagline">&ldquo;The Backbone of Global Chocolate &amp; Confectionery&rdquo;</p>
+        <p>Nigeria is the world&rsquo;s 4th largest cocoa producer. Our beans are harvested at peak ripeness, fermented for 5&ndash;7 days, and sun-dried to achieve a perfect flavour profile prized by chocolatiers worldwide.</p>
+        <div class="prod-specs">
+          <div class="ps-cell"><div class="ps-label">Grade</div><div class="ps-val">Grade 1 / 2</div></div>
+          <div class="ps-cell"><div class="ps-label">Moisture</div><div class="ps-val">&le; 7.5%</div></div>
+          <div class="ps-cell"><div class="ps-label">Defects</div><div class="ps-val">&le; 5%</div></div>
+          <div class="ps-cell"><div class="ps-label">Fat Content</div><div class="ps-val">&ge; 48%</div></div>
+          <div class="ps-cell"><div class="ps-label">Packing</div><div class="ps-val">60kg Jute Bags</div></div>
+          <div class="ps-cell"><div class="ps-label">Min. Order</div><div class="ps-val">1 &times; 20ft FCL</div></div>
+        </div>
+        <div class="prod-tags">
+          <span class="prod-tag">Chocolate</span>
+          <span class="prod-tag">Cocoa Butter</span>
+          <span class="prod-tag">Cocoa Powder</span>
+          <span class="prod-tag">Confectionery</span>
+          <span class="prod-tag">Cosmetics</span>
+        </div>
+        <a href="#contact" class="prod-cta"><i class="fas fa-envelope"></i> Request Quote</a>
+      </div>
+    </div>
+
+    <!-- CASHEW -->
+    <div class="prod-card reveal">
+      <div class="prod-slides" id="cashewSlides">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/4d0dee8e3_generated_image.png" alt="Premium cashew nuts" class="active" loading="eager"/>
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/57376a37e_generated_image.png" alt="Cashew farm harvest" loading="lazy"/>
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/83d81fed0_generated_image.png" alt="Cashew nuts export grade" loading="lazy"/>
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/a6cfddf09_generated_image.png" alt="Cashew orchard" loading="lazy"/>
+        <div class="prod-overlay"></div>
+        <div class="prod-pill">Cashew Nuts</div>
+        <div class="slide-dots" id="cashewDots">
+          <button class="slide-dot active" onclick="goSlide('cashew',0)" aria-label="Slide 1"></button>
+          <button class="slide-dot" onclick="goSlide('cashew',1)" aria-label="Slide 2"></button>
+          <button class="slide-dot" onclick="goSlide('cashew',2)" aria-label="Slide 3"></button>
+          <button class="slide-dot" onclick="goSlide('cashew',3)" aria-label="Slide 4"></button>
+        </div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-origin"><i class="fas fa-map-marker-alt"></i> Kogi &middot; Enugu &middot; Benue &middot; Kwara &middot; Nassarawa</div>
+        <h3>Raw Cashew Nuts (RCN)</h3>
+        <p class="prod-tagline">&ldquo;West Africa&rsquo;s Premium Cashew — Trusted by Global Processors&rdquo;</p>
+        <p>Sourced from Nigeria&rsquo;s central and eastern cashew belts, our Raw Cashew Nuts are harvested at full maturity, sun-dried, and cleaned to achieve consistently high outturn (KOR) rates favoured by processors in India, Vietnam, and Europe.</p>
+        <div class="prod-specs">
+          <div class="ps-cell"><div class="ps-label">Grade</div><div class="ps-val">Grade 1 RCN</div></div>
+          <div class="ps-cell"><div class="ps-label">Moisture</div><div class="ps-val">&le; 9%</div></div>
+          <div class="ps-cell"><div class="ps-label">KOR</div><div class="ps-val">&ge; 48 lbs/80kg</div></div>
+          <div class="ps-cell"><div class="ps-label">Outturn</div><div class="ps-val">&ge; 48%</div></div>
+          <div class="ps-cell"><div class="ps-label">Packing</div><div class="ps-val">80kg Jute Bags</div></div>
+          <div class="ps-cell"><div class="ps-label">Min. Order</div><div class="ps-val">1 &times; 20ft FCL</div></div>
+        </div>
+        <div class="prod-tags">
+          <span class="prod-tag">Cashew Processing</span>
+          <span class="prod-tag">Snack Industry</span>
+          <span class="prod-tag">Cashew Kernel</span>
+          <span class="prod-tag">CNSL</span>
+        </div>
+        <a href="#contact" class="prod-cta"><i class="fas fa-envelope"></i> Request Quote</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CATALOGUE -->
+<section id="catalogue" class="section">
+  <div class="u-center reveal">
+    <div class="s-eyebrow">Full Product Catalogue</div>
+    <h2 class="s-title">All <span>Eight Commodities</span></h2>
+    <div class="s-divider"></div>
+    <p class="s-sub u-sub">A comprehensive export portfolio — all sourced from Nigeria&rsquo;s most productive growing zones, processed to international grade, and shipped with full documentation.</p>
+  </div>
+  <div class="cat-grid" style="margin-top:48px">
+
+    <!-- SESAME -->
+    <div class="cat-card reveal">
+      <div class="cat-img">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/33c27abeb_generated_image.png" alt="White sesame seeds" loading="lazy"/>
+        <div class="cat-img-overlay"></div>
+        <div class="cat-pill">Sesame Seeds</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Jigawa &middot; Yobe &middot; Borno &middot; Kebbi &middot; Niger</div>
+        <h4>White Sesame Seeds</h4>
+        <p class="cat-tagline">&ldquo;Nigeria&rsquo;s Golden Seed — Prized in Asian &amp; Middle Eastern Markets&rdquo;</p>
+        <p class="cat-desc">Cleaned, sorted and hulled or natural (non-hulled) to 99.95% purity. High oil content and bright white colour make them highly sought by the food, confectionery and cosmetics industries.</p>
+        <div class="cat-specs">
+          <div class="csp-cell"><span class="csp-label">Purity</span><span class="csp-val">&ge; 99.95%</span></div>
+          <div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 6%</span></div>
+          <div class="csp-cell"><span class="csp-label">Oil Content</span><span class="csp-val">48–52%</span></div>
+          <div class="csp-cell"><span class="csp-label">Min. Order</span><span class="csp-val">1 FCL</span></div>
+        </div>
+        <div class="cat-chips">
+          <span class="cat-chip">Food Industry</span>
+          <span class="cat-chip">Tahini</span>
+          <span class="cat-chip">Sesame Oil</span>
+          <span class="cat-chip">Cosmetics</span>
+        </div>
+        <a href="#contact" class="cat-cta">Request Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- SHEA NUTS -->
+    <div class="cat-card reveal">
+      <div class="cat-img">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/e6177cf01_generated_image.png" alt="Shea nuts" loading="lazy"/>
+        <div class="cat-img-overlay"></div>
+        <div class="cat-pill">Shea Nuts</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Kwara &middot; Kogi &middot; Niger &middot; Benue &middot; Taraba</div>
+        <h4>Shea Nuts (Vitellaria)</h4>
+        <p class="cat-tagline">&ldquo;Nature&rsquo;s Superfat — The Cosmetics &amp; Confectionery Gold Standard&rdquo;</p>
+        <p class="cat-desc">Sourced from Nigeria&rsquo;s Middle Belt shea parklands, our dried shea nuts are cleaned, graded, and sun-dried to optimal moisture levels for consistent extraction. High free fatty acid (FFA) compliance available.</p>
+        <div class="cat-specs">
+          <div class="csp-cell"><span class="csp-label">Fat Content</span><span class="csp-val">40–50%</span></div>
+          <div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 8%</span></div>
+          <div class="csp-cell"><span class="csp-label">FFA</span><span class="csp-val">&le; 5%</span></div>
+          <div class="csp-cell"><span class="csp-label">Min. Order</span><span class="csp-val">1 FCL</span></div>
+        </div>
+        <div class="cat-chips">
+          <span class="cat-chip">Shea Butter</span>
+          <span class="cat-chip">Cosmetics</span>
+          <span class="cat-chip">Chocolate</span>
+          <span class="cat-chip">Pharmaceuticals</span>
+        </div>
+        <a href="#contact" class="cat-cta">Request Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- SOYBEANS -->
+    <div class="cat-card reveal">
+      <div class="cat-img">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/e079f008a_generated_image.png" alt="Non-GMO soybeans" loading="lazy"/>
+        <div class="cat-img-overlay"></div>
+        <div class="cat-pill">Soybeans</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Benue &middot; Kaduna &middot; Plateau &middot; Taraba &middot; Nasarawa</div>
+        <h4>Non-GMO Soybeans</h4>
+        <p class="cat-tagline">&ldquo;Clean Protein from Nigeria&rsquo;s Fertile Middle Belt&rdquo;</p>
+        <p class="cat-desc">Nigeria&rsquo;s Non-GMO soybeans are identity-preserved and free from genetic modification, making them highly desirable in European and Asian markets. Cleaned, sorted, and dried to specification.</p>
+        <div class="cat-specs">
+          <div class="csp-cell"><span class="csp-label">Protein</span><span class="csp-val">36–42%</span></div>
+          <div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 13%</span></div>
+          <div class="csp-cell"><span class="csp-label">Oil Content</span><span class="csp-val">18–22%</span></div>
+          <div class="csp-cell"><span class="csp-label">Min. Order</span><span class="csp-val">1 FCL</span></div>
+        </div>
+        <div class="cat-chips">
+          <span class="cat-chip">Animal Feed</span>
+          <span class="cat-chip">Soy Oil</span>
+          <span class="cat-chip">Food Processing</span>
+          <span class="cat-chip">Tofu</span>
+        </div>
+        <a href="#contact" class="cat-cta">Request Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- GINGER -->
+    <div class="cat-card reveal">
+      <div class="cat-img">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/290107872_generated_image.png" alt="Dried ginger root" loading="lazy"/>
+        <div class="cat-img-overlay"></div>
+        <div class="cat-pill">Dried Ginger</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Kaduna &middot; Nassarawa &middot; Gombe &middot; Benue &middot; Plateau</div>
+        <h4>Dried Ginger Root</h4>
+        <p class="cat-tagline">&ldquo;Nigeria Produces the World&rsquo;s Finest Export-Grade Ginger&rdquo;</p>
+        <p class="cat-desc">Nigerian ginger is globally renowned for its high oleoresin and essential oil content, intense pungency, and distinctive aroma. Processed as split, whole, or sliced dried ginger — all cleaned to EU phytosanitary standards.</p>
+        <div class="cat-specs">
+          <div class="csp-cell"><span class="csp-label">Gingerol</span><span class="csp-val">High (&ge;1.5%)</span></div>
+          <div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 10%</span></div>
+          <div class="csp-cell"><span class="csp-label">Ash</span><span class="csp-val">&le; 7%</span></div>
+          <div class="csp-cell"><span class="csp-label">Min. Order</span><span class="csp-val">1 FCL</span></div>
+        </div>
+        <div class="cat-chips">
+          <span class="cat-chip">Food &amp; Beverage</span>
+          <span class="cat-chip">Pharmaceuticals</span>
+          <span class="cat-chip">Spice Industry</span>
+          <span class="cat-chip">Oleoresins</span>
+        </div>
+        <a href="#contact" class="cat-cta">Request Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- PALM KERNEL -->
+    <div class="cat-card reveal">
+      <div class="cat-img">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/e310ee53b_generated_image.png" alt="Palm kernel nuts" loading="lazy"/>
+        <div class="cat-img-overlay"></div>
+        <div class="cat-pill">Palm Kernel</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Rivers &middot; Delta &middot; Imo &middot; Akwa-Ibom &middot; Cross River</div>
+        <h4>Palm Kernel Nuts / PKO</h4>
+        <p class="cat-tagline">&ldquo;Nigeria&rsquo;s Tropical Industrial Oil — From the Niger Delta Belt&rdquo;</p>
+        <p class="cat-desc">Derived from the inner seed of the African oil palm. Available as dried palm kernel nuts or crude Palm Kernel Oil (PKO) in bulk tankers or drums — cleaned, graded, and dried to spec.</p>
+        <div class="cat-specs">
+          <div class="csp-cell"><span class="csp-label">Oil Content</span><span class="csp-val">45–55%</span></div>
+          <div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 8%</span></div>
+          <div class="csp-cell"><span class="csp-label">FFA (PKO)</span><span class="csp-val">&le; 5%</span></div>
+          <div class="csp-cell"><span class="csp-label">Min. Order</span><span class="csp-val">1 FCL</span></div>
+        </div>
+        <div class="cat-chips">
+          <span class="cat-chip">Soap &amp; Detergent</span>
+          <span class="cat-chip">Oleochemicals</span>
+          <span class="cat-chip">Cosmetics</span>
+          <span class="cat-chip">Biofuel</span>
+        </div>
+        <a href="#contact" class="cat-cta">Request Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- HIBISCUS -->
+    <div class="cat-card reveal">
+      <div class="cat-img">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/a6202cfc3_generated_image.png" alt="Dried hibiscus flowers" loading="lazy"/>
+        <div class="cat-img-overlay"></div>
+        <div class="cat-pill">Hibiscus Flowers</div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Kano &middot; Jigawa &middot; Katsina &middot; Zamfara &middot; Sokoto</div>
+        <h4>Dried Hibiscus (Zobo)</h4>
+        <p class="cat-tagline">&ldquo;Nigeria&rsquo;s Ruby Flower — A Global Superfood &amp; Beverage Ingredient&rdquo;</p>
+        <p class="cat-desc">Nigeria is the world&rsquo;s largest exporter of dried hibiscus. Our deep ruby-red calyces are hand-picked at peak colour intensity, shade-dried, and sorted free of stems and foreign matter.</p>
+        <div class="cat-specs">
+          <div class="csp-cell"><span class="csp-label">Colour Grade</span><span class="csp-val">Grade A / B</span></div>
+          <div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 12%</span></div>
+          <div class="csp-cell"><span class="csp-label">Foreign Matter</span><span class="csp-val">&le; 1%</span></div>
+          <div class="csp-cell"><span class="csp-label">Min. Order</span><span class="csp-val">1 FCL</span></div>
+        </div>
+        <div class="cat-chips">
+          <span class="cat-chip">Herbal Tea</span>
+          <span class="cat-chip">Food Colouring</span>
+          <span class="cat-chip">Nutraceuticals</span>
+          <span class="cat-chip">Functional Drinks</span>
+        </div>
+        <a href="#contact" class="cat-cta">Request Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div id="gallery">
+  <div class="gallery-strip">
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/7d4135330_generated_image.png" alt="Nigerian farmland" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/331c9d663_generated_image.png" alt="Cocoa beans drying" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/4d0dee8e3_generated_image.png" alt="Cashew nuts" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/33c27abeb_generated_image.png" alt="Sesame seeds" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/a6202cfc3_generated_image.png" alt="Hibiscus flowers" loading="lazy"/></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Commodity Lines</div></div>
+  <div class="stat-item"><div class="stat-num">40+</div><div class="stat-label">Countries Served</div></div>
+  <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Farm Partners</div></div>
+  <div class="stat-item"><div class="stat-num">24h</div><div class="stat-label">Quote Turnaround</div></div>
+</div>
+
+<!-- WHY US -->
+<section id="why" class="section">
+  <div class="u-center reveal">
+    <div class="s-eyebrow" style="color:rgba(255,255,255,.55)">Why Choose Us</div>
+    <h2 class="s-title" style="color:#fff">Your Trusted <em>Agric Export Partner</em></h2>
+    <div class="s-divider"></div>
+    <p class="s-sub u-sub" style="color:rgba(255,255,255,.52)">Deep local knowledge. International standards. A seamless, transparent export experience — every single time.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-ico"><i class="fas fa-seedling"></i></div><h4>Farm-to-Ship Traceability</h4><p>Complete traceability from farm origin to final shipment. You know exactly where your produce comes from — total confidence in every batch we ship.</p></div>
+    <div class="why-card reveal"><div class="why-ico"><i class="fas fa-star"></i></div><h4>Uncompromising Quality</h4><p>Every consignment undergoes rigorous inspection for moisture, defects, purity, and grade. We only ship what meets your exact specification — no shortcuts.</p></div>
+    <div class="why-card reveal"><div class="why-ico"><i class="fas fa-file-contract"></i></div><h4>Full Documentation</h4><p>From phytosanitary certificates to certificates of origin, fumigation, and quality reports — every document in order, every time. Zero hassle at customs.</p></div>
+    <div class="why-card reveal"><div class="why-ico"><i class="fas fa-handshake"></i></div><h4>Direct Farmer Network</h4><p>We work directly with over 500 farmers across Nigeria, cutting out middlemen and guaranteeing you the best price-to-quality ratio available in the market.</p></div>
+    <div class="why-card reveal"><div class="why-ico"><i class="fas fa-globe-africa"></i></div><h4>Global Shipping Experience</h4><p>We handle FCL and LCL shipments to ports across Europe, Asia, the Middle East, and the Americas. Experienced freight teams — reliable, on-time delivery.</p></div>
+    <div class="why-card reveal"><div class="why-ico"><i class="fas fa-headset"></i></div><h4>Responsive Communication</h4><p>A dedicated export team available to respond to enquiries, provide samples, share test reports, and keep you updated at every stage of your order.</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section">
+  <div class="u-center reveal">
+    <div class="s-eyebrow">Our Export Process</div>
+    <h2 class="s-title">From <span>Farm to Your Port</span></h2>
+    <div class="s-divider"></div>
+    <p class="s-sub u-sub">A streamlined, transparent 5-step journey from sourcing to delivery — built for reliability and buyer confidence.</p>
+  </div>
+  <div class="proc-steps" style="margin-top:60px">
+    <div class="proc-step reveal"><div class="proc-num">01</div><h5>Sourcing &amp; Harvest</h5><p>Direct procurement from trusted farmer networks across Nigeria&rsquo;s best producing zones.</p></div>
+    <div class="proc-step reveal"><div class="proc-num">02</div><h5>Processing &amp; Grading</h5><p>Cleaning, drying, sorting and grading to meet buyer specification and international standards.</p></div>
+    <div class="proc-step reveal"><div class="proc-num">03</div><h5>Quality Inspection</h5><p>Third-party and in-house quality checks — moisture, purity, defects, and lab reports provided.</p></div>
+    <div class="proc-step reveal"><div class="proc-num">04</div><h5>Documentation</h5><p>Phytosanitary cert, COO, fumigation, weight &amp; quality reports, bill of lading prepared.</p></div>
+    <div class="proc-step reveal"><div class="proc-num">05</div><h5>Shipment &amp; Delivery</h5><p>Loading, containerisation, and shipping to your nominated port — tracked end to end.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="u-center reveal">
+    <div class="s-eyebrow">Get In Touch</div>
+    <h2 class="s-title">Start Your <span>Export Partnership</span></h2>
+    <div class="s-divider"></div>
+    <p class="s-sub u-sub">Ready to source premium Nigerian farm produce? Tell us your requirements and our export team will respond personally within 24 hours.</p>
+  </div>
+
+  <div class="contact-wrap">
+
+    <!-- LEFT: Info Panel -->
+    <div class="ci-panel reveal">
+      <div class="ci-promise">
+        <div class="ci-promise-inner">
+          <div class="ci-promise-ico"><i class="fas fa-clock"></i></div>
+          <div class="ci-promise-text">
+            <strong>24-Hour Response Guarantee</strong>
+            <span>Our export team responds to every enquiry personally within 24 business hours, Mon&ndash;Sat.</span>
+          </div>
+        </div>
+      </div>
+      <div class="ci-items">
+        <div class="ci-item">
+          <div class="ci-ico"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <strong>Registered Address</strong>
+            <span>Plot 1, Lawal Estate, Maku Olose<br/>Off Ido-Omi Adio Road, Bako<br/>Ibadan, Oyo State, Nigeria</span>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <strong>Phone &mdash; Call</strong>
+            <span><a href="tel:+2349055842583">+234 905 584 2583</a></span>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico whatsapp"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <strong>WhatsApp Only</strong>
+            <span><a href="https://wa.me/2348066092732">+234 806 609 2732</a></span>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico"><i class="fas fa-envelope"></i></div>
+          <div>
+            <strong>Email</strong>
+            <span><a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></span>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico"><i class="fas fa-ship"></i></div>
+          <div>
+            <strong>Export Ports</strong>
+            <span>Apapa Port (Lagos) &bull; Tin Can Island &bull; Onne Port</span>
+          </div>
+        </div>
+      </div>
+      <div class="ci-badges">
+        <div class="ci-badges-title">Compliance &amp; Standards</div>
+        <div class="ci-badge-list">
+          <span class="ci-badge green"><i class="fas fa-check-circle"></i> GDPR Compliant</span>
+          <span class="ci-badge green"><i class="fas fa-check-circle"></i> EU Standards</span>
+          <span class="ci-badge green"><i class="fas fa-check-circle"></i> Phytosanitary Cert</span>
+          <span class="ci-badge gold"><i class="fas fa-check-circle"></i> FOB / CIF / CFR</span>
+          <span class="ci-badge gold"><i class="fas fa-check-circle"></i> Grade A Export</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Enquiry Form -->
+    <div class="reveal">
+      <div class="eq-form-wrap">
+
+        <!-- Header bar -->
+        <div class="eq-header">
+          <div class="eq-header-inner">
+            <h3>Request a Quote</h3>
+            <p>Fill in your details below &mdash; we&rsquo;ll prepare a personalised quotation and send it to your inbox within 24 hours.</p>
+            <div class="eq-trust-pills">
+              <span class="eq-pill"><i class="fas fa-lock"></i> SSL Secured</span>
+              <span class="eq-pill"><i class="fas fa-shield-alt"></i> GDPR Protected</span>
+              <span class="eq-pill"><i class="fas fa-clock"></i> 24h Reply</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form body -->
+        <div class="eq-body">
+          <form id="enquiryForm" novalidate autocomplete="on">
+
+            <div class="eq-step">Your Contact Details</div>
+            <div class="eq-row">
+              <div class="eq-group">
+                <label for="eq_name">Full Name <span class="eq-req">*</span></label>
+                <input type="text" id="eq_name" name="full_name" placeholder="John Smith" required autocomplete="name"/>
+              </div>
+              <div class="eq-group">
+                <label for="eq_company">Company <span class="eq-opt">(optional)</span></label>
+                <input type="text" id="eq_company" name="company" placeholder="ABC Trading Ltd" autocomplete="organization"/>
+              </div>
+            </div>
+            <div class="eq-row">
+              <div class="eq-group">
+                <label for="eq_email">Email Address <span class="eq-req">*</span></label>
+                <input type="email" id="eq_email" name="email" placeholder="you@company.com" required autocomplete="email"/>
+              </div>
+              <div class="eq-group">
+                <label for="eq_phone">Phone / WhatsApp <span class="eq-opt">(optional)</span></label>
+                <div class="phone-wrap">
+                  <select id="eq_dialcode" name="country_code" class="phone-code" aria-label="Dial code">
+                    <option value="+234" selected>🇳🇬 +234</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+49">🇩🇪 +49</option>
+                    <option value="+33">🇫🇷 +33</option>
+                    <option value="+39">🇮🇹 +39</option>
+                    <option value="+34">🇪🇸 +34</option>
+                    <option value="+31">🇳🇱 +31</option>
+                    <option value="+32">🇧🇪 +32</option>
+                    <option value="+47">🇳🇴 +47</option>
+                    <option value="+46">🇸🇪 +46</option>
+                    <option value="+358">🇫🇮 +358</option>
+                    <option value="+45">🇩🇰 +45</option>
+                    <option value="+41">🇨🇭 +41</option>
+                    <option value="+43">🇦🇹 +43</option>
+                    <option value="+48">🇵🇱 +48</option>
+                    <option value="+30">🇬🇷 +30</option>
+                    <option value="+351">🇵🇹 +351</option>
+                    <option value="+7">🇷🇺 +7</option>
+                    <option value="+380">🇺🇦 +380</option>
+                    <option value="+81">🇯🇵 +81</option>
+                    <option value="+86">🇨🇳 +86</option>
+                    <option value="+82">🇰🇷 +82</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+92">🇵🇰 +92</option>
+                    <option value="+880">🇧🇩 +880</option>
+                    <option value="+60">🇲🇾 +60</option>
+                    <option value="+65">🇸🇬 +65</option>
+                    <option value="+62">🇮🇩 +62</option>
+                    <option value="+66">🇹🇭 +66</option>
+                    <option value="+84">🇻🇳 +84</option>
+                    <option value="+63">🇵🇭 +63</option>
+                    <option value="+94">🇱🇰 +94</option>
+                    <option value="+886">🇹🇼 +886</option>
+                    <option value="+20">🇪🇬 +20</option>
+                    <option value="+27">🇿🇦 +27</option>
+                    <option value="+233">🇬🇭 +233</option>
+                    <option value="+254">🇰🇪 +254</option>
+                    <option value="+255">🇹🇿 +255</option>
+                    <option value="+256">🇺🇬 +256</option>
+                    <option value="+251">🇪🇹 +251</option>
+                    <option value="+243">🇨🇩 +243</option>
+                    <option value="+221">🇸🇳 +221</option>
+                    <option value="+227">🇳🇪 +227</option>
+                    <option value="+244">🇦🇴 +244</option>
+                    <option value="+258">🇲🇿 +258</option>
+                    <option value="+249">🇸🇩 +249</option>
+                    <option value="+218">🇱🇾 +218</option>
+                    <option value="+213">🇩🇿 +213</option>
+                    <option value="+212">🇲🇦 +212</option>
+                    <option value="+216">🇹🇳 +216</option>
+                    <option value="+966">🇸🇦 +966</option>
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+974">🇶🇦 +974</option>
+                    <option value="+965">🇰🇼 +965</option>
+                    <option value="+968">🇴🇲 +968</option>
+                    <option value="+962">🇯🇴 +962</option>
+                    <option value="+961">🇱🇧 +961</option>
+                    <option value="+964">🇮🇶 +964</option>
+                    <option value="+98">🇮🇷 +98</option>
+                    <option value="+972">🇮🇱 +972</option>
+                    <option value="+90">🇹🇷 +90</option>
+                    <option value="+55">🇧🇷 +55</option>
+                    <option value="+54">🇦🇷 +54</option>
+                    <option value="+57">🇨🇴 +57</option>
+                    <option value="+52">🇲🇽 +52</option>
+                    <option value="+58">🇻🇪 +58</option>
+                    <option value="+1">🇨🇦 +1</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+64">🇳🇿 +64</option>
+                  </select>
+                  <input type="tel" id="eq_phone" name="phone" placeholder="806 609 2732" autocomplete="tel" inputmode="numeric"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="eq-step">Product &amp; Destination</div>
+            <div class="eq-group">
+              <label for="eq_product">Product of Interest <span class="eq-req">*</span></label>
+              <select id="eq_product" name="product" required>
+                <option value="" disabled selected>&#8212; Select a commodity &#8212;</option>
+                <option value="Cocoa Beans">Cocoa Beans</option>
+                <option value="Cashew Nuts (RCN)">Cashew Nuts (RCN)</option>
+                <option value="White Sesame Seeds">White Sesame Seeds</option>
+                <option value="Shea Nuts">Shea Nuts</option>
+                <option value="Non-GMO Soybeans">Non-GMO Soybeans</option>
+                <option value="Dried Ginger Root">Dried Ginger Root</option>
+                <option value="Palm Kernel Nuts / PKO">Palm Kernel Nuts / PKO</option>
+                <option value="Dried Hibiscus Flowers">Dried Hibiscus Flowers</option>
+                <option value="Multiple Commodities">Multiple Commodities</option>
+              </select>
+            </div>
+            <div class="eq-row">
+              <div class="eq-group">
+                <label for="eq_country">Destination Country <span class="eq-req">*</span></label>
+                <select id="eq_country" name="country" required>
+                  <option value="" disabled selected>&#8212; Select your country &#8212;</option>
+                  <option>Australia</option><option>Austria</option><option>Bahrain</option>
+                  <option>Bangladesh</option><option>Belgium</option><option>Brazil</option>
+                  <option>Canada</option><option>Chile</option><option>China</option>
+                  <option>Colombia</option><option>Denmark</option><option>Egypt</option>
+                  <option>Ethiopia</option><option>Finland</option><option>France</option>
+                  <option>Germany</option><option>Ghana</option><option>Greece</option>
+                  <option>Hong Kong</option><option>India</option><option>Indonesia</option>
+                  <option>Iran</option><option>Iraq</option><option>Ireland</option>
+                  <option>Israel</option><option>Italy</option><option>Japan</option>
+                  <option>Jordan</option><option>Kenya</option><option>Kuwait</option>
+                  <option>Lebanon</option><option>Libya</option><option>Malaysia</option>
+                  <option>Mauritius</option><option>Mexico</option><option>Morocco</option>
+                  <option>Mozambique</option><option>Netherlands</option><option>New Zealand</option>
+                  <option>Nigeria</option><option>Norway</option><option>Oman</option>
+                  <option>Pakistan</option><option>Peru</option><option>Philippines</option>
+                  <option>Poland</option><option>Portugal</option><option>Qatar</option>
+                  <option>Romania</option><option>Russia</option><option>Saudi Arabia</option>
+                  <option>Senegal</option><option>Singapore</option><option>South Africa</option>
+                  <option>South Korea</option><option>Spain</option><option>Sri Lanka</option>
+                  <option>Sweden</option><option>Switzerland</option><option>Taiwan</option>
+                  <option>Tanzania</option><option>Thailand</option><option>Turkey</option>
+                  <option>Uganda</option><option>Ukraine</option><option>United Arab Emirates</option>
+                  <option>United Kingdom</option><option>United States</option><option>Vietnam</option>
+                  <option>Yemen</option><option>Other</option>
+                </select>
+              </div>
+              <div class="eq-group">
+                <label for="eq_port">Destination Port <span class="eq-req">*</span></label>
+                <select id="eq_port" name="destination" required disabled>
+                  <option value="" disabled selected>&#8212; Select country first &#8212;</option>
+                </select>
+                <span class="eq-hint">Select country above to see ports</span>
+              </div>
+            </div>
+
+            <div class="eq-step">Your Message</div>
+            <div class="eq-group">
+              <label for="eq_message">Enquiry Details <span class="eq-opt">(optional)</span></label>
+              <textarea id="eq_message" name="message" rows="4" placeholder="Tell us your requirements &#8212; quantity (MT), grade preference, packaging type, incoterms, timeline&#8230;"></textarea>
+            </div>
+
+            <!-- GDPR -->
+            <div class="eq-gdpr" id="eq_gdpr_box" onclick="toggleGdpr()">
+              <input type="checkbox" class="eq-gdpr-check" id="eq_gdpr" name="gdprConsent" value="yes" onclick="event.stopPropagation();handleGdpr()"/>
+              <div class="eq-gdpr-text">
+                I consent to <strong>LOOK AGRIC ALLIED LIMITED</strong> processing my personal data (name, email, company, phone) to respond to this enquiry, in accordance with the <a href="#" onclick="event.stopPropagation();event.preventDefault();openPrivacy()">Privacy Policy</a> &amp; GDPR regulations. I understand I may withdraw consent at any time by emailing <a href="mailto:lookagricalliedlimited@gmail.com" onclick="event.stopPropagation()">lookagricalliedlimited@gmail.com</a>.
+              </div>
+            </div>
+            <div class="eq-err" id="eq_gdpr_err"><i class="fas fa-exclamation-triangle"></i> Please accept the privacy consent to submit your enquiry.</div>
+
+            <button type="submit" class="eq-submit" id="eq_submit_btn">
+              <i class="fas fa-paper-plane"></i> Send Enquiry &mdash; Get a Quote
+            </button>
+            <div class="eq-submit-note">
+              <span><i class="fas fa-lock"></i> SSL encrypted</span>
+              <span><i class="fas fa-shield-alt"></i> GDPR compliant</span>
+              <span><i class="fas fa-clock"></i> Response within 24h</span>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="fb-logo">
+        <div class="fb-logo-img"><img src="https://base44.app/api/apps/6a16801fb0ff64008092b008/files/mp/public/6a16801fb0ff64008092b008/83a38a071_logo.jpg" alt="Logo" width="40" height="40" loading="eager"/></div>
+        <div class="fb-logo-text"><b>LOOK AGRIC ALLIED</b><small>Limited &mdash; Nigeria</small></div>
+      </div>
+      <p>Nigeria&rsquo;s trusted exporter of premium agricultural commodities &mdash; from fertile farmlands to global markets. Quality, reliability, and integrity in every shipment.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/2348066092732" class="fsoc" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:lookagricalliedlimited@gmail.com" class="fsoc" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+2349055842583" class="fsoc" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Our Products</h5>
+      <ul>
+        <li><a href="#products">Cocoa Beans</a></li>
+        <li><a href="#products">Cashew Nuts (RCN)</a></li>
+        <li><a href="#catalogue">White Sesame Seeds</a></li>
+        <li><a href="#catalogue">Shea Nuts</a></li>
+        <li><a href="#catalogue">Soybeans</a></li>
+        <li><a href="#catalogue">Dried Ginger Root</a></li>
+        <li><a href="#catalogue">Palm Kernel / PKO</a></li>
+        <li><a href="#catalogue">Dried Hibiscus</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#process">Export Process</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <p>Plot 1, Lawal Estate, Maku Olose, Bako, Ibadan, Oyo State</p>
+      <p style="margin-top:10px"><a href="tel:+2349055842583">+234 905 584 2583</a></p>
+      <p style="margin-top:4px"><a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></p>
+      <p style="margin-top:4px"><a href="mailto:lawalwaheedkayode1@gmail.com">lawalwaheedkayode1@gmail.com</a></p>
+      <p style="margin-top:10px;color:rgba(255,255,255,.35);font-size:12px">Mon &ndash; Sat: 8am &ndash; 6pm WAT</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 LOOK AGRIC ALLIED LIMITED. All rights reserved.</span>
+    <div class="footer-certs">
+      <span class="footer-cert">GDPR Compliant</span>
+      <span class="footer-cert">EU Standards</span>
+      <span class="footer-cert">Grade A Export</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/2348066092732" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- TOAST -->
+<div id="toast" role="alert" aria-live="polite"></div>
+
+<!-- PRIVACY MODAL -->
+<div id="privacy-modal" role="dialog" aria-modal="true" aria-label="Privacy Policy">
+  <div class="pm-box">
+    <button class="pm-close" onclick="closePrivacy()" aria-label="Close">&times;</button>
+    <h2>Privacy Policy</h2>
+    <p class="pm-date">Last updated: June 2026 &nbsp;|&nbsp; LOOK AGRIC ALLIED LIMITED</p>
+    <h3>1. Who We Are</h3>
+    <p><strong>LOOK AGRIC ALLIED LIMITED</strong> is a Nigerian agricultural commodity export company registered in Oyo State, Nigeria. Registered address: Plot 1, Lawal Estate, Maku Olose off Ido-Omi Adio Road, Bako, Ibadan, Oyo State, Nigeria. Data enquiries: <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></p>
+    <h3>2. Data We Collect</h3>
+    <p>When you submit an enquiry, we collect: full name, company name (optional), email address, phone number (optional), country of origin, destination port, product interest, and your message. We do not collect payment data or sensitive personal information.</p>
+    <h3>3. How We Use Your Data</h3>
+    <ul>
+      <li>Responding to your export enquiry</li>
+      <li>Sending relevant product and pricing information</li>
+      <li>Follow-up communications (max 3 emails over 6 days)</li>
+      <li>Improving our export services</li>
+    </ul>
+    <h3>4. Legal Basis (GDPR)</h3>
+    <p>We process your data based on your explicit consent (Article 6(1)(a) GDPR). You may withdraw consent at any time by emailing <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a>.</p>
+    <h3>5. Data Sharing</h3>
+    <p>We do not sell your personal data to third parties. Data may be shared with trusted logistics and freight partners strictly for fulfilling export orders. All processors operate under GDPR-compliant data processing agreements.</p>
+    <h3>6. Data Retention</h3>
+    <p>Enquiry data is retained for a maximum of 24 months. You may request deletion at any time.</p>
+    <h3>7. Your Rights</h3>
+    <p>Under GDPR, you have the right to access, correct, delete, or restrict processing of your personal data. Contact us at <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a> to exercise these rights.</p>
+    <h3>8. EU Compliance</h3>
+    <p>While LOOK AGRIC ALLIED LIMITED is based in Nigeria, we are committed to full compliance with EU General Data Protection Regulation (GDPR) for all data subjects located in the European Economic Area (EEA). We implement appropriate technical and organisational measures to ensure data security and privacy.</p>
+    <h3>9. Contact</h3>
+    <p>For any data protection enquiries: <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></p>
+  </div>
+</div>
+
+<script>
+/* ═══ NAVIGATION ═══ */
+var navbar = document.getElementById('navbar');
+var hamburger = document.getElementById('hamburger');
+var mobMenu = document.getElementById('mobMenu');
+
+window.addEventListener('scroll', function() {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+}, {passive: true});
+
+function openMob() {
+  mobMenu.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeMob() {
+  mobMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+hamburger.addEventListener('click', function(e) {
+  e.stopPropagation();
+  mobMenu.classList.contains('open') ? closeMob() : openMob();
+});
+document.addEventListener('click', function(e) {
+  if (mobMenu.classList.contains('open') && !hamburger.contains(e.target) && !mobMenu.contains(e.target)) closeMob();
+});
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 820) closeMob();
+});
+
+/* ═══ IMAGE SLIDERS ═══ */
+var _sliders = {
+  cocoa: {
+    idx: 0,
+    imgs: document.querySelectorAll('#cocoaSlides img'),
+    dots: document.querySelectorAll('#cocoaDots .slide-dot')
+  },
+  cashew: {
+    idx: 0,
+    imgs: document.querySelectorAll('#cashewSlides img'),
+    dots: document.querySelectorAll('#cashewDots .slide-dot')
+  }
+};
+function goSlide(name, n) {
+  var s = _sliders[name];
+  if (!s || !s.imgs.length) return;
+  s.imgs[s.idx].classList.remove('active');
+  s.dots[s.idx].classList.remove('active');
+  s.idx = ((n % s.imgs.length) + s.imgs.length) % s.imgs.length;
+  s.imgs[s.idx].classList.add('active');
+  s.dots[s.idx].classList.add('active');
+}
+setInterval(function() { goSlide('cocoa', _sliders.cocoa.idx + 1); }, 4000);
+setInterval(function() { goSlide('cashew', _sliders.cashew.idx + 1); }, 4600);
+
+/* ═══ PRIVACY MODAL ═══ */
+var privModal = document.getElementById('privacy-modal');
+function openPrivacy() {
+  privModal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closePrivacy() {
+  privModal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+privModal.addEventListener('click', function(e) {
+  if (e.target === privModal) closePrivacy();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closePrivacy(); closeMob(); }
+});
+
+/* ═══ COUNTRY → PORT MAP ═══ */
+var portMap = {
+  'Australia': ['Sydney — Port Botany','Melbourne','Brisbane','Fremantle','Other / TBC'],
+  'Austria': ['Vienna (via Hamburg/Rotterdam)','Other / TBC'],
+  'Bahrain': ['Khalifa Bin Salman Port','Other / TBC'],
+  'Bangladesh': ['Chittagong Port','Dhaka Inland','Other / TBC'],
+  'Belgium': ['Antwerp','Ghent','Zeebrugge','Other / TBC'],
+  'Brazil': ['Port of Santos','Rio de Janeiro','Itajai','Other / TBC'],
+  'Canada': ['Vancouver','Montreal','Halifax','Other / TBC'],
+  'Chile': ['Valparaiso','San Antonio','Other / TBC'],
+  'China': ['Shanghai','Ningbo-Zhoushan','Guangzhou (Nansha)','Tianjin','Qingdao','Xiamen','Shenzhen','Other / TBC'],
+  'Colombia': ['Cartagena','Buenaventura','Other / TBC'],
+  'Denmark': ['Copenhagen','Aarhus','Other / TBC'],
+  'Egypt': ['Alexandria','Port Said','Damietta','Other / TBC'],
+  'Ethiopia': ['Djibouti Port (transit)','Other / TBC'],
+  'Finland': ['Helsinki','Turku','Kotka','Other / TBC'],
+  'France': ['Le Havre','Marseille','Dunkirk','Other / TBC'],
+  'Germany': ['Hamburg','Bremen / Bremerhaven','Duisburg (Inland)','Other / TBC'],
+  'Ghana': ['Tema Port — Accra','Takoradi Port','Other / TBC'],
+  'Greece': ['Piraeus Port','Thessaloniki','Other / TBC'],
+  'Hong Kong': ['Hong Kong Container Terminal','Other / TBC'],
+  'India': ['Mumbai (JNPT)','Chennai','Kolkata','Mundra','Cochin','Other / TBC'],
+  'Indonesia': ['Tanjung Priok — Jakarta','Surabaya (Tanjung Perak)','Other / TBC'],
+  'Iran': ['Bandar Abbas','Imam Khomeini Port','Other / TBC'],
+  'Iraq': ['Umm Qasr Port','Basra','Other / TBC'],
+  'Ireland': ['Dublin Port','Cork Port','Other / TBC'],
+  'Israel': ['Haifa Port','Ashdod Port','Other / TBC'],
+  'Italy': ['Genoa','La Spezia','Naples','Trieste','Other / TBC'],
+  'Japan': ['Tokyo / Yokohama','Osaka / Kobe','Nagoya','Other / TBC'],
+  'Jordan': ['Aqaba Port','Other / TBC'],
+  'Kenya': ['Mombasa Port','Other / TBC'],
+  'Kuwait': ['Shuwaikh Port','Shuaiba Port','Other / TBC'],
+  'Lebanon': ['Beirut Port','Tripoli Port','Other / TBC'],
+  'Libya': ['Tripoli Port','Benghazi Port','Misrata Port','Other / TBC'],
+  'Malaysia': ['Port Klang','Penang Port','Johor Port','Other / TBC'],
+  'Mauritius': ['Port Louis','Other / TBC'],
+  'Mexico': ['Veracruz','Manzanillo','Other / TBC'],
+  'Morocco': ['Casablanca Port','Tanger Med','Agadir','Other / TBC'],
+  'Mozambique': ['Maputo Port','Beira Port','Other / TBC'],
+  'Netherlands': ['Rotterdam','Amsterdam','Other / TBC'],
+  'New Zealand': ['Auckland','Tauranga','Lyttelton','Other / TBC'],
+  'Nigeria': ['Apapa Port — Lagos','Tin Can Island — Lagos','Onne Port','Other / TBC'],
+  'Norway': ['Oslo','Bergen','Stavanger','Other / TBC'],
+  'Oman': ['Sohar Port','Muscat — Sultan Qaboos','Salalah Port','Other / TBC'],
+  'Pakistan': ['Karachi Port','Port Qasim','Other / TBC'],
+  'Peru': ['Callao Port','Paita','Other / TBC'],
+  'Philippines': ['Manila Container Port','Cebu Port','Other / TBC'],
+  'Poland': ['Gdansk Port','Gdynia Port','Other / TBC'],
+  'Portugal': ['Lisbon','Sines','Porto (Leixoes)','Other / TBC'],
+  'Qatar': ['Hamad Port — Doha','Other / TBC'],
+  'Romania': ['Constanta Port','Other / TBC'],
+  'Russia': ['St. Petersburg','Novorossiysk','Vladivostok','Other / TBC'],
+  'Saudi Arabia': ['Jeddah Islamic Port','Dammam Port','Jubail','Other / TBC'],
+  'Senegal': ['Dakar Port','Other / TBC'],
+  'Singapore': ['Singapore — PSA Port','Jurong Port','Other / TBC'],
+  'South Africa': ['Durban Port','Cape Town Port','Port Elizabeth','Other / TBC'],
+  'South Korea': ['Busan','Incheon','Gwangyang','Other / TBC'],
+  'Spain': ['Barcelona','Valencia','Algeciras','Bilbao','Other / TBC'],
+  'Sri Lanka': ['Colombo Port','Other / TBC'],
+  'Sweden': ['Gothenburg','Stockholm','Other / TBC'],
+  'Switzerland': ['Basel (Rhine River Port)','Other / TBC'],
+  'Taiwan': ['Kaohsiung','Keelung','Other / TBC'],
+  'Tanzania': ['Dar es Salaam Port','Other / TBC'],
+  'Thailand': ['Laem Chabang Port','Bangkok','Other / TBC'],
+  'Turkey': ['Mersin Port','Istanbul (Ambarli)','Izmir','Other / TBC'],
+  'Uganda': ['Kampala (via Mombasa)','Other / TBC'],
+  'Ukraine': ['Odessa Port','Chornomorsk Port','Other / TBC'],
+  'United Arab Emirates': ['Jebel Ali Port — Dubai','Abu Dhabi (Khalifa Port)','Sharjah Port','Other / TBC'],
+  'United Kingdom': ['Felixstowe','Southampton','Liverpool','London Gateway','Tilbury','Other / TBC'],
+  'United States': ['Los Angeles / Long Beach','New York / New Jersey','Houston','Savannah','Seattle / Tacoma','Miami','Other / TBC'],
+  'Vietnam': ['Ho Chi Minh City (Cat Lai)','Hai Phong','Da Nang','Other / TBC'],
+  'Yemen': ['Aden Port','Hodeidah Port','Other / TBC'],
+  'Other': ['Other / To Be Confirmed']
+};
+
+var _cSel = document.getElementById('eq_country');
+var _pSel = document.getElementById('eq_port');
+if (_cSel && _pSel) {
+  _cSel.addEventListener('change', function() {
+    var ports = portMap[this.value] || ['Other / To Be Confirmed'];
+    _pSel.innerHTML = '<option value="" disabled selected>\u2014 Select destination port \u2014</option>';
+    ports.forEach(function(p) {
+      var o = document.createElement('option');
+      o.value = p; o.textContent = p;
+      _pSel.appendChild(o);
+    });
+    _pSel.disabled = false;
+    _pSel.value = '';
+    _pSel.classList.remove('invalid');
+    _cSel.classList.remove('invalid');
+  });
+}
+
+/* ═══ GDPR HELPERS ═══ */
+var _gdprBox = document.getElementById('eq_gdpr_box');
+var _gdprCb  = document.getElementById('eq_gdpr');
+var _gdprErr = document.getElementById('eq_gdpr_err');
+
+function toggleGdpr() {
+  if (!_gdprCb) return;
+  _gdprCb.checked = !_gdprCb.checked;
+  handleGdpr();
+}
+function handleGdpr() {
+  if (!_gdprCb || !_gdprBox) return;
+  if (_gdprCb.checked) {
+    _gdprBox.classList.add('checked');
+    _gdprBox.classList.remove('invalid');
+    if (_gdprErr) _gdprErr.classList.remove('visible');
+  } else {
+    _gdprBox.classList.remove('checked');
+  }
+}
+function setGdprError(on) {
+  if (!_gdprErr || !_gdprBox) return;
+  if (on) {
+    _gdprErr.classList.add('visible');
+    _gdprBox.classList.add('invalid');
+  } else {
+    _gdprErr.classList.remove('visible');
+    _gdprBox.classList.remove('invalid');
+  }
+}
+
+/* ═══ TOAST ═══ */
+var _toast = document.getElementById('toast');
+function showToast(msg, isError) {
+  if (!_toast) return;
+  _toast.style.background = isError ? '#c0392b' : 'var(--g1)';
+  _toast.innerHTML = msg;
+  _toast.classList.add('show');
+  clearTimeout(_toast._t);
+  _toast._t = setTimeout(function() { _toast.classList.remove('show'); }, 6500);
+}
+
+/* ═══ FIELD VALIDATION ═══ */
+function setInvalid(el, on) {
+  if (!el) return;
+  if (on) el.classList.add('invalid');
+  else el.classList.remove('invalid');
+}
+
+/* ═══ FORM SUBMISSION ═══ */
+(function() {
+  var form = document.getElementById('enquiryForm');
+  var btn  = document.getElementById('eq_submit_btn');
+  if (!form || !btn) return;
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var ok = true;
+
+    /* Validate GDPR */
+    if (!_gdprCb || !_gdprCb.checked) {
+      setGdprError(true);
+      ok = false;
+      if (_gdprBox) _gdprBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      setGdprError(false);
+    }
+
+    /* Validate required fields */
+    var reqFields = [
+      { id: 'eq_name',    label: 'Full Name' },
+      { id: 'eq_email',   label: 'Email' },
+      { id: 'eq_product', label: 'Product' },
+      { id: 'eq_country', label: 'Country' },
+      { id: 'eq_port',    label: 'Port' }
+    ];
+    var firstErr = null;
+    reqFields.forEach(function(f) {
+      var el = document.getElementById(f.id);
+      if (!el) return;
+      var empty = !(el.value || '').trim();
+      setInvalid(el, empty);
+      if (empty && !firstErr) firstErr = el;
+      if (empty) ok = false;
+    });
+
+    if (!ok) {
+      if (firstErr && _gdprCb && _gdprCb.checked) {
+        firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return;
+    }
+
+    /* Collect & submit */
+    var origHTML = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Sending&hellip;';
+    btn.disabled = true;
+
+    var fd = new FormData(form);
+    var payload = {
+      full_name:   (fd.get('full_name')   || '').trim(),
+      company:     (fd.get('company')     || '').trim(),
+      email:       (fd.get('email')       || '').trim(),
+      phone:       (function() {
+        var dialEl = document.getElementById('eq_dialcode');
+        var cc = dialEl ? dialEl.value.trim() : (fd.get('country_code') || '').trim();
+        var ph = (fd.get('phone') || '').trim().replace(/^0+/, '');
+        if (!ph) return '';
+        return cc ? cc + ' ' + ph : ph;
+      })(),
+      country:     (fd.get('country')     || '').trim(),
+      destination: (fd.get('destination') || '').trim(),
+      product:     (fd.get('product')     || '').trim(),
+      message:     (fd.get('message')     || '').trim()
+    };
+
+    try {
+      var res = await fetch('https://superagent-8092b008.base44.app/functions/submitEnquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      var data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Server error');
+      showToast('&#9989;&nbsp; Enquiry sent! We\'ll respond within 24 hours.', false);
+      form.reset();
+      if (_pSel) {
+        _pSel.disabled = true;
+        _pSel.innerHTML = '<option value="" disabled selected>\u2014 Select country first \u2014</option>';
+      }
+      setGdprError(false);
+      if (_gdprBox) { _gdprBox.classList.remove('checked', 'invalid'); }
+      reqFields.forEach(function(f) { setInvalid(document.getElementById(f.id), false); });
+    } catch (err) {
+      showToast('&#10060;&nbsp; Something went wrong. Please call +234 905 584 2583.', true);
+    } finally {
+      btn.innerHTML = origHTML;
+      btn.disabled = false;
+    }
+  });
+
+  /* Live validation — clear error on input */
+  ['eq_name','eq_email','eq_product','eq_country','eq_port'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('change', function() { setInvalid(this, false); });
+  });
+})();
+</script>
+
+</body>
+</html>
