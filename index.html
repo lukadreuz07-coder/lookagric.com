@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <style>
 /* ═══════════════════════════════════════════
    LOOK AGRIC — Complete Design System
@@ -368,6 +369,43 @@ h2.s-title em{font-style:italic;color:var(--a1)}
 .eq-gdpr-text{font-size:11.5px;color:var(--n3);line-height:1.7;user-select:none}
 .eq-gdpr-text strong{color:var(--g2)}
 .eq-gdpr-text a{color:var(--g2);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+/* reCAPTCHA Container */
+.eq-recaptcha-wrap{
+  margin-bottom:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:6px;
+}
+.eq-recaptcha-label{
+  font-size:11px;
+  font-weight:700;
+  color:var(--n3);
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.eq-recaptcha-label i{color:var(--g2);font-size:10px;}
+.eq-recaptcha-box{
+  border:1.5px solid rgba(15,107,58,.18);
+  border-radius:10px;
+  padding:10px;
+  background:#fafdf9;
+  transition:border-color var(--ease),box-shadow var(--ease);
+  width:100%;
+  max-width:310px;
+}
+.eq-recaptcha-box.invalid{
+  border-color:#e03d3d!important;
+  box-shadow:0 0 0 3px rgba(224,61,61,.12)!important;
+}
+.eq-recaptcha-box:focus-within{
+  border-color:var(--g2);
+  box-shadow:0 0 0 3px rgba(15,107,58,.1);
+}
+
 .eq-err{display:none;align-items:center;gap:7px;margin-bottom:16px;padding:9px 14px;background:#fff3f3;border:1px solid rgba(224,61,61,.22);border-radius:8px;font-size:11.5px;color:#c0392b;font-weight:600}
 .eq-err.visible{display:flex}
 .eq-err i{font-size:11px;flex-shrink:0}
@@ -1175,13 +1213,31 @@ input,select,textarea{font-size:16px!important}
             </div>
 
             <!-- GDPR -->
-            <div class="eq-gdpr" id="eq_gdpr_box" onclick="toggleGdpr()">
+            <!-- GDPR Consent (kept for legal compliance) -->
+            <div class="eq-gdpr" id="eq_gdpr_box" onclick="toggleGdpr()" style="margin-bottom:14px;">
               <input type="checkbox" class="eq-gdpr-check" id="eq_gdpr" name="gdprConsent" value="yes" onclick="event.stopPropagation();handleGdpr()"/>
               <div class="eq-gdpr-text">
                 I consent to <strong>LOOK AGRIC ALLIED LIMITED</strong> processing my personal data (name, email, company, phone) to respond to this enquiry, in accordance with the <a href="#" onclick="event.stopPropagation();event.preventDefault();openPrivacy()">Privacy Policy</a> &amp; GDPR regulations. I understand I may withdraw consent at any time by emailing <a href="mailto:lookagricalliedlimited@gmail.com" onclick="event.stopPropagation()">lookagricalliedlimited@gmail.com</a>.
               </div>
             </div>
             <div class="eq-err" id="eq_gdpr_err"><i class="fas fa-exclamation-triangle"></i> Please accept the privacy consent to submit your enquiry.</div>
+
+            <!-- Google reCAPTCHA v2 Puzzle -->
+            <div class="eq-recaptcha-wrap">
+              <div class="eq-recaptcha-label">
+                <i class="fas fa-shield-halved"></i> Security Verification
+              </div>
+              <div class="eq-recaptcha-box" id="eq_recaptcha_box">
+                <div class="g-recaptcha"
+                  data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                  data-theme="light"
+                  data-size="normal"
+                  data-callback="onRecaptchaSuccess"
+                  data-expired-callback="onRecaptchaExpired">
+                </div>
+              </div>
+              <div class="eq-err" id="eq_recaptcha_err" style="display:none;"><i class="fas fa-exclamation-triangle"></i> Please complete the security verification to submit.</div>
+            </div>
 
             <button type="submit" class="eq-submit" id="eq_submit_btn">
               <i class="fas fa-paper-plane"></i> Send Enquiry &mdash; Get a Quote
@@ -1465,6 +1521,19 @@ if (_cSel && _pSel) {
 }
 
 /* ═══ GDPR HELPERS ═══ */
+/* ── reCAPTCHA state ── */
+var _recaptchaVerified = false;
+function onRecaptchaSuccess(token) {
+  _recaptchaVerified = true;
+  var box = document.getElementById('eq_recaptcha_box');
+  var err = document.getElementById('eq_recaptcha_err');
+  if (box) { box.classList.remove('invalid'); }
+  if (err) { err.style.display = 'none'; }
+}
+function onRecaptchaExpired() {
+  _recaptchaVerified = false;
+}
+
 var _gdprBox = document.getElementById('eq_gdpr_box');
 var _gdprCb  = document.getElementById('eq_gdpr');
 var _gdprErr = document.getElementById('eq_gdpr_err');
@@ -1523,13 +1592,26 @@ function setInvalid(el, on) {
     e.preventDefault();
     var ok = true;
 
-    /* Validate GDPR */
+    /* Validate GDPR consent */
     if (!_gdprCb || !_gdprCb.checked) {
       setGdprError(true);
       ok = false;
       if (_gdprBox) _gdprBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {
       setGdprError(false);
+    }
+
+    /* Validate reCAPTCHA */
+    var recaptchaBox = document.getElementById('eq_recaptcha_box');
+    var recaptchaErr = document.getElementById('eq_recaptcha_err');
+    if (!_recaptchaVerified) {
+      if (recaptchaBox) recaptchaBox.classList.add('invalid');
+      if (recaptchaErr) recaptchaErr.style.display = 'block';
+      if (!ok) {} else { recaptchaBox && recaptchaBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      ok = false;
+    } else {
+      if (recaptchaBox) recaptchaBox.classList.remove('invalid');
+      if (recaptchaErr) recaptchaErr.style.display = 'none';
     }
 
     /* Validate required fields */
@@ -1596,6 +1678,13 @@ function setInvalid(el, on) {
       }
       setGdprError(false);
       if (_gdprBox) { _gdprBox.classList.remove('checked', 'invalid'); }
+      /* Reset reCAPTCHA */
+      _recaptchaVerified = false;
+      if (typeof grecaptcha !== 'undefined') { try { grecaptcha.reset(); } catch(e) {} }
+      var recaptchaBox2 = document.getElementById('eq_recaptcha_box');
+      var recaptchaErr2 = document.getElementById('eq_recaptcha_err');
+      if (recaptchaBox2) recaptchaBox2.classList.remove('invalid');
+      if (recaptchaErr2) recaptchaErr2.style.display = 'none';
       reqFields.forEach(function(f) { setInvalid(document.getElementById(f.id), false); });
     } catch (err) {
       showToast('&#10060;&nbsp; Something went wrong. Please call +234 905 584 2583.', true);
