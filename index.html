@@ -15,656 +15,417 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <style>
-/* ═══════════════════════════════════════════════════════
-   LOOK AGRIC ALLIED LIMITED
-   Version 6.0 — Luxury Editorial · Zero Errors
-   Inspired by: Monocle, FT Weekend, Wallpaper*, Vogue
-═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════
+   LOOK AGRIC ALLIED LIMITED  ·  Version 7.0
+   Beautiful · Luxury · Zero Errors
+═══════════════════════════════════════════════════ */
 
-/* RESET */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
-body{font-family:'Inter',sans-serif;color:#1c2b1e;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Inter',sans-serif;color:#1a2b1d;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 img{max-width:100%;display:block;height:auto}
 a{text-decoration:none;color:inherit}
 button,input,select,textarea{font-family:'Inter',sans-serif}
-
-/* SCROLLBAR */
 ::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-track{background:#f5f9f6}
+::-webkit-scrollbar-track{background:#f4f9f5}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#0a3d1f,#b8790a);border-radius:2px}
 
-/* ── DESIGN TOKENS ── */
+/* ── TOKENS ── */
 :root{
-  --night:#040d06;
-  --forest:#061a0a;
+  --night:#030c05;
+  --forest:#061609;
   --g1:#0a3d1f;
   --g2:#0d5c2e;
-  --g3:#198040;
-  --g4:#e8f5ed;
-  --g5:#f4fbf7;
-  --g6:#fafffe;
-  --gold:#a86c00;
-  --gold2:#c48500;
+  --g3:#1a8044;
+  --g4:#e6f4eb;
+  --g5:#f3faf6;
+  --gold:#a06800;
+  --gold2:#c08000;
   --gold3:#e8a800;
   --gold4:#f5c842;
-  --gold-bg:#fdf8ec;
-  --ink:#080f09;
-  --ink2:#1c2b1e;
-  --ink3:#3d5445;
-  --ink4:#6b8572;
-  --line:#dce8df;
-  --line2:#eef5f0;
-  --white:#ffffff;
+  --gold-bg:#fdf7e8;
+  --ink:#070e08;
+  --ink2:#1a2b1d;
+  --ink3:#3a5240;
+  --ink4:#688070;
+  --line:#d8e8dc;
+  --line2:#edf5f0;
   --cream:#fafdf8;
-  --warm:#f7f5f0;
-  --s1:0 1px 4px rgba(4,13,6,.05);
-  --s2:0 4px 20px rgba(4,13,6,.08);
-  --s3:0 10px 40px rgba(4,13,6,.11);
-  --s4:0 24px 72px rgba(4,13,6,.15);
-  --s5:0 48px 120px rgba(4,13,6,.19);
+  --warm:#f6f4ef;
+  --s1:0 1px 4px rgba(3,12,5,.05);
+  --s2:0 4px 20px rgba(3,12,5,.08);
+  --s3:0 12px 48px rgba(3,12,5,.12);
+  --s4:0 28px 80px rgba(3,12,5,.16);
+  --s5:0 52px 130px rgba(3,12,5,.21);
   --ease:.2s cubic-bezier(.4,0,.2,1);
   --ease-out:.42s cubic-bezier(0,.8,.2,1);
-  --r1:4px;--r2:8px;--r3:14px;--r4:20px;--r5:28px;
 }
 
-/* ── GLOBAL TYPOGRAPHY ── */
-.serif{font-family:'Cormorant Garamond',serif}
+/* ── TYPOGRAPHY ── */
+.eyebrow{font-family:'Inter',sans-serif;font-size:9.5px;font-weight:600;letter-spacing:4.5px;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:14px}
+.eyebrow::before,.eyebrow::after{content:'';flex:0 0 28px;height:1px;background:currentColor;opacity:.38}
+.eyebrow.center{justify-content:center}
+.eyebrow.light{color:rgba(245,200,66,.7)}
 
-/* Luxury eyebrow — thin rule, wide tracking */
-.eyebrow{
-  font-family:'Inter',sans-serif;
-  font-size:9.5px;font-weight:600;
-  letter-spacing:4px;text-transform:uppercase;
-  color:var(--gold2);
-  display:flex;align-items:center;gap:14px;
-  white-space:nowrap;
-}
-.eyebrow::before,.eyebrow::after{
-  content:'';flex:0 0 32px;height:1px;
-  background:currentColor;opacity:.4;
-}
-.eyebrow.light{color:var(--gold4)}
-
-/* Section titles */
-.s-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.2rem,3.6vw,3.6rem);
-  font-weight:600;color:var(--ink);
-  line-height:1.08;letter-spacing:-.5px;
-  margin:12px 0 0;
-}
+.s-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.3rem,3.8vw,3.8rem);font-weight:600;color:var(--ink);line-height:1.06;letter-spacing:-.6px;margin:14px 0 0}
 .s-title em{font-style:italic;font-weight:300}
 .s-title span{color:var(--g2)}
 .s-title.light{color:#fff}
 .s-title.light span{color:var(--gold4)}
 
-/* Rule divider */
-.rule{display:flex;align-items:center;gap:12px;margin:20px 0 26px}
-.rule::before{content:'';flex:0 0 28px;height:1px;background:var(--gold2)}
-.rule::after{content:'';flex:1;height:1px;background:var(--line)}
-.rule.center{justify-content:center}
-.rule.center::before,.rule.center::after{flex:0 0 28px}
-.rule-dot{width:5px;height:5px;border-radius:50%;background:var(--gold3);flex-shrink:0}
-.rule.light::before{background:var(--gold4)}
-.rule.light::after{background:rgba(255,255,255,.12)}
-.rule.light .rule-dot{background:var(--gold4)}
+.s-rule{display:flex;align-items:center;gap:10px;margin:22px 0 28px}
+.s-rule::before{content:'';flex:0 0 32px;height:1px;background:var(--gold3)}
+.s-rule::after{content:'';flex:1;height:1px;background:var(--line)}
+.s-rule-dot{width:5px;height:5px;border-radius:50%;background:var(--gold3);flex-shrink:0}
+.s-rule.center{justify-content:center}
+.s-rule.center::before,.s-rule.center::after{flex:0 0 32px}
+.s-rule.light::before{background:var(--gold4)}
+.s-rule.light::after{background:rgba(255,255,255,.1)}
+.s-rule.light .s-rule-dot{background:var(--gold4)}
 
-/* Lead paragraph */
-.s-lead{
-  font-size:.95rem;color:var(--ink3);
-  line-height:2.05;max-width:620px;font-weight:300;
-  font-family:'Cormorant Garamond',serif;font-size:1.15rem;
-  letter-spacing:.1px;
-}
+.s-lead{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:300;color:var(--ink3);line-height:1.95;max-width:640px;letter-spacing:.05px}
 .s-lead.center{margin-inline:auto;text-align:center}
+.s-lead.light{color:rgba(255,255,255,.45)}
 
-/* LAYOUT */
-.section{padding:108px 7%}
-.container{max-width:1240px;margin:0 auto;width:100%}
-.centered{text-align:center}
+/* Layout */
+.section{padding:112px 7%}
+.wrap{max-width:1260px;margin:0 auto;width:100%}
+.tc{text-align:center}
 
-/* ── NAVBAR ──────────────────────────────────── */
-#navbar{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  height:76px;padding:0 7%;
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(255,255,255,.98);
-  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-  border-bottom:1px solid transparent;
-  transition:border-color .3s,box-shadow .3s;
-}
-#navbar.scrolled{
-  border-bottom-color:var(--line);
-  box-shadow:0 1px 32px rgba(4,13,6,.06);
-}
-.nav-brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
-.nav-logo{
-  width:44px;height:44px;border-radius:9px;
-  border:1px solid rgba(10,61,31,.13);
-  overflow:hidden;flex-shrink:0;background:#f6fdf9;
-  display:flex;align-items:center;justify-content:center;
-}
-.nav-logo img{width:100%;height:100%;object-fit:contain;padding:4px}
-.nav-name{display:block;font-family:'Cormorant Garamond',serif;font-size:15.5px;font-weight:600;color:var(--g1);letter-spacing:.05px;line-height:1.25}
-.nav-sub{display:block;font-size:7.5px;font-weight:600;color:var(--gold2);letter-spacing:4px;text-transform:uppercase;margin-top:1px}
+/* ── NAVBAR ── */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+#navbar.scrolled{border-bottom-color:var(--line);box-shadow:0 2px 40px rgba(3,12,5,.07)}
+.nb{display:flex;align-items:center;gap:13px;flex-shrink:0}
+.nb-logo{width:44px;height:44px;border-radius:8px;border:1px solid rgba(10,61,31,.12);overflow:hidden;flex-shrink:0;background:#f5fdf8;display:flex;align-items:center;justify-content:center}
+.nb-logo img{width:100%;height:100%;object-fit:contain;padding:4px}
+.nb-name{display:block;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;color:var(--g1);line-height:1.25}
+.nb-sub{display:block;font-size:7.5px;font-weight:600;color:var(--gold2);letter-spacing:4px;text-transform:uppercase;margin-top:1px}
 nav ul{display:flex;gap:34px;list-style:none;align-items:center}
 nav ul a{font-size:12px;font-weight:500;color:var(--ink3);transition:color var(--ease);position:relative;padding-bottom:2px;letter-spacing:.2px}
 nav ul a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--g2);transition:width var(--ease)}
 nav ul a:hover{color:var(--g1)}
 nav ul a:hover::after{width:100%}
-.nav-cta{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:9px 22px;border-radius:2px;
-  background:var(--g1);color:#fff;
-  font-size:11.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
-  transition:all var(--ease);border:none;cursor:pointer;flex-shrink:0;
-}
-.nav-cta:hover{background:var(--g2);box-shadow:0 6px 24px rgba(10,61,31,.25)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;border:none;background:none;-webkit-tap-highlight-color:transparent}
-.hamburger span{display:block;width:20px;height:1.5px;background:var(--g1);transition:.26s}
-.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
-.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-#mobMenu{display:none;flex-direction:column;position:fixed;top:76px;inset-inline:0;bottom:0;background:#fff;z-index:999;padding:28px 7% 40px;overflow-y:auto;border-top:1px solid var(--line)}
-#mobMenu.open{display:flex}
-#mobMenu a{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--ink);padding:16px 0;border-bottom:1px solid var(--line2);display:flex;align-items:center;justify-content:space-between;min-height:60px;transition:color var(--ease)}
-#mobMenu a:hover{color:var(--g2)}
-#mobMenu a::after{content:'→';font-family:'Inter',sans-serif;font-size:18px;color:var(--ink4);font-weight:300}
-#mobMenu .mob-cta{margin-top:28px;background:var(--g1);color:#fff;padding:16px 24px;border-radius:2px;text-align:center;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase}
-#mobMenu .mob-cta::after{display:none}
+.nb-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 22px;background:var(--g1);color:#fff;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all var(--ease);border:none;cursor:pointer;flex-shrink:0}
+.nb-cta:hover{background:var(--g2);box-shadow:0 6px 24px rgba(10,61,31,.25)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;border:none;background:none;-webkit-tap-highlight-color:transparent}
+.hbg span{display:block;width:20px;height:1.5px;background:var(--g1);transition:.26s}
+.hbg.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hbg.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hbg.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+#mob{display:none;flex-direction:column;position:fixed;top:76px;inset-inline:0;bottom:0;background:#fff;z-index:999;padding:28px 7% 40px;overflow-y:auto;border-top:1px solid var(--line)}
+#mob.open{display:flex}
+#mob a{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:500;color:var(--ink);padding:16px 0;border-bottom:1px solid var(--line2);display:flex;align-items:center;justify-content:space-between;min-height:62px;transition:color var(--ease)}
+#mob a:hover{color:var(--g2)}
+#mob a::after{content:'→';font-family:'Inter',sans-serif;font-size:18px;color:var(--ink4);font-weight:300}
+#mob .mob-cta{margin-top:28px;background:var(--g1);color:#fff;padding:16px 24px;text-align:center;font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:1.2px;text-transform:uppercase}
+#mob .mob-cta::after{display:none}
 
-/* ── HERO ─────────────────────────────────────── */
+/* ── HERO ── */
 #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero-bg{
-  position:absolute;inset:0;
-  background-image:url('https://media.base44.com/images/public/6a16801fb0ff64008092b008/62503f5a3_generated_image.png');
-  background-size:cover;background-position:center;
-}
-.hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(110deg,rgba(4,13,6,.97) 0%,rgba(6,26,10,.90) 48%,rgba(10,50,22,.55) 100%);
-}
-/* Luxury grain texture overlay */
-.hero-grain{
-  position:absolute;inset:0;opacity:.04;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-size:200px;pointer-events:none;
-}
-.hero-content{position:relative;z-index:2;padding:172px 7% 160px;max-width:900px}
-.hero-kicker{
-  display:inline-flex;align-items:center;gap:12px;
-  margin-bottom:36px;
-}
-.hero-kicker-line{width:40px;height:1px;background:var(--gold3);opacity:.7}
-.hero-kicker span{font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold4);opacity:.85}
-.hero-content h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3.2rem,7vw,6.4rem);
-  font-weight:600;color:#fff;
-  line-height:1.01;margin-bottom:28px;
-  letter-spacing:-.6px;
-}
-.hero-content h1 .italic{
-  font-style:italic;font-weight:300;
-  background:linear-gradient(95deg,var(--gold4),#fff5c0,var(--gold4));
-  background-size:200%;
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;
-  animation:shimmer 4s linear infinite;
-}
-@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
-.hero-content p{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.2rem;color:rgba(255,255,255,.58);
-  line-height:1.9;max-width:520px;margin-bottom:50px;
-  font-weight:300;letter-spacing:.1px;
-}
+.hero-bg{position:absolute;inset:0;background-image:url('https://media.base44.com/images/public/6a16801fb0ff64008092b008/85c71b2f3_generated_image.png');background-size:cover;background-position:center top}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(108deg,rgba(3,12,5,.96) 0%,rgba(5,22,9,.88) 45%,rgba(8,40,18,.52) 100%)}
+.hero-content{position:relative;z-index:2;padding:178px 7% 164px;max-width:920px}
+.hero-kicker{display:flex;align-items:center;gap:14px;margin-bottom:38px}
+.hero-kicker-line{flex:0 0 44px;height:1px;background:var(--gold3);opacity:.65}
+.hero-kicker span{font-size:9.5px;font-weight:600;letter-spacing:4.5px;text-transform:uppercase;color:var(--gold4);opacity:.82}
+.hero-content h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.4rem,7.2vw,6.6rem);font-weight:600;color:#fff;line-height:1;margin-bottom:30px;letter-spacing:-.8px}
+.hero-content h1 .italic{font-style:italic;font-weight:300;background:linear-gradient(90deg,var(--gold4),#fff9d0,var(--gold4));background-size:220%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4.5s linear infinite}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:220%}}
+.hero-content p{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:300;color:rgba(255,255,255,.56);line-height:1.92;max-width:540px;margin-bottom:52px;letter-spacing:.05px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn-gold{
-  padding:14px 34px;border-radius:2px;
-  background:linear-gradient(135deg,var(--gold),var(--gold3));
-  color:#fff;font-weight:600;font-size:12px;
-  letter-spacing:1.2px;text-transform:uppercase;
-  display:inline-flex;align-items:center;gap:10px;
-  border:none;cursor:pointer;transition:all var(--ease);
-  box-shadow:0 6px 32px rgba(168,108,0,.38);
-}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(168,108,0,.52)}
-.btn-outline-white{
-  padding:13px 32px;border-radius:2px;
-  border:1px solid rgba(255,255,255,.24);
-  color:rgba(255,255,255,.8);font-size:12px;
-  font-weight:500;letter-spacing:.8px;text-transform:uppercase;
-  transition:all var(--ease);display:inline-flex;align-items:center;gap:10px;
-  cursor:pointer;background:transparent;
-}
-.btn-outline-white:hover{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.05)}
+.btn-gold{padding:15px 36px;background:linear-gradient(135deg,var(--gold),var(--gold3));color:#fff;font-weight:600;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;transition:all var(--ease);box-shadow:0 6px 32px rgba(160,104,0,.4)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(160,104,0,.55)}
+.btn-wh{padding:13px 34px;border:1px solid rgba(255,255,255,.24);color:rgba(255,255,255,.78);font-size:11.5px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;transition:all var(--ease);display:inline-flex;align-items:center;gap:10px;cursor:pointer;background:transparent}
+.btn-wh:hover{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.06)}
 /* Hero strip */
-.hero-strip{
-  position:absolute;bottom:0;inset-inline:0;z-index:2;
-  display:grid;grid-template-columns:repeat(4,1fr);
-  background:rgba(4,10,6,.88);
-  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
-  border-top:1px solid rgba(255,255,255,.05);
-}
-.hs-cell{padding:22px 20px;display:flex;align-items:center;gap:14px;border-right:1px solid rgba(255,255,255,.04)}
-.hs-cell:last-child{border-right:none}
-.hs-icon{width:36px;height:36px;border-radius:4px;background:rgba(232,168,0,.1);border:1px solid rgba(232,168,0,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.hs-icon i{color:var(--gold4);font-size:13px}
-.hs-cell strong{display:block;font-size:11.5px;font-weight:600;color:#fff;line-height:1.3;letter-spacing:.1px}
-.hs-cell span{display:block;font-size:10px;color:rgba(255,255,255,.32);margin-top:2px;letter-spacing:.2px}
+.hero-strip{position:absolute;bottom:0;inset-inline:0;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(3,10,5,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid rgba(255,255,255,.05)}
+.hs{padding:22px 20px;display:flex;align-items:center;gap:14px;border-right:1px solid rgba(255,255,255,.04)}
+.hs:last-child{border-right:none}
+.hs-icon{width:38px;height:38px;border:1px solid rgba(232,168,0,.2);background:rgba(232,168,0,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hs-icon i{color:var(--gold4);font-size:13.5px}
+.hs strong{display:block;font-size:11.5px;font-weight:600;color:#fff;line-height:1.3}
+.hs span{display:block;font-size:10px;color:rgba(255,255,255,.3);margin-top:2px;letter-spacing:.2px}
 
-/* ── TRUST BAR ─────────────────────────────────── */
-#trustbar{
-  background:#fff;border-bottom:1px solid var(--line);
-  padding:12px 7%;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;
-}
-.tb-inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center}
+/* ── TRUST BAR ── */
+#trustbar{background:#fff;border-bottom:1px solid var(--line);padding:13px 7%;display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+.tb{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:center}
 .tb-item{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:500;color:var(--ink4);letter-spacing:.3px;white-space:nowrap}
 .tb-item i{font-size:10.5px}
-.ti-green{color:var(--g2)}
-.ti-gold{color:var(--gold2)}
-.tb-div{width:1px;height:14px;background:var(--line);flex-shrink:0}
+.ti-g{color:var(--g2)}
+.ti-a{color:var(--gold2)}
+.tb-d{width:1px;height:14px;background:var(--line);flex-shrink:0}
 
-/* ── ABOUT ──────────────────────────────────────── */
-#about{background:#fff;padding:120px 7%}
-.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1240px;margin:0 auto}
-.about-images{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:12px}
-.a-hero{grid-column:1/-1;border-radius:2px;overflow:hidden;height:290px;position:relative}
-.a-hero img{width:100%;height:100%;object-fit:cover}
-.a-hero-caption{position:absolute;bottom:0;inset-inline:0;padding:14px 18px;background:linear-gradient(0deg,rgba(4,13,6,.7),transparent);font-family:'Cormorant Garamond',serif;font-size:11.5px;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:.5px;font-style:italic}
-.a-thumb{border-radius:2px;overflow:hidden;height:160px}
-.a-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
-.a-thumb:hover img{transform:scale(1.05)}
+/* ── ABOUT ── */
+#about{padding:124px 7%;background:#fff}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:84px;align-items:center;max-width:1260px;margin:0 auto}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:10px}
+.a-main{grid-column:1/-1;height:300px;overflow:hidden;position:relative}
+.a-main img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.a-main:hover img{transform:scale(1.03)}
+.a-caption{position:absolute;bottom:0;inset-inline:0;padding:14px 18px;background:linear-gradient(0deg,rgba(3,12,5,.72),transparent);font-family:'Cormorant Garamond',serif;font-size:11.5px;font-style:italic;color:rgba(255,255,255,.7);letter-spacing:.4px}
+.a-sm{height:170px;overflow:hidden;position:relative}
+.a-sm img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.a-sm:hover img{transform:scale(1.05)}
 .about-text .eyebrow{margin-bottom:18px}
-.about-text p{font-size:.9rem;color:var(--ink3);line-height:2;margin-bottom:14px;font-weight:300}
-.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:28px 0 36px;background:var(--line);border:1px solid var(--line);border-radius:2px;overflow:hidden}
-.pillar{background:#fff;padding:16px 18px;transition:background var(--ease)}
+.about-text p{font-size:.9rem;color:var(--ink3);line-height:2.05;margin-bottom:14px;font-weight:300}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:28px 0 36px;background:var(--line);border:1px solid var(--line)}
+.pillar{background:#fff;padding:18px 16px;transition:background var(--ease)}
 .pillar:hover{background:var(--g5)}
-.pillar i{color:var(--g2);font-size:14px;margin-bottom:7px}
-.pillar strong{display:block;font-size:11.5px;font-weight:600;color:var(--ink);margin-bottom:3px;letter-spacing:.1px}
-.pillar small{font-size:11px;color:var(--ink4);line-height:1.6}
-.btn-forest{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:2px;background:var(--g1);color:#fff;font-weight:600;font-size:11.5px;letter-spacing:.8px;text-transform:uppercase;transition:all var(--ease)}
-.btn-forest:hover{background:var(--g2);box-shadow:0 8px 28px rgba(10,61,31,.28)}
+.pillar i{color:var(--g2);font-size:15px;margin-bottom:8px;display:block}
+.pillar strong{display:block;font-size:11.5px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.pillar small{font-size:11px;color:var(--ink4);line-height:1.65}
+.btn-dk{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;background:var(--g1);color:#fff;font-weight:600;font-size:11px;letter-spacing:.9px;text-transform:uppercase;transition:all var(--ease)}
+.btn-dk:hover{background:var(--g2);box-shadow:0 8px 30px rgba(10,61,31,.28)}
 
-/* ── PRODUCTS ───────────────────────────────────── */
-#products{background:var(--warm);padding:108px 7%}
+/* ── PRODUCTS ── */
+#products{background:var(--warm);padding:112px 7%}
 .prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px;background:var(--line)}
-.prod-card{background:#fff;display:grid;grid-template-columns:1fr 1fr;transition:all var(--ease)}
-.prod-card:hover{z-index:2;box-shadow:var(--s4)}
-.prod-slides{position:relative;overflow:hidden;background:#e4eeea;min-height:460px}
-.prod-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
+.prod-card{background:#fff;display:grid;grid-template-columns:1fr 1fr;transition:box-shadow var(--ease-out)}
+.prod-card:hover{box-shadow:var(--s4);z-index:2}
+.prod-slides{position:relative;overflow:hidden;background:#dce8e0;min-height:480px}
+.prod-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .75s ease}
 .prod-slides img.active{opacity:1}
-.prod-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(4,13,6,.5))}
-.prod-pill{
-  position:absolute;bottom:18px;left:18px;z-index:1;
-  font-size:8.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
-  color:rgba(255,255,255,.85);
-  border:1px solid rgba(255,255,255,.25);
-  padding:5px 13px;border-radius:0;
-  backdrop-filter:blur(8px);background:rgba(4,13,6,.35);
-}
-.slide-dots{position:absolute;bottom:16px;right:16px;display:flex;gap:5px;z-index:2}
-.slide-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;padding:0;transition:all .3s}
-.slide-dot.active{background:#fff;width:16px;border-radius:2px}
-.prod-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line)}
-.prod-origin{font-size:9.5px;color:var(--g3);font-weight:600;letter-spacing:.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.prod-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(3,12,5,.52))}
+.prod-pill{position:absolute;bottom:18px;left:18px;z-index:1;font-size:8.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.24);padding:5px 14px;backdrop-filter:blur(8px);background:rgba(3,12,5,.32)}
+.sdots{position:absolute;bottom:16px;right:16px;display:flex;gap:5px;z-index:2}
+.sdot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.3);border:none;cursor:pointer;padding:0;transition:all .3s}
+.sdot.active{background:#fff;width:16px;border-radius:2px}
+.prod-body{padding:44px 38px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--line)}
+.prod-origin{font-size:9.5px;color:var(--g3);font-weight:600;letter-spacing:.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .prod-origin i{font-size:8px;color:var(--gold2)}
-.prod-body h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--ink);margin-bottom:6px;line-height:1.12;letter-spacing:-.2px}
-.prod-tagline{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink4);margin-bottom:16px;line-height:1.5}
-.prod-body p{font-size:.855rem;color:var(--ink3);line-height:1.95;margin-bottom:24px;font-weight:300}
-.prod-specs{border-top:1px solid var(--line2);border-left:1px solid var(--line2);margin-bottom:20px}
+.prod-body h3{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:600;color:var(--ink);margin-bottom:6px;line-height:1.1;letter-spacing:-.2px}
+.prod-tagline{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;font-style:italic;color:var(--ink4);margin-bottom:16px;line-height:1.55}
+.prod-body > p{font-size:.855rem;color:var(--ink3);line-height:2;margin-bottom:26px;font-weight:300}
+.prod-specs{border-top:1px solid var(--line2);border-left:1px solid var(--line2);margin-bottom:22px}
 .ps-row{display:grid;grid-template-columns:1fr 1fr 1fr}
-.ps-cell{padding:9px 12px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.ps-cell{padding:10px 12px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
 .ps-label{font-size:8.5px;color:var(--ink4);font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:2px}
 .ps-val{font-size:12px;color:var(--ink);font-weight:600}
-.prod-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:24px}
-.prod-tag{font-size:9.5px;padding:4px 11px;border:1px solid var(--line);color:var(--ink3);font-weight:500;letter-spacing:.2px;border-radius:0}
-.prod-cta{display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:0;background:var(--g1);color:#fff;font-weight:600;font-size:11px;letter-spacing:1px;text-transform:uppercase;transition:all var(--ease);align-self:flex-start}
-.prod-cta:hover{background:var(--g2);box-shadow:0 6px 20px rgba(10,61,31,.24)}
+.prod-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:26px}
+.prod-tag{font-size:9.5px;padding:4px 12px;border:1px solid var(--line);color:var(--ink3);font-weight:500}
+.prod-cta{display:inline-flex;align-items:center;gap:9px;padding:12px 24px;background:var(--g1);color:#fff;font-weight:600;font-size:11px;letter-spacing:1px;text-transform:uppercase;transition:all var(--ease);align-self:flex-start}
+.prod-cta:hover{background:var(--g2);box-shadow:0 6px 22px rgba(10,61,31,.24)}
 
-/* ── CATALOGUE ──────────────────────────────────── */
-#catalogue{background:#fff;padding:108px 7%}
-.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:52px;background:var(--line);border:1px solid var(--line)}
-.cat-card{background:#fff;display:flex;flex-direction:column;transition:all var(--ease)}
-.cat-card:hover{z-index:2;box-shadow:var(--s3)}
-.cat-card:hover .cat-img img{transform:scale(1.05)}
-.cat-img{height:210px;overflow:hidden;position:relative;background:#e8f1ea;flex-shrink:0}
-.cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
-.cat-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(4,13,6,.48))}
-.cat-pill{
-  position:absolute;bottom:14px;left:14px;z-index:1;
-  font-size:8px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
-  color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.22);
-  padding:4px 11px;backdrop-filter:blur(6px);background:rgba(4,13,6,.3);
-}
+/* ── CATALOGUE ── */
+#catalogue{background:#fff;padding:112px 7%}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:54px;background:var(--line);border:1px solid var(--line)}
+.cat-card{background:#fff;display:flex;flex-direction:column;transition:box-shadow var(--ease-out)}
+.cat-card:hover{box-shadow:var(--s3);z-index:2}
+.cat-card:hover .cat-img img{transform:scale(1.06)}
+.cat-img{height:220px;overflow:hidden;position:relative;background:#e0edea;flex-shrink:0}
+.cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .85s ease}
+.cat-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(3,12,5,.5))}
+.cat-pill{position:absolute;bottom:14px;left:14px;z-index:1;font-size:8px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.2);padding:4px 12px;backdrop-filter:blur(6px);background:rgba(3,12,5,.28)}
 .cat-body{padding:22px 22px 26px;flex:1;display:flex;flex-direction:column}
 .cat-origin{font-size:9.5px;color:var(--g3);font-weight:600;letter-spacing:.4px;margin-bottom:7px;display:flex;align-items:center;gap:5px}
 .cat-origin i{font-size:8px;color:var(--gold2)}
-.cat-body h4{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.2}
+.cat-body h4{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.2}
 .cat-tagline{font-family:'Cormorant Garamond',serif;font-size:.92rem;font-weight:300;font-style:italic;color:var(--ink4);margin-bottom:10px}
-.cat-desc{font-size:11.5px;color:var(--ink3);line-height:1.88;margin-bottom:14px;flex:1;font-weight:300}
+.cat-desc{font-size:11.5px;color:var(--ink3);line-height:1.9;margin-bottom:16px;flex:1;font-weight:300}
 .cat-specs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line2);border-left:1px solid var(--line2);margin-bottom:14px}
-.csp-cell{padding:7px 10px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
-.csp-label{display:block;font-size:8.5px;color:var(--ink4);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:2px}
-.csp-val{display:block;font-size:11.5px;color:var(--ink);font-weight:600}
+.csp{padding:7px 10px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.csp-l{display:block;font-size:8.5px;color:var(--ink4);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:2px}
+.csp-v{display:block;font-size:11.5px;color:var(--ink);font-weight:600}
 .cat-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}
-.cat-chip{font-size:9px;padding:3px 9px;border:1px solid var(--line);color:var(--ink3);font-weight:500;letter-spacing:.2px}
-.cat-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:0;background:var(--g1);color:#fff;font-weight:600;font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;transition:all var(--ease);margin-top:auto;align-self:flex-start}
-.cat-cta:hover{background:var(--g2);box-shadow:0 4px 14px rgba(10,61,31,.18)}
+.cat-chip{font-size:9px;padding:3px 9px;border:1px solid var(--line);color:var(--ink3);font-weight:500}
+.cat-cta{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;background:var(--g1);color:#fff;font-weight:600;font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;transition:all var(--ease);margin-top:auto;align-self:flex-start}
+.cat-cta:hover{background:var(--g2)}
 
-/* ── GALLERY ────────────────────────────────────── */
+/* ── GALLERY ── */
 #gallery{overflow:hidden}
-.gallery-strip{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;height:320px;gap:1px;background:var(--line)}
+.gallery-strip{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;height:340px;gap:2px;background:var(--line)}
 .g-panel{overflow:hidden;position:relative}
-.g-panel img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease;filter:saturate(.92)}
-.g-panel:hover img{transform:scale(1.07);filter:saturate(1.05)}
-.g-panel::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(4,13,6,.4));opacity:0;transition:opacity .4s}
-.g-panel:hover::after{opacity:1}
+.g-panel img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease;filter:saturate(.9) brightness(.95)}
+.g-panel:hover img{transform:scale(1.08);filter:saturate(1.08) brightness(1)}
+.g-panel::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(3,12,5,.38));pointer-events:none}
 
-/* ── STATS ──────────────────────────────────────── */
-.stats-band{
-  background:var(--g1);
-  padding:72px 7%;
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:1px;background-color:var(--g1);
-  position:relative;overflow:hidden;
-}
-.stats-band::before{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse at 10% 90%,rgba(232,168,0,.09) 0%,transparent 45%),
-    radial-gradient(ellipse at 90% 10%,rgba(25,128,64,.2) 0%,transparent 45%);
-  pointer-events:none;
-}
-.stat-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
-.stat-item{
-  position:relative;z-index:1;padding:48px 40px;
-  border-right:1px solid rgba(255,255,255,.06);
-  text-align:left;
-}
+/* ── STATS ── */
+.stats-band{background:var(--g1);padding:0;display:grid;grid-template-columns:repeat(4,1fr);position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 10% 90%,rgba(232,168,0,.09) 0%,transparent 45%),radial-gradient(ellipse at 90% 10%,rgba(25,128,68,.22) 0%,transparent 45%);pointer-events:none}
+.stat-item{position:relative;z-index:1;padding:52px 44px;border-right:1px solid rgba(255,255,255,.06)}
 .stat-item:last-child{border-right:none}
-.stat-num{
-  font-family:'Cormorant Garamond',serif;
-  font-size:3.8rem;font-weight:600;
-  color:var(--gold4);line-height:1;letter-spacing:-1px;
-}
-.stat-label{
-  font-size:10px;font-weight:600;
-  color:rgba(255,255,255,.4);
-  letter-spacing:2.5px;text-transform:uppercase;margin-top:10px;
-}
-.stat-rule{width:24px;height:1px;background:var(--gold3);opacity:.5;margin:14px 0 0}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3.9rem;font-weight:600;color:var(--gold4);line-height:1;letter-spacing:-1px}
+.stat-rule{width:26px;height:1px;background:var(--gold3);opacity:.45;margin:14px 0}
+.stat-label{font-size:10px;font-weight:600;color:rgba(255,255,255,.38);letter-spacing:2.5px;text-transform:uppercase}
 
-/* ── WHY US ─────────────────────────────────────── */
-#why{
-  background:var(--night);
-  padding:120px 7%;position:relative;overflow:hidden;
-}
-#why::before{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse at 15% 85%,rgba(232,168,0,.07) 0%,transparent 42%),
-    radial-gradient(ellipse at 85% 10%,rgba(25,128,64,.14) 0%,transparent 42%);
-  pointer-events:none;
-}
-.why-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;margin-top:56px;
-  background:rgba(255,255,255,.05);position:relative;z-index:1;
-}
-.why-card{
-  background:rgba(255,255,255,.02);
-  border-right:1px solid rgba(255,255,255,.04);
-  padding:36px 32px;
-  transition:all var(--ease);
-}
+/* ── WHY US ── */
+#why{background:var(--night);padding:120px 7%;position:relative;overflow:hidden}
+#why::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 12% 88%,rgba(232,168,0,.07) 0%,transparent 40%),radial-gradient(ellipse at 88% 8%,rgba(25,128,68,.13) 0%,transparent 40%);pointer-events:none}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:58px;background:rgba(255,255,255,.04);position:relative;z-index:1}
+.why-card{background:rgba(255,255,255,.02);padding:40px 34px;border-right:1px solid rgba(255,255,255,.04);transition:background var(--ease)}
 .why-card:last-child{border-right:none}
-.why-card:hover{background:rgba(255,255,255,.05)}
-.why-num{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.4rem;font-weight:300;color:rgba(255,255,255,.08);
-  line-height:1;margin-bottom:16px;letter-spacing:-1px;
-}
-.why-icon{width:40px;height:40px;border-radius:0;border:1px solid rgba(232,168,0,.22);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.why-card:hover{background:rgba(255,255,255,.06)}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;color:rgba(255,255,255,.06);line-height:1;margin-bottom:18px;letter-spacing:-1px}
+.why-icon{width:42px;height:42px;border:1px solid rgba(232,168,0,.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .why-icon i{color:var(--gold4);font-size:16px}
-.why-card h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#fff;margin-bottom:10px;line-height:1.25;letter-spacing:-.1px}
-.why-card p{font-size:12px;color:rgba(255,255,255,.44);line-height:1.9;font-weight:300}
+.why-card h4{font-family:'Cormorant Garamond',serif;font-size:1.32rem;font-weight:600;color:#fff;margin-bottom:11px;line-height:1.25}
+.why-card p{font-size:12px;color:rgba(255,255,255,.42);line-height:1.92;font-weight:300}
 
-/* ── PROCESS ────────────────────────────────────── */
-#process{background:#fff;padding:108px 7%}
-.proc-steps{
-  display:grid;grid-template-columns:repeat(5,1fr);
-  gap:1px;margin-top:64px;
-  background:var(--line);border:1px solid var(--line);
-}
-.proc-step{
-  background:#fff;padding:36px 28px;text-align:center;
-  transition:background var(--ease),box-shadow var(--ease);
-}
+/* ── PROCESS ── */
+#process{background:var(--cream);padding:112px 7%}
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:64px;background:var(--line);border:1px solid var(--line)}
+.proc-step{background:#fff;padding:38px 26px;text-align:center;transition:background var(--ease)}
 .proc-step:hover{background:var(--g5)}
-.proc-num{
-  width:52px;height:52px;border-radius:0;
-  border:1px solid var(--line);
-  color:var(--g2);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 18px;transition:all var(--ease);
-  background:#fff;
-}
+.proc-num{width:52px;height:52px;border:1px solid var(--line);color:var(--g2);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;transition:all var(--ease);background:#fff}
 .proc-step:hover .proc-num{background:var(--g1);color:#fff;border-color:var(--g1)}
 .proc-step h5{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:8px}
-.proc-step p{font-size:11.5px;color:var(--ink4);line-height:1.8;font-weight:300}
+.proc-step p{font-size:11.5px;color:var(--ink4);line-height:1.82;font-weight:300}
 
-/* ── CONTACT ────────────────────────────────────── */
-#contact{background:var(--warm);padding:108px 7%}
-.contact-wrap{
-  display:grid;grid-template-columns:1fr 1.72fr;
-  gap:64px;margin-top:60px;align-items:start;
-  max-width:1240px;margin-left:auto;margin-right:auto;
-}
+/* ── CONTACT ── */
+#contact{background:var(--warm);padding:112px 7%}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.72fr;gap:64px;margin-top:62px;align-items:start;max-width:1260px;margin-left:auto;margin-right:auto}
 
-/* Info panel */
 .ci-panel{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line)}
-.ci-promise{
-  background:var(--g1);padding:26px 24px;
-  position:relative;overflow:hidden;
-}
-.ci-promise::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 90% 10%,rgba(232,168,0,.1) 0%,transparent 55%)}
+.ci-promise{background:var(--g1);padding:28px 24px;position:relative;overflow:hidden}
+.ci-promise::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 88% 8%,rgba(232,168,0,.12) 0%,transparent 52%)}
 .ci-promise-inner{position:relative;z-index:1;display:flex;align-items:flex-start;gap:14px}
-.ci-promise-ico{width:40px;height:40px;border:1px solid rgba(232,168,0,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-.ci-promise-ico i{color:var(--gold4);font-size:16px}
-.ci-promise-text strong{display:block;font-size:12.5px;font-weight:600;color:#fff;margin-bottom:4px;letter-spacing:.1px}
-.ci-promise-text span{font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.65}
+.ci-pico{width:40px;height:40px;border:1px solid rgba(232,168,0,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.ci-pico i{color:var(--gold4);font-size:16px}
+.ci-ptext strong{display:block;font-size:12.5px;font-weight:600;color:#fff;margin-bottom:4px}
+.ci-ptext span{font-size:11.5px;color:rgba(255,255,255,.48);line-height:1.65}
 .ci-item{background:#fff;display:flex;align-items:flex-start;gap:14px;padding:18px 20px;transition:background var(--ease)}
 .ci-item:hover{background:var(--g5)}
 .ci-ico{width:38px;height:38px;border:1px solid var(--line);background:var(--g5);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;color:var(--g2)}
-.ci-ico.wa{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.2);color:#25d366}
+.ci-ico.wa{background:rgba(37,211,102,.09);border-color:rgba(37,211,102,.18);color:#25d366}
 .ci-item strong{display:block;font-size:9px;font-weight:600;color:var(--ink4);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
 .ci-item span{font-size:12.5px;color:var(--ink3);line-height:1.65}
 .ci-item a{color:var(--g2);font-weight:500;word-break:break-all;transition:color var(--ease)}
 .ci-item a:hover{color:var(--g3)}
 .ci-badges{background:#fff;padding:18px 20px}
-.ci-badges-title{font-size:8.5px;font-weight:600;color:var(--ink4);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.ci-bl-title{font-size:8.5px;font-weight:600;color:var(--ink4);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
 .ci-badge-list{display:flex;flex-wrap:wrap;gap:6px}
-.ci-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:500;padding:4px 11px;letter-spacing:.2px;border:1px solid var(--line)}
+.ci-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:500;padding:4px 11px;border:1px solid var(--line)}
 .ci-badge.green{color:var(--g2);background:var(--g4)}
 .ci-badge.gold{color:var(--gold);background:var(--gold-bg)}
 .ci-badge i{font-size:9px}
 
-/* ── ENQUIRY FORM ──────────────────────────────── */
+/* ── FORM ── */
 .eq-card{background:#fff;border:1px solid var(--line);box-shadow:var(--s4)}
-.eq-head{
-  background:var(--g1);
-  padding:34px 38px;position:relative;overflow:hidden;
-}
-.eq-head::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 92% 8%,rgba(232,168,0,.12) 0%,transparent 52%)}
+.eq-head{background:var(--g1);padding:36px 40px;position:relative;overflow:hidden}
+.eq-head::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 94% 6%,rgba(232,168,0,.13) 0%,transparent 50%)}
 .eq-head-inner{position:relative;z-index:1}
 .eq-head h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:#fff;margin-bottom:8px;letter-spacing:-.2px}
-.eq-head p{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.52);line-height:1.75;margin-bottom:18px;font-style:italic}
-.eq-trust-row{display:flex;gap:10px;flex-wrap:wrap}
-.eq-trust-pill{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.1);padding:5px 12px;letter-spacing:.3px}
-.eq-trust-pill i{font-size:9px;color:var(--gold4)}
-.eq-body{padding:34px 38px}
+.eq-head p{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:300;font-style:italic;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px}
+.eq-pills{display:flex;gap:10px;flex-wrap:wrap}
+.eq-pill{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:500;color:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.1);padding:5px 12px;letter-spacing:.3px}
+.eq-pill i{font-size:9px;color:var(--gold4)}
+.eq-body{padding:36px 40px}
 .eq-sec{font-size:8.5px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--ink4);margin-bottom:16px;display:flex;align-items:center;gap:12px}
 .eq-sec::after{content:'';flex:1;height:1px;background:var(--line2)}
 .eq-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .eq-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.eq-group label{font-size:11px;font-weight:600;color:var(--ink2);letter-spacing:.4px;text-transform:uppercase}
-.eq-req{color:#b83232;font-weight:600}
-.eq-opt{font-size:10px;font-weight:400;color:var(--ink4);text-transform:none;letter-spacing:0}
-.eq-group input,.eq-group select,.eq-group textarea{
-  width:100%;padding:11px 14px;
-  border:1px solid var(--line);border-radius:0;
-  font-size:13.5px;color:var(--ink);background:#fff;
-  transition:border-color var(--ease),box-shadow var(--ease);
-  outline:none;-webkit-appearance:none;appearance:none;
-}
-.eq-group select{
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b8572'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:38px;
-}
+.eq-group label{font-size:10.5px;font-weight:600;color:var(--ink2);letter-spacing:.5px;text-transform:uppercase}
+.req{color:#b03030;font-weight:600}
+.opt{font-size:10px;font-weight:400;color:var(--ink4);text-transform:none;letter-spacing:0}
+.eq-group input,.eq-group select,.eq-group textarea{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:0;font-size:13.5px;color:var(--ink);background:#fff;transition:border-color var(--ease),box-shadow var(--ease);outline:none;-webkit-appearance:none;appearance:none}
+.eq-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23688070'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:38px}
 .eq-group input:focus,.eq-group select:focus,.eq-group textarea:focus{border-color:var(--g2);box-shadow:0 0 0 3px rgba(10,61,31,.07)}
-.eq-group input.invalid,.eq-group select.invalid{border-color:#b83232;box-shadow:0 0 0 3px rgba(184,50,50,.07)}
-.eq-group textarea{resize:vertical;min-height:88px;line-height:1.65}
-.phone-wrap{display:flex;gap:8px}
-.phone-code{flex-shrink:0;width:118px;font-size:12px}
-.phone-input{flex:1}
-.eq-err{display:none;font-size:11px;color:#b83232;font-weight:500;align-items:center;gap:5px;margin-top:3px}
+.eq-group input.invalid,.eq-group select.invalid{border-color:#b03030;box-shadow:0 0 0 3px rgba(176,48,48,.07)}
+.eq-group textarea{resize:vertical;min-height:90px;line-height:1.65}
+.ph-wrap{display:flex;gap:8px}
+.ph-code{flex-shrink:0;width:118px;font-size:12px}
+.ph-inp{flex:1}
+.eq-err{display:none;font-size:11px;color:#b03030;font-weight:500;align-items:center;gap:5px;margin-top:3px}
 .eq-err.show{display:flex}
-/* GDPR */
-.eq-consent{
-  display:flex;gap:12px;align-items:flex-start;
-  padding:14px 16px;background:var(--g5);
-  border:1px solid var(--line);margin-bottom:14px;cursor:pointer;
-  transition:border-color var(--ease),background var(--ease);
-}
-.eq-consent.checked{border-color:var(--g2);background:#e8f5ed}
-.eq-consent.invalid{border-color:#b83232 !important;background:#fff8f8 !important}
-.eq-consent-check{width:16px;height:16px;min-width:16px;border-radius:2px;margin-top:2px;accent-color:var(--g2);cursor:pointer;flex-shrink:0}
-.eq-consent-text{font-size:11px;color:var(--ink3);line-height:1.75;user-select:none;font-weight:300}
+.eq-consent{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:var(--g5);border:1px solid var(--line);margin-bottom:14px;cursor:pointer;transition:border-color var(--ease),background var(--ease)}
+.eq-consent.checked{border-color:var(--g2);background:#e5f4eb}
+.eq-consent.invalid{border-color:#b03030!important;background:#fff8f8!important}
+.eq-cb{width:16px;height:16px;min-width:16px;border-radius:2px;margin-top:2px;accent-color:var(--g2);cursor:pointer;flex-shrink:0}
+.eq-consent-text{font-size:11px;color:var(--ink3);line-height:1.78;user-select:none;font-weight:300}
 .eq-consent-text strong{color:var(--g2);font-weight:600}
 .eq-consent-text a{color:var(--g2);font-weight:600;text-decoration:underline;text-underline-offset:2px}
-/* reCAPTCHA */
-.eq-captcha-wrap{margin-bottom:16px}
-.eq-captcha-label{font-size:8.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--ink4);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.eq-captcha-label i{color:var(--g2);font-size:9px}
-.eq-captcha-box{
-  display:inline-block;border:1px solid var(--line);
-  padding:10px 12px;background:#fff;
-  transition:border-color var(--ease),box-shadow var(--ease);
-}
-.eq-captcha-box.invalid{border-color:#b83232;box-shadow:0 0 0 3px rgba(184,50,50,.07)}
-/* Submit */
-.eq-submit{
-  width:100%;padding:15px;border-radius:0;
-  background:var(--g1);color:#fff;
-  font-weight:600;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
-  border:none;cursor:pointer;transition:all var(--ease);
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  box-shadow:0 4px 24px rgba(10,61,31,.2);
-}
+.eq-cap-wrap{margin-bottom:16px}
+.eq-cap-label{font-size:8.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--ink4);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.eq-cap-label i{color:var(--g2);font-size:9px}
+.eq-cap-box{display:inline-block;border:1px solid var(--line);padding:10px 12px;background:#fff;transition:border-color var(--ease),box-shadow var(--ease)}
+.eq-cap-box.invalid{border-color:#b03030;box-shadow:0 0 0 3px rgba(176,48,48,.07)}
+.eq-submit{width:100%;padding:15px;background:var(--g1);color:#fff;font-weight:600;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;transition:all var(--ease);display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 24px rgba(10,61,31,.2)}
 .eq-submit:hover:not(:disabled){background:var(--g2);box-shadow:0 10px 36px rgba(10,61,31,.3)}
-.eq-submit:disabled{opacity:.55;cursor:not-allowed}
+.eq-submit:disabled{opacity:.52;cursor:not-allowed}
 
-/* ── FOOTER ─────────────────────────────────────── */
-#footer{background:var(--night);padding:80px 7% 0}
+/* ── FOOTER ── */
+#footer{background:var(--night);padding:84px 7% 0}
 .footer-top{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.1fr;gap:56px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.06)}
-.f-brand img{width:48px;height:48px;border-radius:2px;margin-bottom:16px;border:1px solid rgba(255,255,255,.1);object-fit:contain;background:rgba(255,255,255,.04);padding:6px}
-.f-brand h4{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;margin-bottom:6px;letter-spacing:-.1px}
-.f-brand p{font-size:12px;line-height:1.85;color:rgba(255,255,255,.38);max-width:280px;font-weight:300;margin-bottom:22px}
-.f-socials{display:flex;gap:8px}
-.f-social{
-  width:34px;height:34px;border:1px solid rgba(255,255,255,.08);
-  display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,.4);font-size:12.5px;
-  transition:all var(--ease);
-}
-.f-social:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
-.f-col h5{font-size:8.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.f-brand img{width:48px;height:48px;margin-bottom:16px;border:1px solid rgba(255,255,255,.1);object-fit:contain;background:rgba(255,255,255,.04);padding:6px}
+.f-brand h4{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:#fff;margin-bottom:6px}
+.f-brand p{font-size:12px;line-height:1.88;color:rgba(255,255,255,.36);max-width:280px;font-weight:300;margin-bottom:22px}
+.f-soc{display:flex;gap:8px}
+.f-s{width:34px;height:34px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.38);font-size:13px;transition:all var(--ease)}
+.f-s:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
+.f-col h5{font-size:8.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:20px}
 .f-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.f-col ul li{font-size:12px;color:rgba(255,255,255,.4);line-height:1.6;font-weight:300}
-.f-col ul a{color:rgba(255,255,255,.4);transition:color var(--ease)}
+.f-col ul li,.f-col ul a{font-size:12px;color:rgba(255,255,255,.38);font-weight:300;line-height:1.65;transition:color var(--ease)}
 .f-col ul a:hover{color:rgba(255,255,255,.82)}
 .footer-bottom{padding:18px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.footer-bottom p{font-size:11px;color:rgba(255,255,255,.22);font-weight:300}
-.f-bottom-links{display:flex;gap:20px}
-.f-bottom-links a{font-size:11px;color:rgba(255,255,255,.22);transition:color var(--ease)}
-.f-bottom-links a:hover{color:rgba(255,255,255,.6)}
+.footer-bottom p{font-size:11px;color:rgba(255,255,255,.2);font-weight:300}
+.f-bl{display:flex;gap:20px}
+.f-bl a{font-size:11px;color:rgba(255,255,255,.2);transition:color var(--ease)}
+.f-bl a:hover{color:rgba(255,255,255,.6)}
 
-/* ── TOAST ──────────────────────────────────────── */
-#toast{
-  position:fixed;bottom:28px;left:50%;
-  transform:translateX(-50%) translateY(20px);z-index:9999;
-  background:var(--ink);color:#fff;
-  padding:13px 26px;font-size:12.5px;font-weight:500;
-  box-shadow:var(--s4);opacity:0;pointer-events:none;
-  transition:all .3s cubic-bezier(.4,0,.2,1);
-  white-space:nowrap;max-width:90vw;letter-spacing:.2px;
-}
+/* ── TOAST ── */
+#toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);z-index:9999;background:var(--ink);color:#fff;padding:13px 28px;font-size:12.5px;font-weight:500;box-shadow:var(--s4);opacity:0;pointer-events:none;transition:all .32s cubic-bezier(.4,0,.2,1);white-space:nowrap;max-width:90vw;letter-spacing:.2px}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-#toast.error{background:#8b1a1a}
+#toast.err{background:#8b1a1a}
 
-/* ── PRIVACY MODAL ──────────────────────────────── */
-#privacy-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(4,13,6,.75);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px}
-#privacy-modal.open{display:flex}
+/* ── PRIVACY MODAL ── */
+#pm{display:none;position:fixed;inset:0;z-index:9999;background:rgba(3,12,5,.78);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px}
+#pm.open{display:flex}
 .pm-box{background:#fff;max-width:680px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:var(--s5)}
 .pm-head{display:flex;align-items:center;justify-content:space-between;padding:22px 28px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1}
-.pm-head h4{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;color:var(--ink);letter-spacing:-.1px}
+.pm-head h4{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;color:var(--ink)}
 .pm-close{background:#fff;border:1px solid var(--line);width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink4);font-size:13px;transition:all var(--ease)}
-.pm-close:hover{background:var(--g4);border-color:var(--line);color:var(--ink)}
+.pm-close:hover{background:var(--g4)}
 .pm-body{padding:24px 28px 36px}
-.pm-body h5{font-size:12.5px;font-weight:600;color:var(--ink);margin:18px 0 6px;letter-spacing:.1px}
+.pm-body h5{font-size:12.5px;font-weight:600;color:var(--ink);margin:18px 0 6px}
 .pm-body h5:first-child{margin-top:0}
-.pm-body p{font-size:12px;color:var(--ink3);line-height:1.9;margin-bottom:10px;font-weight:300}
+.pm-body p,.pm-body li{font-size:12px;color:var(--ink3);line-height:1.92;font-weight:300}
 .pm-body ul{padding-left:16px;margin-bottom:10px}
-.pm-body ul li{font-size:12px;color:var(--ink3);line-height:1.9;margin-bottom:4px;font-weight:300}
+.pm-body li{margin-bottom:4px}
 .pm-body a{color:var(--g2);font-weight:500}
 
-/* ── RESPONSIVE ─────────────────────────────────── */
+/* ── RESPONSIVE ── */
 @media(max-width:1100px){
   .prod-card{grid-template-columns:1fr}
-  .prod-slides{min-height:280px}
-  .prod-body{padding:28px 24px;border-left:none;border-top:1px solid var(--line)}
+  .prod-slides{min-height:300px}
+  .prod-body{padding:30px 26px;border-left:none;border-top:1px solid var(--line)}
   .footer-top{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media(max-width:900px){
-  nav ul,.nav-cta{display:none}
-  .hamburger{display:flex}
-  .about-wrap{grid-template-columns:1fr;gap:48px}
-  .about-images{max-width:560px;margin:0 auto}
+  nav ul,.nb-cta{display:none}
+  .hbg{display:flex}
+  .about-wrap{grid-template-columns:1fr;gap:50px}
+  .about-imgs{max-width:580px;margin:0 auto}
   .contact-wrap{grid-template-columns:1fr;gap:40px}
   .why-grid{grid-template-columns:1fr 1fr}
-  .stats-band{grid-template-columns:1fr 1fr;padding:0}
-  .stat-item{padding:36px 28px}
+  .stats-band{grid-template-columns:1fr 1fr}
+  .stat-item{padding:38px 28px}
   .section{padding:80px 5%}
-  #about,#why,#process,#contact{padding:80px 5%}
+  #about,#products,#catalogue,#why,#process,#contact{padding:80px 5%}
 }
 @media(max-width:680px){
   .hero-strip{grid-template-columns:1fr 1fr}
   .prod-grid{grid-template-columns:1fr}
   .cat-grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr}
-  .proc-steps{grid-template-columns:1fr;gap:1px}
+  .proc-grid{grid-template-columns:1fr;gap:1px}
   .gallery-strip{grid-template-columns:repeat(3,1fr);height:240px}
   .g-panel:nth-child(4),.g-panel:nth-child(5){display:none}
   .footer-top{grid-template-columns:1fr;gap:28px}
-  .footer-bottom{flex-direction:column;text-align:center;align-items:center}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center}
   .eq-row{grid-template-columns:1fr}
-  .eq-body{padding:24px 20px}
-  .eq-head{padding:26px 20px}
+  .eq-body{padding:26px 20px}
+  .eq-head{padding:28px 20px}
 }
 @media(max-width:440px){
   .cat-grid{grid-template-columns:1fr}
-  .hero-content h1{font-size:2.8rem}
-  .about-images{grid-template-columns:1fr}
-  .a-thumb:first-of-type{display:none}
+  .hero-content h1{font-size:2.9rem}
+  .about-imgs{grid-template-columns:1fr}
+  .a-sm:first-of-type{display:none}
   .stats-band{grid-template-columns:1fr 1fr}
-  .hero-strip{grid-template-columns:1fr 1fr}
 }
 
-/* ── SCROLL REVEAL ──────────────────────────────── */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .68s ease,transform .68s ease}
 .reveal.visible{opacity:1;transform:none}
 </style>
 </head>
@@ -672,16 +433,16 @@ nav ul a:hover::after{width:100%}
 
 <!-- NAVBAR -->
 <header id="navbar">
-  <a href="#" class="nav-brand">
-    <div class="nav-logo">
-      <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/83a38a071_logo.jpg" alt="Look Agric Allied Limited" width="44" height="44"/>
+  <a href="#" class="nb" aria-label="Look Agric Allied Limited home">
+    <div class="nb-logo">
+      <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/83a38a071_logo.jpg" alt="Look Agric Allied Limited logo" width="44" height="44"/>
     </div>
     <div>
-      <span class="nav-name">LOOK AGRIC ALLIED LIMITED</span>
-      <span class="nav-sub">Nigeria Export Specialists</span>
+      <span class="nb-name">LOOK AGRIC ALLIED LIMITED</span>
+      <span class="nb-sub">Nigeria Export Specialists</span>
     </div>
   </a>
-  <nav>
+  <nav aria-label="Primary navigation">
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#products">Products</a></li>
@@ -690,14 +451,14 @@ nav ul a:hover::after{width:100%}
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <a href="#contact" class="nav-cta">Request Quote</a>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <a href="#contact" class="nb-cta">Request Quote</a>
+  <button class="hbg" id="hamburger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </header>
 
 <!-- MOBILE MENU -->
-<nav id="mobMenu" aria-label="Mobile navigation">
+<nav id="mob" aria-label="Mobile navigation">
   <a href="#about" onclick="closeMob()">About Us</a>
   <a href="#products" onclick="closeMob()">Products</a>
   <a href="#catalogue" onclick="closeMob()">Full Catalogue</a>
@@ -708,9 +469,8 @@ nav ul a:hover::after{width:100%}
 
 <!-- HERO -->
 <section id="hero" aria-label="Hero">
-  <div class="hero-bg" role="img" aria-label="Nigerian farmland"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-grain"></div>
+  <div class="hero-bg" role="img" aria-label="Nigerian farmland aerial view"></div>
+  <div class="hero-ov"></div>
   <div class="hero-content">
     <div class="hero-kicker">
       <div class="hero-kicker-line"></div>
@@ -720,23 +480,23 @@ nav ul a:hover::after{width:100%}
     <p>From Nigeria's finest farmlands to ports across Europe, Asia, and the Americas — cocoa, cashew, sesame and more, shipped with full documentation and export-grade precision.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn-gold"><i class="fas fa-envelope-open-text"></i> Request a Quote</a>
-      <a href="#products" class="btn-outline-white">View Products <i class="fas fa-arrow-right"></i></a>
+      <a href="#products" class="btn-wh">View Products <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
-  <div class="hero-strip">
-    <div class="hs-cell">
+  <div class="hero-strip" aria-label="Key facts">
+    <div class="hs">
       <div class="hs-icon"><i class="fas fa-globe-africa"></i></div>
       <div><strong>Global Reach</strong><span>Europe · Asia · Americas</span></div>
     </div>
-    <div class="hs-cell">
+    <div class="hs">
       <div class="hs-icon"><i class="fas fa-boxes-stacked"></i></div>
       <div><strong>8 Commodities</strong><span>All export-grade certified</span></div>
     </div>
-    <div class="hs-cell">
+    <div class="hs">
       <div class="hs-icon"><i class="fas fa-ship"></i></div>
       <div><strong>FOB &amp; CIF</strong><span>Apapa · Tin Can · Onne</span></div>
     </div>
-    <div class="hs-cell">
+    <div class="hs">
       <div class="hs-icon"><i class="fas fa-clock"></i></div>
       <div><strong>24h Response</strong><span>Quote within one business day</span></div>
     </div>
@@ -745,77 +505,77 @@ nav ul a:hover::after{width:100%}
 
 <!-- TRUST BAR -->
 <div id="trustbar" role="region" aria-label="Trust signals">
-  <div class="tb-inner">
-    <div class="tb-item"><i class="fas fa-certificate ti-gold"></i> Grade A Quality Certified</div>
-    <div class="tb-div"></div>
-    <div class="tb-item"><i class="fas fa-leaf ti-green"></i> Direct Farmer Sourcing</div>
-    <div class="tb-div"></div>
-    <div class="tb-item"><i class="fas fa-ship ti-green"></i> FOB &amp; CIF Available</div>
-    <div class="tb-div"></div>
-    <div class="tb-item"><i class="fas fa-file-contract ti-gold"></i> Full Export Documentation</div>
-    <div class="tb-div"></div>
-    <div class="tb-item"><i class="fas fa-shield-alt ti-green"></i> GDPR Compliant</div>
-    <div class="tb-div"></div>
-    <div class="tb-item"><i class="fas fa-lock ti-gold"></i> SSL Secured Enquiries</div>
+  <div class="tb">
+    <div class="tb-item"><i class="fas fa-certificate ti-a"></i> Grade A Quality Certified</div>
+    <div class="tb-d"></div>
+    <div class="tb-item"><i class="fas fa-leaf ti-g"></i> Direct Farmer Sourcing</div>
+    <div class="tb-d"></div>
+    <div class="tb-item"><i class="fas fa-ship ti-g"></i> FOB &amp; CIF Available</div>
+    <div class="tb-d"></div>
+    <div class="tb-item"><i class="fas fa-file-contract ti-a"></i> Full Export Documentation</div>
+    <div class="tb-d"></div>
+    <div class="tb-item"><i class="fas fa-shield-alt ti-g"></i> GDPR Compliant</div>
+    <div class="tb-d"></div>
+    <div class="tb-item"><i class="fas fa-lock ti-a"></i> SSL Secured</div>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="about-wrap">
-    <div class="about-images reveal">
-      <div class="a-hero">
-        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/7d4135330_generated_image.png" alt="Nigerian farmland aerial view" loading="eager" fetchpriority="high"/>
-        <div class="a-hero-caption">Nigeria's agricultural heartland — Oyo State</div>
+    <div class="about-imgs reveal">
+      <div class="a-main">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/85c71b2f3_generated_image.png" alt="Nigerian farmland aerial view at golden hour" loading="eager" fetchpriority="high"/>
+        <div class="a-caption">Nigeria's agricultural heartland — Oyo State, West Africa</div>
       </div>
-      <div class="a-thumb">
-        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/331c9d663_generated_image.png" alt="Cocoa beans drying" loading="lazy"/>
+      <div class="a-sm">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/126e68429_generated_image.png" alt="Fermented cocoa beans drying in Nigerian sun" loading="lazy"/>
       </div>
-      <div class="a-thumb">
-        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/4d0dee8e3_generated_image.png" alt="Premium cashew nuts" loading="lazy"/>
+      <div class="a-sm">
+        <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/60387b875_generated_image.png" alt="Premium raw cashew nuts export grade" loading="lazy"/>
       </div>
     </div>
     <div class="about-text reveal">
       <div class="eyebrow">Who We Are</div>
       <h2 class="s-title">Rooted in Nigeria,<br/><em>Reaching the World</em></h2>
-      <div class="rule"><div class="rule-dot"></div></div>
+      <div class="s-rule"><div class="s-rule-dot"></div></div>
       <p>LOOK AGRIC ALLIED LIMITED is a Nigerian farm produce export company headquartered in Ibadan, Oyo State. We specialise in the sourcing, processing, and export of premium agricultural commodities — connecting Nigeria's richest farmlands to global buyers across Europe, Asia, the Middle East, and the Americas.</p>
       <p>We work directly with trusted farmers across Nigeria's most productive agric belts, ensuring every lot meets international standards for quality, purity, and consistency — every shipment, every time.</p>
-      <div class="about-pillars">
+      <div class="pillars">
         <div class="pillar"><i class="fas fa-handshake"></i><strong>Direct Farmer Sourcing</strong><small>Partnering with local farmers for fresh, traceable produce.</small></div>
-        <div class="pillar"><i class="fas fa-certificate"></i><strong>Quality Assurance</strong><small>Every batch inspected and graded to international export spec.</small></div>
+        <div class="pillar"><i class="fas fa-certificate"></i><strong>Quality Assurance</strong><small>Every batch inspected and graded to international spec.</small></div>
         <div class="pillar"><i class="fas fa-ship"></i><strong>Reliable Export</strong><small>Timely shipments with complete documentation support.</small></div>
         <div class="pillar"><i class="fas fa-leaf"></i><strong>Sustainable Practices</strong><small>Eco-friendly, responsible, community-driven farming.</small></div>
       </div>
-      <a href="#contact" class="btn-forest"><i class="fas fa-paper-plane"></i> Partner With Us</a>
+      <a href="#contact" class="btn-dk"><i class="fas fa-paper-plane"></i> Partner With Us</a>
     </div>
   </div>
 </section>
 
 <!-- PRODUCTS -->
 <section id="products">
-  <div class="container">
-    <div class="centered reveal">
-      <div class="eyebrow" style="justify-content:center">Flagship Exports</div>
+  <div class="wrap">
+    <div class="tc reveal">
+      <div class="eyebrow center">Flagship Exports</div>
       <h2 class="s-title" style="margin-top:14px">Our Two <span>Premier Commodities</span></h2>
-      <div class="rule center" style="margin-top:18px"><div class="rule-dot"></div></div>
-      <p class="s-lead center" style="margin-top:4px">Nigeria's most internationally traded farm produce — sourced from the finest growing zones, processed to specification, and shipped with care.</p>
+      <div class="s-rule center" style="margin-top:20px"><div class="s-rule-dot"></div></div>
+      <p class="s-lead center">Nigeria's most internationally traded farm produce — sourced from the finest growing zones, processed to specification, shipped with care.</p>
     </div>
-    <div class="prod-grid" style="margin-top:52px">
+    <div class="prod-grid">
       <!-- COCOA -->
       <div class="prod-card reveal">
         <div class="prod-slides" id="cocoaSlides">
-          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/331c9d663_generated_image.png" alt="Fermented cocoa beans" class="active" loading="eager"/>
-          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/2c224109a_generated_image.png" alt="Cocoa pod harvest" loading="lazy"/>
+          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/126e68429_generated_image.png" alt="Fermented cocoa beans drying" class="active" loading="eager"/>
+          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/db469d32f_generated_image.png" alt="Cocoa harvest Nigeria" loading="lazy"/>
           <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/cebbf1d33_generated_image.png" alt="Cocoa beans close-up" loading="lazy"/>
           <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/80d19959a_generated_image.png" alt="Cocoa pods on tree" loading="lazy"/>
-          <div class="prod-img-overlay"></div>
+          <div class="prod-ov"></div>
           <div class="prod-pill">Cocoa Beans</div>
-          <div class="slide-dots" id="cocoaDots">
-            <button class="slide-dot active" onclick="goSlide('cocoa',0)" aria-label="Slide 1"></button>
-            <button class="slide-dot" onclick="goSlide('cocoa',1)" aria-label="Slide 2"></button>
-            <button class="slide-dot" onclick="goSlide('cocoa',2)" aria-label="Slide 3"></button>
-            <button class="slide-dot" onclick="goSlide('cocoa',3)" aria-label="Slide 4"></button>
+          <div class="sdots" id="cocoaDots">
+            <button class="sdot active" onclick="goSlide('cocoa',0)" aria-label="Slide 1"></button>
+            <button class="sdot" onclick="goSlide('cocoa',1)" aria-label="Slide 2"></button>
+            <button class="sdot" onclick="goSlide('cocoa',2)" aria-label="Slide 3"></button>
+            <button class="sdot" onclick="goSlide('cocoa',3)" aria-label="Slide 4"></button>
           </div>
         </div>
         <div class="prod-body">
@@ -835,26 +595,24 @@ nav ul a:hover::after{width:100%}
               <div class="ps-cell"><div class="ps-label">Min. Order</div><div class="ps-val">1 &times; 20ft FCL</div></div>
             </div>
           </div>
-          <div class="prod-tags">
-            <span class="prod-tag">Chocolate</span><span class="prod-tag">Cocoa Butter</span><span class="prod-tag">Cocoa Powder</span><span class="prod-tag">Confectionery</span><span class="prod-tag">Cosmetics</span>
-          </div>
+          <div class="prod-tags"><span class="prod-tag">Chocolate</span><span class="prod-tag">Cocoa Butter</span><span class="prod-tag">Cocoa Powder</span><span class="prod-tag">Confectionery</span><span class="prod-tag">Cosmetics</span></div>
           <a href="#contact" class="prod-cta"><i class="fas fa-envelope"></i> Request Quote</a>
         </div>
       </div>
       <!-- CASHEW -->
       <div class="prod-card reveal">
         <div class="prod-slides" id="cashewSlides">
-          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/4d0dee8e3_generated_image.png" alt="Premium cashew nuts" class="active" loading="eager"/>
+          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/60387b875_generated_image.png" alt="Premium raw cashew nuts" class="active" loading="eager"/>
           <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/57376a37e_generated_image.png" alt="Cashew farm harvest" loading="lazy"/>
-          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/83d81fed0_generated_image.png" alt="Cashew export grade" loading="lazy"/>
-          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/a6cfddf09_generated_image.png" alt="Cashew orchard" loading="lazy"/>
-          <div class="prod-img-overlay"></div>
+          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/83d81fed0_generated_image.png" alt="Cashew nuts export grade" loading="lazy"/>
+          <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/a6cfddf09_generated_image.png" alt="Cashew orchard Nigeria" loading="lazy"/>
+          <div class="prod-ov"></div>
           <div class="prod-pill">Cashew Nuts</div>
-          <div class="slide-dots" id="cashewDots">
-            <button class="slide-dot active" onclick="goSlide('cashew',0)" aria-label="Slide 1"></button>
-            <button class="slide-dot" onclick="goSlide('cashew',1)" aria-label="Slide 2"></button>
-            <button class="slide-dot" onclick="goSlide('cashew',2)" aria-label="Slide 3"></button>
-            <button class="slide-dot" onclick="goSlide('cashew',3)" aria-label="Slide 4"></button>
+          <div class="sdots" id="cashewDots">
+            <button class="sdot active" onclick="goSlide('cashew',0)" aria-label="Slide 1"></button>
+            <button class="sdot" onclick="goSlide('cashew',1)" aria-label="Slide 2"></button>
+            <button class="sdot" onclick="goSlide('cashew',2)" aria-label="Slide 3"></button>
+            <button class="sdot" onclick="goSlide('cashew',3)" aria-label="Slide 4"></button>
           </div>
         </div>
         <div class="prod-body">
@@ -874,9 +632,7 @@ nav ul a:hover::after{width:100%}
               <div class="ps-cell"><div class="ps-label">Min. Order</div><div class="ps-val">1 &times; 20ft FCL</div></div>
             </div>
           </div>
-          <div class="prod-tags">
-            <span class="prod-tag">Cashew Processing</span><span class="prod-tag">Snack Industry</span><span class="prod-tag">Cashew Kernel</span><span class="prod-tag">CNSL</span>
-          </div>
+          <div class="prod-tags"><span class="prod-tag">Cashew Processing</span><span class="prod-tag">Snack Industry</span><span class="prod-tag">Cashew Kernel</span><span class="prod-tag">CNSL</span></div>
           <a href="#contact" class="prod-cta"><i class="fas fa-envelope"></i> Request Quote</a>
         </div>
       </div>
@@ -886,88 +642,88 @@ nav ul a:hover::after{width:100%}
 
 <!-- CATALOGUE -->
 <section id="catalogue">
-  <div class="container">
-    <div class="centered reveal">
-      <div class="eyebrow" style="justify-content:center">Full Product Catalogue</div>
+  <div class="wrap">
+    <div class="tc reveal">
+      <div class="eyebrow center">Full Product Catalogue</div>
       <h2 class="s-title" style="margin-top:14px">All <span>Eight Commodities</span></h2>
-      <div class="rule center" style="margin-top:18px"><div class="rule-dot"></div></div>
-      <p class="s-lead center" style="margin-top:4px">A comprehensive export portfolio — all sourced from Nigeria's most productive growing zones, processed to international grade, and shipped with full documentation.</p>
+      <div class="s-rule center" style="margin-top:20px"><div class="s-rule-dot"></div></div>
+      <p class="s-lead center">A comprehensive export portfolio — all sourced from Nigeria's most productive growing zones, processed to international grade, and shipped with full documentation.</p>
     </div>
-    <div class="cat-grid" style="margin-top:52px">
+    <div class="cat-grid">
       <!-- SESAME -->
       <div class="cat-card reveal">
-        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/33c27abeb_generated_image.png" alt="White sesame seeds" loading="lazy"/><div class="cat-overlay"></div><div class="cat-pill">Sesame Seeds</div></div>
+        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/67da9cf2a_generated_image.png" alt="White sesame seeds" loading="lazy"/><div class="cat-ov"></div><div class="cat-pill">Sesame Seeds</div></div>
         <div class="cat-body">
           <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Jigawa &middot; Borno &middot; Yobe &middot; Kano</div>
           <h4>White Sesame Seeds</h4>
           <div class="cat-tagline">"Nigeria's Premium Oil Seed"</div>
           <p class="cat-desc">Hulled and natural sesame seeds with exceptional purity and high oil content, ideal for food and cosmetic processing.</p>
-          <div class="cat-specs"><div class="csp-cell"><span class="csp-label">Purity</span><span class="csp-val">&ge; 99.5%</span></div><div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 6%</span></div><div class="csp-cell"><span class="csp-label">Oil Content</span><span class="csp-val">&ge; 52%</span></div><div class="csp-cell"><span class="csp-label">Packing</span><span class="csp-val">25/50kg Bags</span></div></div>
+          <div class="cat-specs"><div class="csp"><span class="csp-l">Purity</span><span class="csp-v">&ge; 99.5%</span></div><div class="csp"><span class="csp-l">Moisture</span><span class="csp-v">&le; 6%</span></div><div class="csp"><span class="csp-l">Oil Content</span><span class="csp-v">&ge; 52%</span></div><div class="csp"><span class="csp-l">Packing</span><span class="csp-v">25/50kg Bags</span></div></div>
           <div class="cat-chips"><span class="cat-chip">Food Grade</span><span class="cat-chip">Cosmetics</span><span class="cat-chip">Oil Processing</span></div>
           <a href="#contact" class="cat-cta"><i class="fas fa-envelope"></i> Enquire Now</a>
         </div>
       </div>
       <!-- SHEA NUTS -->
       <div class="cat-card reveal">
-        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/c7face763_generated_image.png" alt="Shea nuts" loading="lazy"/><div class="cat-overlay"></div><div class="cat-pill">Shea Nuts</div></div>
+        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/561266fd2_generated_image.png" alt="Grade A shea nuts" loading="lazy"/><div class="cat-ov"></div><div class="cat-pill">Shea Nuts</div></div>
         <div class="cat-body">
           <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Kwara &middot; Niger &middot; Benue &middot; Nassarawa</div>
           <h4>Grade A Shea Nuts</h4>
           <div class="cat-tagline">"The Gold of Africa's Savanna"</div>
-          <p class="cat-desc">Sun-dried shea nuts with consistent fat content for butter extraction, widely used in confectionery and cosmetics.</p>
-          <div class="cat-specs"><div class="csp-cell"><span class="csp-label">Fat Content</span><span class="csp-val">&ge; 45%</span></div><div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 8%</span></div><div class="csp-cell"><span class="csp-label">FFA</span><span class="csp-val">&le; 12%</span></div><div class="csp-cell"><span class="csp-label">Packing</span><span class="csp-val">60/80kg Bags</span></div></div>
+          <p class="cat-desc">Sun-dried shea nuts with consistent fat content for butter extraction, widely used in confectionery and cosmetics worldwide.</p>
+          <div class="cat-specs"><div class="csp"><span class="csp-l">Fat Content</span><span class="csp-v">&ge; 45%</span></div><div class="csp"><span class="csp-l">Moisture</span><span class="csp-v">&le; 8%</span></div><div class="csp"><span class="csp-l">FFA</span><span class="csp-v">&le; 12%</span></div><div class="csp"><span class="csp-l">Packing</span><span class="csp-v">60/80kg Bags</span></div></div>
           <div class="cat-chips"><span class="cat-chip">Shea Butter</span><span class="cat-chip">Confectionery</span><span class="cat-chip">Cosmetics</span></div>
           <a href="#contact" class="cat-cta"><i class="fas fa-envelope"></i> Enquire Now</a>
         </div>
       </div>
       <!-- SOYBEANS -->
       <div class="cat-card reveal">
-        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/e1474ec90_generated_image.png" alt="Non-GMO soybeans" loading="lazy"/><div class="cat-overlay"></div><div class="cat-pill">Soybeans</div></div>
+        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/ee6115aed_generated_image.png" alt="Non-GMO soybeans" loading="lazy"/><div class="cat-ov"></div><div class="cat-pill">Soybeans</div></div>
         <div class="cat-body">
           <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Benue &middot; Nasarawa &middot; Taraba &middot; Plateau</div>
           <h4>Non-GMO Soybeans</h4>
           <div class="cat-tagline">"Pure Protein, Naturally Grown"</div>
           <p class="cat-desc">Non-GMO soybeans with high protein content for feed, food processing, and oil extraction industries.</p>
-          <div class="cat-specs"><div class="csp-cell"><span class="csp-label">Protein</span><span class="csp-val">&ge; 36%</span></div><div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 12%</span></div><div class="csp-cell"><span class="csp-label">Oil Content</span><span class="csp-val">&ge; 18%</span></div><div class="csp-cell"><span class="csp-label">Packing</span><span class="csp-val">50kg PP Bags</span></div></div>
+          <div class="cat-specs"><div class="csp"><span class="csp-l">Protein</span><span class="csp-v">&ge; 36%</span></div><div class="csp"><span class="csp-l">Moisture</span><span class="csp-v">&le; 12%</span></div><div class="csp"><span class="csp-l">Oil Content</span><span class="csp-v">&ge; 18%</span></div><div class="csp"><span class="csp-l">Packing</span><span class="csp-v">50kg PP Bags</span></div></div>
           <div class="cat-chips"><span class="cat-chip">Non-GMO</span><span class="cat-chip">Feed Industry</span><span class="cat-chip">Oil Processing</span></div>
           <a href="#contact" class="cat-cta"><i class="fas fa-envelope"></i> Enquire Now</a>
         </div>
       </div>
       <!-- GINGER -->
       <div class="cat-card reveal">
-        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/fa7521199_generated_image.png" alt="Dried ginger root" loading="lazy"/><div class="cat-overlay"></div><div class="cat-pill">Dried Ginger</div></div>
+        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/a2028a45f_generated_image.png" alt="Dried ginger root" loading="lazy"/><div class="cat-ov"></div><div class="cat-pill">Dried Ginger</div></div>
         <div class="cat-body">
           <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Kaduna &middot; Nassarawa &middot; Benue &middot; Gombe</div>
           <h4>Dried Ginger Root</h4>
           <div class="cat-tagline">"Nigeria's Finest Spice Export"</div>
           <p class="cat-desc">Split and whole dried ginger with high gingerol content, consistently demanded by spice and pharmaceutical industries worldwide.</p>
-          <div class="cat-specs"><div class="csp-cell"><span class="csp-label">Ash</span><span class="csp-val">&le; 6%</span></div><div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 12%</span></div><div class="csp-cell"><span class="csp-label">Gingerol</span><span class="csp-val">High</span></div><div class="csp-cell"><span class="csp-label">Packing</span><span class="csp-val">50kg Bags</span></div></div>
+          <div class="cat-specs"><div class="csp"><span class="csp-l">Ash</span><span class="csp-v">&le; 6%</span></div><div class="csp"><span class="csp-l">Moisture</span><span class="csp-v">&le; 12%</span></div><div class="csp"><span class="csp-l">Gingerol</span><span class="csp-v">High</span></div><div class="csp"><span class="csp-l">Packing</span><span class="csp-v">50kg Bags</span></div></div>
           <div class="cat-chips"><span class="cat-chip">Spice Industry</span><span class="cat-chip">Pharma</span><span class="cat-chip">Beverages</span></div>
           <a href="#contact" class="cat-cta"><i class="fas fa-envelope"></i> Enquire Now</a>
         </div>
       </div>
       <!-- PALM KERNEL -->
       <div class="cat-card reveal">
-        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/abbd77044_generated_image.png" alt="Palm kernel nuts" loading="lazy"/><div class="cat-overlay"></div><div class="cat-pill">Palm Kernel</div></div>
+        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/c1ea26f0f_generated_image.png" alt="Palm kernel nuts" loading="lazy"/><div class="cat-ov"></div><div class="cat-pill">Palm Kernel</div></div>
         <div class="cat-body">
           <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Delta &middot; Edo &middot; Rivers &middot; Cross River &middot; Ondo</div>
           <h4>Palm Kernel Nuts / PKO</h4>
           <div class="cat-tagline">"High-Yield Oil Extraction Kernel"</div>
           <p class="cat-desc">Cleaned palm kernel nuts with consistent oil yield, used by edible oil and oleochemical manufacturers across Asia and Europe.</p>
-          <div class="cat-specs"><div class="csp-cell"><span class="csp-label">Oil Content</span><span class="csp-val">&ge; 50%</span></div><div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 8%</span></div><div class="csp-cell"><span class="csp-label">Shell</span><span class="csp-val">&le; 7%</span></div><div class="csp-cell"><span class="csp-label">Packing</span><span class="csp-val">50kg Bags</span></div></div>
+          <div class="cat-specs"><div class="csp"><span class="csp-l">Oil Content</span><span class="csp-v">&ge; 50%</span></div><div class="csp"><span class="csp-l">Moisture</span><span class="csp-v">&le; 8%</span></div><div class="csp"><span class="csp-l">Shell</span><span class="csp-v">&le; 7%</span></div><div class="csp"><span class="csp-l">Packing</span><span class="csp-v">50kg Bags</span></div></div>
           <div class="cat-chips"><span class="cat-chip">Edible Oil</span><span class="cat-chip">Oleochemicals</span><span class="cat-chip">Soap Making</span></div>
           <a href="#contact" class="cat-cta"><i class="fas fa-envelope"></i> Enquire Now</a>
         </div>
       </div>
       <!-- HIBISCUS -->
       <div class="cat-card reveal">
-        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/7888a6add_generated_image.png" alt="Dried hibiscus flowers" loading="lazy"/><div class="cat-overlay"></div><div class="cat-pill">Hibiscus</div></div>
+        <div class="cat-img"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/245f85c04_generated_image.png" alt="Dried hibiscus flowers" loading="lazy"/><div class="cat-ov"></div><div class="cat-pill">Hibiscus</div></div>
         <div class="cat-body">
           <div class="cat-origin"><i class="fas fa-map-marker-alt"></i> Kano &middot; Jigawa &middot; Katsina &middot; Zamfara</div>
           <h4>Dried Hibiscus Flowers</h4>
           <div class="cat-tagline">"Premium Roselle for Global Markets"</div>
           <p class="cat-desc">Vibrant, deep-red dried hibiscus calyces with high anthocyanin content, exported for beverages, food colouring, and herbal industries.</p>
-          <div class="cat-specs"><div class="csp-cell"><span class="csp-label">Colour</span><span class="csp-val">Deep Red</span></div><div class="csp-cell"><span class="csp-label">Moisture</span><span class="csp-val">&le; 11%</span></div><div class="csp-cell"><span class="csp-label">Purity</span><span class="csp-val">&ge; 99%</span></div><div class="csp-cell"><span class="csp-label">Packing</span><span class="csp-val">25/50kg Bags</span></div></div>
+          <div class="cat-specs"><div class="csp"><span class="csp-l">Colour</span><span class="csp-v">Deep Red</span></div><div class="csp"><span class="csp-l">Moisture</span><span class="csp-v">&le; 11%</span></div><div class="csp"><span class="csp-l">Purity</span><span class="csp-v">&ge; 99%</span></div><div class="csp"><span class="csp-l">Packing</span><span class="csp-v">25/50kg Bags</span></div></div>
           <div class="cat-chips"><span class="cat-chip">Beverages</span><span class="cat-chip">Food Colouring</span><span class="cat-chip">Herbal / Pharma</span></div>
           <a href="#contact" class="cat-cta"><i class="fas fa-envelope"></i> Enquire Now</a>
         </div>
@@ -977,13 +733,13 @@ nav ul a:hover::after{width:100%}
 </section>
 
 <!-- GALLERY -->
-<div id="gallery" role="region" aria-label="Gallery">
+<div id="gallery" role="region" aria-label="Photo gallery">
   <div class="gallery-strip">
-    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/331c9d663_generated_image.png" alt="Cocoa drying" loading="lazy"/></div>
-    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/4d0dee8e3_generated_image.png" alt="Cashew harvest" loading="lazy"/></div>
-    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/7d4135330_generated_image.png" alt="Farmland" loading="lazy"/></div>
-    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/33c27abeb_generated_image.png" alt="Sesame seeds" loading="lazy"/></div>
-    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/57376a37e_generated_image.png" alt="Ginger root" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/85c71b2f3_generated_image.png" alt="Nigerian farmland golden hour" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/126e68429_generated_image.png" alt="Cocoa beans drying" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/60387b875_generated_image.png" alt="Cashew nuts harvest" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/67da9cf2a_generated_image.png" alt="White sesame seeds" loading="lazy"/></div>
+    <div class="g-panel"><img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/245f85c04_generated_image.png" alt="Dried hibiscus flowers" loading="lazy"/></div>
   </div>
 </div>
 
@@ -997,18 +753,18 @@ nav ul a:hover::after{width:100%}
 
 <!-- WHY US -->
 <section id="why">
-  <div class="container">
-    <div class="centered reveal">
-      <div class="eyebrow light" style="justify-content:center;color:rgba(255,255,255,.38)">Why Partner With Us</div>
+  <div class="wrap">
+    <div class="tc reveal">
+      <div class="eyebrow center light">Why Partner With Us</div>
       <h2 class="s-title light" style="margin-top:14px">The LOOK AGRIC <span>Advantage</span></h2>
-      <div class="rule center light" style="margin-top:18px"><div class="rule-dot"></div></div>
-      <p class="s-lead center" style="color:rgba(255,255,255,.4);margin-top:4px">We combine Nigeria's agricultural depth with the professionalism and reliability demanded by international buyers.</p>
+      <div class="s-rule center light" style="margin-top:20px"><div class="s-rule-dot"></div></div>
+      <p class="s-lead center light">We combine Nigeria's agricultural depth with the professionalism and reliability demanded by international buyers.</p>
     </div>
     <div class="why-grid">
       <div class="why-card reveal"><div class="why-num">01</div><div class="why-icon"><i class="fas fa-seedling"></i></div><h4>Direct Farm Access</h4><p>We source directly from certified farmer cooperatives across Nigeria's prime agric belts, eliminating intermediaries and ensuring freshness and traceability from farm to port.</p></div>
       <div class="why-card reveal"><div class="why-num">02</div><div class="why-icon"><i class="fas fa-microscope"></i></div><h4>Stringent Quality Control</h4><p>Every consignment undergoes rigorous grading, moisture testing, and visual inspection before loading. We don't ship until it meets international specification.</p></div>
       <div class="why-card reveal"><div class="why-num">03</div><div class="why-icon"><i class="fas fa-file-contract"></i></div><h4>Complete Documentation</h4><p>Phytosanitary certificates, fumigation reports, SGS inspection, Bills of Lading, certificates of origin — the full documentation package for seamless customs clearance.</p></div>
-      <div class="why-card reveal"><div class="why-num">04</div><div class="why-icon"><i class="fas fa-ship"></i></div><h4>Multi-Port Flexibility</h4><p>We ship from Apapa Port, Tin Can Island, and Onne Port, offering both FOB and CIF incoterms. We coordinate freight forwarding for any global destination.</p></div>
+      <div class="why-card reveal"><div class="why-num">04</div><div class="why-icon"><i class="fas fa-ship"></i></div><h4>Multi-Port Flexibility</h4><p>We ship from Apapa Port, Tin Can Island, and Onne Port, offering both FOB and CIF incoterms, coordinating freight forwarding for any global destination.</p></div>
       <div class="why-card reveal"><div class="why-num">05</div><div class="why-icon"><i class="fas fa-headset"></i></div><h4>Dedicated Export Team</h4><p>Every buyer gets a dedicated export manager for consistent communication. From first quote to port delivery, you'll always know exactly where your order stands.</p></div>
       <div class="why-card reveal"><div class="why-num">06</div><div class="why-icon"><i class="fas fa-globe"></i></div><h4>Global Buyer Experience</h4><p>We have handled enquiries from Europe, the Middle East, Asia, and the Americas. We understand international buyer expectations and exceed them on every order.</p></div>
     </div>
@@ -1017,14 +773,14 @@ nav ul a:hover::after{width:100%}
 
 <!-- PROCESS -->
 <section id="process">
-  <div class="container">
-    <div class="centered reveal">
-      <div class="eyebrow" style="justify-content:center">How It Works</div>
+  <div class="wrap">
+    <div class="tc reveal">
+      <div class="eyebrow center">How It Works</div>
       <h2 class="s-title" style="margin-top:14px">Our <span>Export Process</span></h2>
-      <div class="rule center" style="margin-top:18px"><div class="rule-dot"></div></div>
-      <p class="s-lead center" style="margin-top:4px">A transparent five-step process from your first enquiry to goods at port.</p>
+      <div class="s-rule center" style="margin-top:20px"><div class="s-rule-dot"></div></div>
+      <p class="s-lead center">A transparent five-step journey from your first enquiry to goods at port.</p>
     </div>
-    <div class="proc-steps">
+    <div class="proc-grid">
       <div class="proc-step reveal"><div class="proc-num">1</div><h5>Submit Enquiry</h5><p>Fill in your product, destination, and quantity requirements using our secure online form.</p></div>
       <div class="proc-step reveal"><div class="proc-num">2</div><h5>Receive Quote</h5><p>Our export team prepares a personalised quotation within 24 hours with full pricing and terms.</p></div>
       <div class="proc-step reveal"><div class="proc-num">3</div><h5>Confirm &amp; Contract</h5><p>Review, negotiate and sign the sales contract. We arrange sourcing and quality inspection.</p></div>
@@ -1036,47 +792,32 @@ nav ul a:hover::after{width:100%}
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="container">
-    <div class="centered reveal">
-      <div class="eyebrow" style="justify-content:center">Get In Touch</div>
+  <div class="wrap">
+    <div class="tc reveal">
+      <div class="eyebrow center">Get In Touch</div>
       <h2 class="s-title" style="margin-top:14px">Request a <span>Quote Today</span></h2>
-      <div class="rule center" style="margin-top:18px"><div class="rule-dot"></div></div>
-      <p class="s-lead center" style="margin-top:4px">Ready to source premium Nigerian agricultural commodities? Send us your requirements and receive a personalised quotation within 24 hours.</p>
+      <div class="s-rule center" style="margin-top:20px"><div class="s-rule-dot"></div></div>
+      <p class="s-lead center">Ready to source premium Nigerian agricultural commodities? Send your requirements and receive a personalised quotation within 24 hours.</p>
     </div>
-    <div class="contact-wrap" style="margin-top:60px">
-      <!-- INFO PANEL -->
+    <div class="contact-wrap">
+      <!-- INFO -->
       <div class="ci-panel reveal">
         <div class="ci-promise">
           <div class="ci-promise-inner">
-            <div class="ci-promise-ico"><i class="fas fa-bolt"></i></div>
-            <div class="ci-promise-text">
+            <div class="ci-pico"><i class="fas fa-bolt"></i></div>
+            <div class="ci-ptext">
               <strong>Response Guarantee</strong>
               <span>Every enquiry receives a personalised reply within 24 business hours — no auto-replies, no delays.</span>
             </div>
           </div>
         </div>
-        <div class="ci-item">
-          <div class="ci-ico"><i class="fas fa-phone-alt"></i></div>
-          <div><strong>Main Office Line</strong><span><a href="tel:+2349055842583">+234 905 584 2583</a></span></div>
-        </div>
-        <div class="ci-item">
-          <div class="ci-ico wa"><i class="fab fa-whatsapp"></i></div>
-          <div><strong>WhatsApp Direct</strong><span><a href="https://wa.me/2348066092732">+234 806 609 2732</a></span></div>
-        </div>
-        <div class="ci-item">
-          <div class="ci-ico"><i class="fas fa-envelope"></i></div>
-          <div><strong>Email</strong><span><a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></span></div>
-        </div>
-        <div class="ci-item">
-          <div class="ci-ico"><i class="fas fa-map-marker-alt"></i></div>
-          <div><strong>Head Office</strong><span>Plot 1, Lawal Estate, Maku Olose<br/>off Ido-Omi Adio Road, Ibadan<br/>Oyo State, Nigeria</span></div>
-        </div>
-        <div class="ci-item">
-          <div class="ci-ico"><i class="fas fa-ship"></i></div>
-          <div><strong>Export Ports</strong><span>Apapa Port (Lagos) &bull; Tin Can Island &bull; Onne Port</span></div>
-        </div>
+        <div class="ci-item"><div class="ci-ico"><i class="fas fa-phone-alt"></i></div><div><strong>Main Office Line</strong><span><a href="tel:+2349055842583">+234 905 584 2583</a></span></div></div>
+        <div class="ci-item"><div class="ci-ico wa"><i class="fab fa-whatsapp"></i></div><div><strong>WhatsApp Direct</strong><span><a href="https://wa.me/2348066092732">+234 806 609 2732</a></span></div></div>
+        <div class="ci-item"><div class="ci-ico"><i class="fas fa-envelope"></i></div><div><strong>Email</strong><span><a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></span></div></div>
+        <div class="ci-item"><div class="ci-ico"><i class="fas fa-map-marker-alt"></i></div><div><strong>Head Office</strong><span>Plot 1, Lawal Estate, Maku Olose<br/>off Ido-Omi Adio Road, Ibadan<br/>Oyo State, Nigeria</span></div></div>
+        <div class="ci-item"><div class="ci-ico"><i class="fas fa-ship"></i></div><div><strong>Export Ports</strong><span>Apapa Port (Lagos) &bull; Tin Can Island &bull; Onne Port</span></div></div>
         <div class="ci-badges">
-          <div class="ci-badges-title">Compliance &amp; Standards</div>
+          <div class="ci-bl-title">Compliance &amp; Standards</div>
           <div class="ci-badge-list">
             <span class="ci-badge green"><i class="fas fa-check-circle"></i> GDPR Compliant</span>
             <span class="ci-badge green"><i class="fas fa-check-circle"></i> EU Standards</span>
@@ -1092,11 +833,11 @@ nav ul a:hover::after{width:100%}
           <div class="eq-head">
             <div class="eq-head-inner">
               <h3>Request a Quote</h3>
-              <p>Fill in your details below — our export team will prepare a personalised quotation and send it to your inbox within 24 hours.</p>
-              <div class="eq-trust-row">
-                <span class="eq-trust-pill"><i class="fas fa-lock"></i> SSL Secured</span>
-                <span class="eq-trust-pill"><i class="fas fa-shield-alt"></i> GDPR Protected</span>
-                <span class="eq-trust-pill"><i class="fas fa-clock"></i> 24h Reply</span>
+              <p>Fill in your details — our export team will send a personalised quotation within 24 hours.</p>
+              <div class="eq-pills">
+                <span class="eq-pill"><i class="fas fa-lock"></i> SSL Secured</span>
+                <span class="eq-pill"><i class="fas fa-shield-alt"></i> GDPR Protected</span>
+                <span class="eq-pill"><i class="fas fa-clock"></i> 24h Reply</span>
               </div>
             </div>
           </div>
@@ -1104,78 +845,45 @@ nav ul a:hover::after{width:100%}
             <form id="enquiryForm" novalidate autocomplete="on">
               <div class="eq-sec">Your Contact Details</div>
               <div class="eq-row">
-                <div class="eq-group">
-                  <label for="eq_name">Full Name <span class="eq-req">*</span></label>
-                  <input type="text" id="eq_name" name="full_name" placeholder="John Smith" required autocomplete="name"/>
-                </div>
-                <div class="eq-group">
-                  <label for="eq_company">Company <span class="eq-opt">(optional)</span></label>
-                  <input type="text" id="eq_company" name="company" placeholder="ABC Trading Ltd" autocomplete="organization"/>
-                </div>
+                <div class="eq-group"><label for="eq_name">Full Name <span class="req">*</span></label><input type="text" id="eq_name" name="full_name" placeholder="John Smith" required autocomplete="name"/></div>
+                <div class="eq-group"><label for="eq_company">Company <span class="opt">(optional)</span></label><input type="text" id="eq_company" name="company" placeholder="ABC Trading Ltd" autocomplete="organization"/></div>
               </div>
               <div class="eq-row">
+                <div class="eq-group"><label for="eq_email">Email Address <span class="req">*</span></label><input type="email" id="eq_email" name="email" placeholder="you@company.com" required autocomplete="email"/></div>
                 <div class="eq-group">
-                  <label for="eq_email">Email Address <span class="eq-req">*</span></label>
-                  <input type="email" id="eq_email" name="email" placeholder="you@company.com" required autocomplete="email"/>
-                </div>
-                <div class="eq-group">
-                  <label for="eq_phone">Phone / WhatsApp <span class="eq-opt">(optional)</span></label>
-                  <div class="phone-wrap">
-                    <select id="eq_dialcode" name="country_code" class="phone-code" aria-label="Dial code">
+                  <label for="eq_phone">Phone / WhatsApp <span class="opt">(optional)</span></label>
+                  <div class="ph-wrap">
+                    <select id="eq_dialcode" name="country_code" class="ph-code" aria-label="Dial code">
                       <option value="+234" selected>🇳🇬 +234</option><option value="+1">🇺🇸 +1</option><option value="+44">🇬🇧 +44</option><option value="+49">🇩🇪 +49</option><option value="+33">🇫🇷 +33</option><option value="+39">🇮🇹 +39</option><option value="+34">🇪🇸 +34</option><option value="+31">🇳🇱 +31</option><option value="+32">🇧🇪 +32</option><option value="+47">🇳🇴 +47</option><option value="+46">🇸🇪 +46</option><option value="+45">🇩🇰 +45</option><option value="+41">🇨🇭 +41</option><option value="+43">🇦🇹 +43</option><option value="+48">🇵🇱 +48</option><option value="+30">🇬🇷 +30</option><option value="+351">🇵🇹 +351</option><option value="+81">🇯🇵 +81</option><option value="+86">🇨🇳 +86</option><option value="+82">🇰🇷 +82</option><option value="+91">🇮🇳 +91</option><option value="+65">🇸🇬 +65</option><option value="+60">🇲🇾 +60</option><option value="+62">🇮🇩 +62</option><option value="+66">🇹🇭 +66</option><option value="+84">🇻🇳 +84</option><option value="+92">🇵🇰 +92</option><option value="+20">🇪🇬 +20</option><option value="+27">🇿🇦 +27</option><option value="+233">🇬🇭 +233</option><option value="+254">🇰🇪 +254</option><option value="+966">🇸🇦 +966</option><option value="+971">🇦🇪 +971</option><option value="+974">🇶🇦 +974</option><option value="+90">🇹🇷 +90</option><option value="+55">🇧🇷 +55</option><option value="+61">🇦🇺 +61</option>
                     </select>
-                    <input type="tel" id="eq_phone" name="phone" placeholder="806 609 2732" autocomplete="tel" inputmode="numeric" class="phone-input"/>
+                    <input type="tel" id="eq_phone" name="phone" placeholder="806 609 2732" autocomplete="tel" inputmode="numeric" class="ph-inp"/>
                   </div>
                 </div>
               </div>
               <div class="eq-sec">Product &amp; Destination</div>
-              <div class="eq-group">
-                <label for="eq_product">Product of Interest <span class="eq-req">*</span></label>
-                <select id="eq_product" name="product" required>
-                  <option value="" disabled selected>&#8212; Select a commodity &#8212;</option>
-                  <option>Cocoa Beans</option><option>Cashew Nuts (RCN)</option><option>White Sesame Seeds</option><option>Shea Nuts</option><option>Non-GMO Soybeans</option><option>Dried Ginger Root</option><option>Palm Kernel Nuts / PKO</option><option>Dried Hibiscus Flowers</option><option>Multiple Commodities</option>
-                </select>
-              </div>
+              <div class="eq-group"><label for="eq_product">Product of Interest <span class="req">*</span></label><select id="eq_product" name="product" required><option value="" disabled selected>&#8212; Select a commodity &#8212;</option><option>Cocoa Beans</option><option>Cashew Nuts (RCN)</option><option>White Sesame Seeds</option><option>Shea Nuts</option><option>Non-GMO Soybeans</option><option>Dried Ginger Root</option><option>Palm Kernel Nuts / PKO</option><option>Dried Hibiscus Flowers</option><option>Multiple Commodities</option></select></div>
               <div class="eq-row">
-                <div class="eq-group">
-                  <label for="eq_country">Destination Country <span class="eq-req">*</span></label>
-                  <select id="eq_country" name="country" required>
-                    <option value="" disabled selected>&#8212; Select your country &#8212;</option>
-                    <option>Australia</option><option>Austria</option><option>Bahrain</option><option>Bangladesh</option><option>Belgium</option><option>Brazil</option><option>Canada</option><option>Chile</option><option>China</option><option>Colombia</option><option>Denmark</option><option>Egypt</option><option>Ethiopia</option><option>Finland</option><option>France</option><option>Germany</option><option>Ghana</option><option>Greece</option><option>Hong Kong</option><option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Japan</option><option>Jordan</option><option>Kenya</option><option>Kuwait</option><option>Lebanon</option><option>Malaysia</option><option>Mexico</option><option>Morocco</option><option>Netherlands</option><option>New Zealand</option><option>Nigeria</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Russia</option><option>Saudi Arabia</option><option>Senegal</option><option>Singapore</option><option>South Africa</option><option>South Korea</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Sweden</option><option>Switzerland</option><option>Taiwan</option><option>Tanzania</option><option>Thailand</option><option>Tunisia</option><option>Turkey</option><option>UAE</option><option>Uganda</option><option>Ukraine</option><option>United Kingdom</option><option>United States</option><option>Vietnam</option><option>Other</option>
-                  </select>
-                </div>
-                <div class="eq-group">
-                  <label for="eq_port">Destination Port <span class="eq-req">*</span></label>
-                  <select id="eq_port" name="destination" required disabled>
-                    <option value="" disabled selected>&#8212; Select country first &#8212;</option>
-                  </select>
-                </div>
+                <div class="eq-group"><label for="eq_country">Destination Country <span class="req">*</span></label><select id="eq_country" name="country" required><option value="" disabled selected>&#8212; Select your country &#8212;</option><option>Australia</option><option>Austria</option><option>Bahrain</option><option>Bangladesh</option><option>Belgium</option><option>Brazil</option><option>Canada</option><option>Chile</option><option>China</option><option>Colombia</option><option>Denmark</option><option>Egypt</option><option>Ethiopia</option><option>Finland</option><option>France</option><option>Germany</option><option>Ghana</option><option>Greece</option><option>Hong Kong</option><option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Japan</option><option>Jordan</option><option>Kenya</option><option>Kuwait</option><option>Lebanon</option><option>Malaysia</option><option>Mexico</option><option>Morocco</option><option>Netherlands</option><option>New Zealand</option><option>Nigeria</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Russia</option><option>Saudi Arabia</option><option>Senegal</option><option>Singapore</option><option>South Africa</option><option>South Korea</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Sweden</option><option>Switzerland</option><option>Taiwan</option><option>Tanzania</option><option>Thailand</option><option>Tunisia</option><option>Turkey</option><option>UAE</option><option>Uganda</option><option>Ukraine</option><option>United Kingdom</option><option>United States</option><option>Vietnam</option><option>Other</option></select></div>
+                <div class="eq-group"><label for="eq_port">Destination Port <span class="req">*</span></label><select id="eq_port" name="destination" required disabled><option value="" disabled selected>&#8212; Select country first &#8212;</option></select></div>
               </div>
               <div class="eq-sec">Your Message</div>
-              <div class="eq-group">
-                <label for="eq_message">Additional Requirements <span class="eq-opt">(optional)</span></label>
-                <textarea id="eq_message" name="message" rows="4" placeholder="Tell us your requirements — quantity (MT), grade preference, packaging type, incoterms, timeline…"></textarea>
-              </div>
+              <div class="eq-group"><label for="eq_message">Additional Requirements <span class="opt">(optional)</span></label><textarea id="eq_message" name="message" rows="4" placeholder="Quantity (MT), grade preference, packaging, incoterms, timeline…"></textarea></div>
               <div class="eq-sec">Consent &amp; Verification</div>
               <!-- GDPR -->
               <div class="eq-consent" id="eq_gdpr_box" onclick="toggleGdpr()">
-                <input type="checkbox" class="eq-consent-check" id="eq_gdpr" name="gdprConsent" value="yes" onclick="event.stopPropagation();handleGdpr()"/>
-                <div class="eq-consent-text">
-                  I consent to <strong>LOOK AGRIC ALLIED LIMITED</strong> processing my personal data (name, email, company, phone) to respond to this enquiry, in accordance with the <a href="#" onclick="event.stopPropagation();event.preventDefault();openPrivacy()">Privacy Policy</a> &amp; GDPR regulations. I understand I may withdraw consent at any time by emailing <a href="mailto:lookagricalliedlimited@gmail.com" onclick="event.stopPropagation()">lookagricalliedlimited@gmail.com</a>.
-                </div>
+                <input type="checkbox" class="eq-cb" id="eq_gdpr" name="gdprConsent" value="yes" onclick="event.stopPropagation();handleGdpr()"/>
+                <div class="eq-consent-text">I consent to <strong>LOOK AGRIC ALLIED LIMITED</strong> processing my personal data (name, email, company, phone) to respond to this enquiry, in accordance with the <a href="#" onclick="event.stopPropagation();event.preventDefault();openPrivacy()">Privacy Policy</a> &amp; GDPR regulations. I understand I may withdraw consent at any time by emailing <a href="mailto:lookagricalliedlimited@gmail.com" onclick="event.stopPropagation()">lookagricalliedlimited@gmail.com</a>.</div>
               </div>
               <div class="eq-err" id="eq_gdpr_err"><i class="fas fa-exclamation-triangle"></i> Please accept the privacy consent to submit.</div>
               <!-- reCAPTCHA -->
-              <div class="eq-captcha-wrap">
-                <div class="eq-captcha-label"><i class="fas fa-shield-halved"></i> Security Verification</div>
-                <div class="eq-captcha-box" id="eq_captcha_box">
+              <div class="eq-cap-wrap">
+                <div class="eq-cap-label"><i class="fas fa-shield-halved"></i> Security Verification</div>
+                <div class="eq-cap-box" id="eq_captcha_box">
                   <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="light" data-size="normal" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
                 </div>
                 <div class="eq-err" id="eq_captcha_err"><i class="fas fa-exclamation-triangle"></i> Please complete the security verification.</div>
               </div>
-              <button type="submit" class="eq-submit" id="eq_submit_btn">
-                <i class="fas fa-paper-plane"></i> Send Enquiry
-              </button>
+              <button type="submit" class="eq-submit" id="eq_submit_btn"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
             </form>
           </div>
         </div>
@@ -1186,55 +894,24 @@ nav ul a:hover::after{width:100%}
 
 <!-- FOOTER -->
 <footer id="footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-top">
       <div class="f-brand">
         <img src="https://media.base44.com/images/public/6a16801fb0ff64008092b008/83a38a071_logo.jpg" alt="Look Agric Allied Limited" width="48" height="48"/>
         <h4>LOOK AGRIC ALLIED LIMITED</h4>
         <p>Nigeria's trusted exporter of premium agricultural commodities — connecting West Africa's finest farmlands to global markets with quality, consistency, and integrity.</p>
-        <div class="f-socials">
-          <a href="mailto:lookagricalliedlimited@gmail.com" class="f-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://wa.me/2348066092732" class="f-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <div class="f-soc">
+          <a href="mailto:lookagricalliedlimited@gmail.com" class="f-s" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/2348066092732" class="f-s" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
-      <div class="f-col">
-        <h5>Products</h5>
-        <ul>
-          <li><a href="#contact">Cocoa Beans</a></li>
-          <li><a href="#contact">Cashew Nuts (RCN)</a></li>
-          <li><a href="#contact">Sesame Seeds</a></li>
-          <li><a href="#contact">Shea Nuts</a></li>
-          <li><a href="#contact">Non-GMO Soybeans</a></li>
-          <li><a href="#contact">Dried Ginger</a></li>
-          <li><a href="#contact">Palm Kernel</a></li>
-          <li><a href="#contact">Hibiscus Flowers</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#why">Why Choose Us</a></li>
-          <li><a href="#process">Our Process</a></li>
-          <li><a href="#contact">Request Quote</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></li>
-          <li><a href="tel:+2349055842583">+234 905 584 2583</a></li>
-          <li><a href="https://wa.me/2348066092732">+234 806 609 2732 (WhatsApp)</a></li>
-          <li>Plot 1, Lawal Estate, Ibadan,<br/>Oyo State, Nigeria</li>
-        </ul>
-      </div>
+      <div class="f-col"><h5>Products</h5><ul><li><a href="#contact">Cocoa Beans</a></li><li><a href="#contact">Cashew Nuts (RCN)</a></li><li><a href="#contact">Sesame Seeds</a></li><li><a href="#contact">Shea Nuts</a></li><li><a href="#contact">Non-GMO Soybeans</a></li><li><a href="#contact">Dried Ginger</a></li><li><a href="#contact">Palm Kernel</a></li><li><a href="#contact">Hibiscus Flowers</a></li></ul></div>
+      <div class="f-col"><h5>Company</h5><ul><li><a href="#about">About Us</a></li><li><a href="#why">Why Choose Us</a></li><li><a href="#process">Our Process</a></li><li><a href="#contact">Request Quote</a></li></ul></div>
+      <div class="f-col"><h5>Contact</h5><ul><li><a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></li><li><a href="tel:+2349055842583">+234 905 584 2583</a></li><li><a href="https://wa.me/2348066092732">+234 806 609 2732 (WhatsApp)</a></li><li>Plot 1, Lawal Estate, Ibadan,<br/>Oyo State, Nigeria</li></ul></div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 LOOK AGRIC ALLIED LIMITED. All rights reserved.</p>
-      <div class="f-bottom-links">
-        <a href="#" onclick="openPrivacy();return false">Privacy Policy</a>
-        <a href="mailto:lookagricalliedlimited@gmail.com">Contact Us</a>
-      </div>
+      <div class="f-bl"><a href="#" onclick="openPrivacy();return false">Privacy Policy</a><a href="mailto:lookagricalliedlimited@gmail.com">Contact Us</a></div>
     </div>
   </div>
 </footer>
@@ -1243,111 +920,78 @@ nav ul a:hover::after{width:100%}
 <div id="toast" role="alert" aria-live="polite"></div>
 
 <!-- PRIVACY MODAL -->
-<div id="privacy-modal" role="dialog" aria-modal="true" aria-label="Privacy Policy">
+<div id="pm" role="dialog" aria-modal="true" aria-label="Privacy Policy">
   <div class="pm-box">
     <div class="pm-head">
       <h4>Privacy Policy</h4>
-      <button class="pm-close" onclick="closePrivacy()" aria-label="Close privacy policy"><i class="fas fa-times"></i></button>
+      <button class="pm-close" onclick="closePrivacy()" aria-label="Close"><i class="fas fa-times"></i></button>
     </div>
     <div class="pm-body">
-      <h5>1. Data Controller</h5>
-      <p>LOOK AGRIC ALLIED LIMITED, Plot 1 Lawal Estate, Ibadan, Oyo State, Nigeria. Email: <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></p>
-      <h5>2. Data We Collect</h5>
-      <p>When you submit an enquiry, we collect: full name, company name, email address, phone number, country, destination port, product interest, and your message.</p>
-      <h5>3. Legal Basis</h5>
-      <p>We process your data based on your explicit consent (Article 6(1)(a) GDPR). You may withdraw consent at any time by emailing <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a>.</p>
-      <h5>4. How We Use Your Data</h5>
-      <ul>
-        <li>To prepare and send you a personalised export quotation.</li>
-        <li>To follow up on your enquiry via email (max. 3 follow-up emails).</li>
-        <li>To maintain records of buyer communications for compliance.</li>
-      </ul>
-      <h5>5. Data Sharing</h5>
-      <p>We do not sell your data to third parties. Data may be shared with trusted logistics and freight partners strictly for fulfilling export orders, under GDPR-compliant agreements.</p>
-      <h5>6. Retention</h5>
-      <p>Your data is retained for up to 24 months from the date of your last enquiry, after which it is securely deleted unless a contractual relationship requires longer retention.</p>
-      <h5>7. Your Rights</h5>
-      <ul>
-        <li>Right of access, rectification, and erasure.</li>
-        <li>Right to restrict or object to processing.</li>
-        <li>Right to data portability.</li>
-      </ul>
-      <p>Exercise any right by emailing <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a>.</p>
-      <h5>8. GDPR Compliance</h5>
-      <p>Although LOOK AGRIC ALLIED LIMITED is based in Nigeria, we are fully committed to compliance with the EU General Data Protection Regulation for all data subjects in the European Economic Area.</p>
+      <h5>1. Data Controller</h5><p>LOOK AGRIC ALLIED LIMITED, Plot 1 Lawal Estate, Ibadan, Oyo State, Nigeria. Email: <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></p>
+      <h5>2. Data We Collect</h5><p>When you submit an enquiry, we collect: full name, company name, email address, phone number, country, destination port, product interest, and your message.</p>
+      <h5>3. Legal Basis</h5><p>We process your data based on your explicit consent (Article 6(1)(a) GDPR). You may withdraw at any time by emailing <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a>.</p>
+      <h5>4. How We Use Your Data</h5><ul><li>To prepare and send you a personalised export quotation.</li><li>To follow up on your enquiry via email (max. 3 follow-up emails).</li><li>To maintain records of buyer communications for compliance.</li></ul>
+      <h5>5. Data Sharing</h5><p>We do not sell your data to third parties. Data may be shared with trusted logistics and freight partners strictly for fulfilling export orders.</p>
+      <h5>6. Retention</h5><p>Your data is retained for up to 24 months from the date of your last enquiry, after which it is securely deleted.</p>
+      <h5>7. Your Rights</h5><ul><li>Right of access, rectification, and erasure.</li><li>Right to restrict or object to processing.</li><li>Right to data portability.</li></ul><p>Exercise any right by emailing <a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a>.</p>
+      <h5>8. GDPR Compliance</h5><p>LOOK AGRIC ALLIED LIMITED is fully committed to compliance with the EU General Data Protection Regulation for all data subjects in the European Economic Area.</p>
     </div>
   </div>
 </div>
 
 <script>
 /* ═══════════════════════════════════════════════
-   LOOK AGRIC v6.0 — Scripts
-   Verified clean. Zero errors.
+   LOOK AGRIC v7.0 — Scripts · Zero Errors
 ═══════════════════════════════════════════════ */
 
-/* ── NAVBAR ── */
+/* NAVBAR SCROLL */
 (function(){
-  var nb = document.getElementById('navbar');
-  if(!nb) return;
-  window.addEventListener('scroll', function(){ nb.classList.toggle('scrolled', window.scrollY > 20); }, {passive:true});
+  var nb=document.getElementById('navbar');
+  if(!nb)return;
+  window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
 })();
 
-/* ── HAMBURGER ── */
-var _hbg = document.getElementById('hamburger');
-var _mob = document.getElementById('mobMenu');
-if(_hbg && _mob){
-  _hbg.addEventListener('click', function(){
-    var open = _mob.classList.toggle('open');
-    _hbg.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+/* HAMBURGER */
+var _hbg=document.getElementById('hamburger');
+var _mob=document.getElementById('mob');
+if(_hbg&&_mob){
+  _hbg.addEventListener('click',function(){
+    var open=_mob.classList.toggle('open');
+    _hbg.classList.toggle('open',open);
+    _hbg.setAttribute('aria-expanded',open);
+    document.body.style.overflow=open?'hidden':'';
   });
 }
-function closeMob(){
-  if(_mob) _mob.classList.remove('open');
-  if(_hbg) _hbg.classList.remove('open');
-  document.body.style.overflow = '';
-}
+function closeMob(){if(_mob)_mob.classList.remove('open');if(_hbg){_hbg.classList.remove('open');_hbg.setAttribute('aria-expanded','false');}document.body.style.overflow='';}
 
-/* ── SCROLL REVEAL ── */
+/* SCROLL REVEAL */
 (function(){
-  var els = document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)){
-    els.forEach(function(el){ el.classList.add('visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-    });
-  },{threshold:0.1});
-  els.forEach(function(el){ io.observe(el); });
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible');});return;}
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.1});
+  els.forEach(function(e){io.observe(e);});
 })();
 
-/* ── PRODUCT SLIDESHOW ── */
-function goSlide(key, idx){
-  var slides = document.getElementById(key+'Slides');
-  var dots   = document.getElementById(key+'Dots');
-  if(!slides || !dots) return;
-  var imgs = slides.querySelectorAll('img');
-  var btns = dots.querySelectorAll('.slide-dot');
-  imgs.forEach(function(i){ i.classList.remove('active'); });
-  btns.forEach(function(b){ b.classList.remove('active'); });
-  if(imgs[idx]) imgs[idx].classList.add('active');
-  if(btns[idx]) btns[idx].classList.add('active');
+/* PRODUCT SLIDESHOW */
+function goSlide(key,idx){
+  var sl=document.getElementById(key+'Slides');
+  var dt=document.getElementById(key+'Dots');
+  if(!sl||!dt)return;
+  sl.querySelectorAll('img').forEach(function(i){i.classList.remove('active');});
+  dt.querySelectorAll('.sdot').forEach(function(b){b.classList.remove('active');});
+  var imgs=sl.querySelectorAll('img');var dots=dt.querySelectorAll('.sdot');
+  if(imgs[idx])imgs[idx].classList.add('active');
+  if(dots[idx])dots[idx].classList.add('active');
 }
 (function(){
-  var keys = [{key:'cocoa',len:4},{key:'cashew',len:4}];
-  keys.forEach(function(k){
-    var cur = 0;
-    setInterval(function(){
-      cur = (cur + 1) % k.len;
-      goSlide(k.key, cur);
-    }, 3800);
+  [{key:'cocoa',len:4},{key:'cashew',len:4}].forEach(function(k){
+    var cur=0;
+    setInterval(function(){cur=(cur+1)%k.len;goSlide(k.key,cur);},3800);
   });
 })();
 
-/* ── PORT MAP ── */
-var portMap = {
+/* PORT MAP */
+var portMap={
   'Australia':['Port of Melbourne','Port of Sydney','Port of Brisbane','Port of Fremantle'],
   'Austria':['Vienna (via Rotterdam)','Vienna (via Hamburg)'],
   'Bahrain':['Port of Khalifa Bin Salman'],
@@ -1417,154 +1061,130 @@ var portMap = {
   'Other':['Please specify in your message']
 };
 (function(){
-  var cs = document.getElementById('eq_country');
-  var ps = document.getElementById('eq_port');
-  if(!cs || !ps) return;
-  cs.addEventListener('change', function(){
-    var ports = portMap[this.value] || ['Please specify in your message'];
-    ps.innerHTML = '<option value="" disabled selected>&#8212; Select a port &#8212;</option>';
-    ports.forEach(function(p){ var o = document.createElement('option'); o.value = o.textContent = p; ps.appendChild(o); });
-    ps.disabled = false;
-    ps.classList.remove('invalid');
+  var cs=document.getElementById('eq_country');
+  var ps=document.getElementById('eq_port');
+  if(!cs||!ps)return;
+  cs.addEventListener('change',function(){
+    var ports=portMap[this.value]||['Please specify in your message'];
+    ps.innerHTML='<option value="" disabled selected>&#8212; Select a port &#8212;</option>';
+    ports.forEach(function(p){var o=document.createElement('option');o.value=o.textContent=p;ps.appendChild(o);});
+    ps.disabled=false;ps.classList.remove('invalid');
   });
 })();
 
-/* ── TOAST ── */
-function showToast(msg, isError){
-  var t = document.getElementById('toast');
-  if(!t) return;
-  t.className = isError ? 'error' : '';
-  t.innerHTML = msg;
-  t.classList.add('show');
-  setTimeout(function(){ t.classList.remove('show'); }, 4500);
+/* TOAST */
+function showToast(msg,isErr){
+  var t=document.getElementById('toast');if(!t)return;
+  t.className=isErr?'err':'';t.innerHTML=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},4500);
 }
 
-/* ── PRIVACY MODAL ── */
-var _pm = document.getElementById('privacy-modal');
-function openPrivacy(){ if(_pm){ _pm.classList.add('open'); document.body.style.overflow='hidden'; } }
-function closePrivacy(){ if(_pm){ _pm.classList.remove('open'); document.body.style.overflow=''; } }
-if(_pm) _pm.addEventListener('click', function(e){ if(e.target===_pm) closePrivacy(); });
-document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closePrivacy(); closeMob(); } });
+/* PRIVACY MODAL */
+var _pm=document.getElementById('pm');
+function openPrivacy(){if(_pm){_pm.classList.add('open');document.body.style.overflow='hidden';}}
+function closePrivacy(){if(_pm){_pm.classList.remove('open');document.body.style.overflow='';}}
+if(_pm)_pm.addEventListener('click',function(e){if(e.target===_pm)closePrivacy();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePrivacy();closeMob();}});
 
-/* ── RECAPTCHA ── */
-var _rcVerified = false;
-function onRecaptchaSuccess(){ _rcVerified = true; setCapErr(false); }
-function onRecaptchaExpired(){ _rcVerified = false; }
+/* RECAPTCHA */
+var _rcOk=false;
+function onRecaptchaSuccess(){_rcOk=true;setCapErr(false);}
+function onRecaptchaExpired(){_rcOk=false;}
 function setCapErr(on){
-  var box = document.getElementById('eq_captcha_box');
-  var err = document.getElementById('eq_captcha_err');
-  if(box) box.classList.toggle('invalid', on);
-  if(err) err.classList.toggle('show', on);
+  var box=document.getElementById('eq_captcha_box');
+  var err=document.getElementById('eq_captcha_err');
+  if(box)box.classList.toggle('invalid',on);
+  if(err)err.classList.toggle('show',on);
 }
 
-/* ── GDPR ── */
-var _gBox = document.getElementById('eq_gdpr_box');
-var _gCb  = document.getElementById('eq_gdpr');
-var _gErr = document.getElementById('eq_gdpr_err');
-function toggleGdpr(){ if(_gCb){ _gCb.checked = !_gCb.checked; handleGdpr(); } }
+/* GDPR */
+var _gBox=document.getElementById('eq_gdpr_box');
+var _gCb=document.getElementById('eq_gdpr');
+var _gErr=document.getElementById('eq_gdpr_err');
+function toggleGdpr(){if(_gCb){_gCb.checked=!_gCb.checked;handleGdpr();}}
 function handleGdpr(){
-  if(!_gBox || !_gCb || !_gErr) return;
-  if(_gCb.checked){ _gBox.classList.add('checked'); setGdprErr(false); }
+  if(!_gBox||!_gCb||!_gErr)return;
+  if(_gCb.checked){_gBox.classList.add('checked');setGdprErr(false);}
   else _gBox.classList.remove('checked');
 }
 function setGdprErr(on){
-  if(_gBox) _gBox.classList.toggle('invalid', on);
-  if(_gErr) _gErr.classList.toggle('show', on);
+  if(_gBox)_gBox.classList.toggle('invalid',on);
+  if(_gErr)_gErr.classList.toggle('show',on);
 }
 
-/* ── FORM ── */
+/* FORM */
 (function(){
-  var form = document.getElementById('enquiryForm');
-  var btn  = document.getElementById('eq_submit_btn');
-  if(!form || !btn) return;
+  var form=document.getElementById('enquiryForm');
+  var btn=document.getElementById('eq_submit_btn');
+  if(!form||!btn)return;
 
-  var reqIds = ['eq_name','eq_email','eq_product','eq_country','eq_port'];
+  var reqIds=['eq_name','eq_email','eq_product','eq_country','eq_port'];
   reqIds.forEach(function(id){
-    var el = document.getElementById(id);
-    if(el){ el.addEventListener('input',function(){ this.classList.remove('invalid'); }); el.addEventListener('change',function(){ this.classList.remove('invalid'); }); }
+    var el=document.getElementById(id);
+    if(el){el.addEventListener('input',function(){this.classList.remove('invalid');});el.addEventListener('change',function(){this.classList.remove('invalid');});}
   });
 
-  form.addEventListener('submit', async function(e){
+  form.addEventListener('submit',async function(e){
     e.preventDefault();
-    var ok = true;
+    var ok=true;
 
-    /* GDPR */
-    if(!_gCb || !_gCb.checked){ setGdprErr(true); ok=false; } else setGdprErr(false);
+    if(!_gCb||!_gCb.checked){setGdprErr(true);ok=false;}else setGdprErr(false);
+    if(!_rcOk){setCapErr(true);ok=false;}else setCapErr(false);
 
-    /* reCAPTCHA */
-    if(!_rcVerified){ setCapErr(true); ok=false; } else setCapErr(false);
-
-    /* Required fields */
-    var firstErr = null;
+    var firstErr=null;
     reqIds.forEach(function(id){
-      var el = document.getElementById(id);
-      if(!el) return;
-      var empty = !(el.value||'').trim();
-      el.classList.toggle('invalid', empty);
-      if(empty && !firstErr) firstErr = el;
-      if(empty) ok = false;
+      var el=document.getElementById(id);if(!el)return;
+      var empty=!(el.value||'').trim();
+      el.classList.toggle('invalid',empty);
+      if(empty&&!firstErr)firstErr=el;
+      if(empty)ok=false;
     });
 
     if(!ok){
-      var target = firstErr || document.getElementById('eq_captcha_box') || _gBox;
-      if(target) target.scrollIntoView({behavior:'smooth', block:'center'});
+      var t=firstErr||document.getElementById('eq_captcha_box')||_gBox;
+      if(t)t.scrollIntoView({behavior:'smooth',block:'center'});
       return;
     }
 
-    /* Submit */
-    var orig = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending&hellip;';
-    btn.disabled = true;
+    var orig=btn.innerHTML;
+    btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending&hellip;';
+    btn.disabled=true;
 
-    var fd = new FormData(form);
-    var dialEl = document.getElementById('eq_dialcode');
-    var cc = dialEl ? dialEl.value.trim() : '';
-    var ph = (fd.get('phone')||'').trim().replace(/^0+/,'');
+    var fd=new FormData(form);
+    var dialEl=document.getElementById('eq_dialcode');
+    var cc=dialEl?dialEl.value.trim():'';
+    var ph=(fd.get('phone')||'').trim().replace(/^0+/,'');
 
-    var payload = {
-      full_name:  (fd.get('full_name')||'').trim(),
-      company:    (fd.get('company')||'').trim(),
-      email:      (fd.get('email')||'').trim(),
-      phone:      ph ? (cc ? cc+' '+ph : ph) : '',
-      country:    (fd.get('country')||'').trim(),
+    var payload={
+      full_name:(fd.get('full_name')||'').trim(),
+      company:(fd.get('company')||'').trim(),
+      email:(fd.get('email')||'').trim(),
+      phone:ph?(cc?cc+' '+ph:ph):'',
+      country:(fd.get('country')||'').trim(),
       destination:(fd.get('destination')||'').trim(),
-      product:    (fd.get('product')||'').trim(),
-      message:    (fd.get('message')||'').trim()
+      product:(fd.get('product')||'').trim(),
+      message:(fd.get('message')||'').trim()
     };
 
-    try {
-      var res = await fetch('https://superagent-8092b008.base44.app/functions/submitEnquiry',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify(payload)
-      });
-      var data = await res.json();
-      if(!res.ok) throw new Error(data.error||'Server error');
+    try{
+      var res=await fetch('https://superagent-8092b008.base44.app/functions/submitEnquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      var data=await res.json();
+      if(!res.ok)throw new Error(data.error||'Server error');
 
-      showToast('&#9989; Enquiry sent — we\'ll respond within 24 hours.', false);
+      showToast('&#9989; Enquiry sent — we\'ll respond within 24 hours.',false);
       form.reset();
 
-      /* Reset port */
-      var ps2 = document.getElementById('eq_port');
-      if(ps2){ ps2.disabled=true; ps2.innerHTML='<option value="" disabled selected>&#8212; Select country first &#8212;</option>'; }
+      var ps2=document.getElementById('eq_port');
+      if(ps2){ps2.disabled=true;ps2.innerHTML='<option value="" disabled selected>&#8212; Select country first &#8212;</option>';}
+      setGdprErr(false);if(_gBox)_gBox.classList.remove('checked','invalid');
+      _rcOk=false;setCapErr(false);
+      if(typeof grecaptcha!=='undefined'){try{grecaptcha.reset();}catch(x){}}
+      reqIds.forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('invalid');});
 
-      /* Reset GDPR */
-      setGdprErr(false);
-      if(_gBox) _gBox.classList.remove('checked','invalid');
-
-      /* Reset reCAPTCHA */
-      _rcVerified = false;
-      setCapErr(false);
-      if(typeof grecaptcha !== 'undefined'){ try{ grecaptcha.reset(); }catch(x){} }
-
-      /* Clear field errors */
-      reqIds.forEach(function(id){ var el=document.getElementById(id); if(el) el.classList.remove('invalid'); });
-
-    } catch(err){
-      showToast('&#10060; Something went wrong. Please call +234 905 584 2583.', true);
-    } finally {
-      btn.innerHTML = orig;
-      btn.disabled = false;
+    }catch(err){
+      showToast('&#10060; Something went wrong. Please call +234 905 584 2583.',true);
+    }finally{
+      btn.innerHTML=orig;btn.disabled=false;
     }
   });
 })();
