@@ -122,7 +122,7 @@ button,input,select,textarea{font-family:'Inter',sans-serif}
   background:rgba(255,255,255,.97);
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid transparent;
-  transition:border-color .3s,box-shadow .3s,background .3s;
+  transition:border-color var(--ease),box-shadow var(--ease),background var(--ease);
 }
 #navbar.scrolled{
   border-bottom-color:var(--border);
@@ -831,6 +831,10 @@ h1.hero-title .accent{
   .footer-top{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media(max-width:900px){
+  .hero-content{padding:120px 5% 160px}
+  .hero-kicker{margin-bottom:22px}
+  h1.hero-title{letter-spacing:-.3px}
+
   nav ul,.nb-cta{display:none}
   .hbg{display:flex}
   .about-grid{grid-template-columns:1fr;gap:48px}
@@ -840,8 +844,15 @@ h1.hero-title .accent{
   .stat-item{padding:36px 26px}
   .section,.about-grid,.why-grid{padding-top:72px;padding-bottom:72px}
   #about,#products,#catalogue,#why,#process,#contact{padding:72px 5%}
+  .about-thumb{height:180px}
+
 }
 @media(max-width:680px){
+  .hero-content{padding:105px 5% 170px}
+  .hero-desc{font-size:1rem}
+  .hero-actions{gap:10px}
+  .btn-primary,.btn-outline-white{font-size:12px;padding:12px 22px}
+
   .hero-stats{grid-template-columns:1fr 1fr}
   .cat-grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr}
@@ -852,8 +863,16 @@ h1.hero-title .accent{
   .footer-bottom{flex-direction:column;align-items:center;text-align:center}
   .eq-row{grid-template-columns:1fr}
   .eq-body,.eq-head{padding:24px 20px}
+  .proc-connector{display:none}
+
+  .ci-card:hover{transform:none}
+  .ci-wrap{gap:10px}
+
 }
 @media(max-width:440px){
+  .hero-content{padding:95px 5% 180px}
+  .hero-kicker-text{font-size:10px;letter-spacing:2.5px}
+
   .cat-grid{grid-template-columns:1fr}
   h1.hero-title{font-size:2.75rem}
   .about-thumbs{grid-template-columns:1fr}
@@ -1403,7 +1422,7 @@ h1.hero-title .accent{
       <div class="f-col"><h5>Contact</h5><ul><li><a href="mailto:lookagricalliedlimited@gmail.com">lookagricalliedlimited@gmail.com</a></li><li><a href="tel:+2349055842583">+234 905 584 2583</a></li><li><a href="https://wa.me/2348066092732">+234 806 609 2732 (WhatsApp)</a></li><li>Plot 1, Lawal Estate,<br/>Ibadan, Oyo State, Nigeria</li></ul></div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 LOOK AGRIC ALLIED LIMITED. All rights reserved.</p>
+      <p>&copy; 2026 LOOK AGRIC ALLIED LIMITED. All rights reserved.</p>
       <div class="f-links"><a href="#" onclick="openPrivacy();return false">Privacy Policy</a><a href="mailto:lookagricalliedlimited@gmail.com">Contact Us</a></div>
     </div>
   </div>
